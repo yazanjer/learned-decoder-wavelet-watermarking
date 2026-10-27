@@ -3,7 +3,9 @@
   "i4": "results/i4/i4_final.json",
   "i4s": "results/i4/i4_secondary.json",
   "i5": "results/i5_interim/summary.json",
-  "cmp": "results/i5_compare/i5_compare.json"
+  "cmp": "results/i5_compare/i5_compare.json",
+  "i6": "results/i6_public/i6_public.json",
+  "i6c": "results/i6_public/i6_fin_compare.json"
  },
  "rule": "direction only where bootstrap and seed-level 95 % intervals agree in sign",
  "checks": {
@@ -379,6 +381,7 @@
   ],
   "baseline_validity": {
    "mbrs": "preliminary: single seed (0); 120 epochs (20 pilot + 100 continued); discriminator re-initialised at epoch 20 and optimiser state not restored (MBRS's own continuation restores none); about 74 times the parameters of WMNet",
+   "fin64": "released checkpoint (I-6), one model",
    "dwtdct": null
   },
   "values": {
@@ -1411,6 +1414,101 @@
     },
     "bitacc_rotate10": {
      "mean": 0.4997499883174896
+    }
+   },
+   "fin64": {
+    "psnr_rgb": {
+     "mean": 40.008522033691406
+    },
+    "ssim": {
+     "mean": 0.9794995188713074
+    },
+    "bitacc_clean": {
+     "mean": 0.977468729019165
+    },
+    "bitacc_jpeg10": {
+     "mean": 0.8370468616485596
+    },
+    "bitacc_jpeg20": {
+     "mean": 0.9517499804496765
+    },
+    "bitacc_jpeg30": {
+     "mean": 0.9713125228881836
+    },
+    "bitacc_jpeg40": {
+     "mean": 0.9758594036102295
+    },
+    "bitacc_jpeg50": {
+     "mean": 0.9764531254768372
+    },
+    "bitacc_jpeg60": {
+     "mean": 0.9769843816757202
+    },
+    "bitacc_jpeg70": {
+     "mean": 0.9779219031333923
+    },
+    "bitacc_jpeg80": {
+     "mean": 0.9779531359672546
+    },
+    "bitacc_jpeg90": {
+     "mean": 0.9777187705039978
+    },
+    "bitacc_webp50": {
+     "mean": 0.9472968578338623
+    },
+    "bitacc_webp75": {
+     "mean": 0.9738906025886536
+    },
+    "bitacc_blur05": {
+     "mean": 0.9836562275886536
+    },
+    "bitacc_blur1": {
+     "mean": 0.9159687757492065
+    },
+    "bitacc_blur2": {
+     "mean": 0.6461406350135803
+    },
+    "bitacc_noise001": {
+     "mean": 0.9771562218666077
+    },
+    "bitacc_noise002": {
+     "mean": 0.9760781526565552
+    },
+    "bitacc_noise005": {
+     "mean": 0.9623749852180481
+    },
+    "bitacc_median3": {
+     "mean": 0.8708906173706055
+    },
+    "bitacc_resize05": {
+     "mean": 0.8686406016349792
+    },
+    "bitacc_resize075": {
+     "mean": 0.9811406135559082
+    },
+    "bitacc_bright12": {
+     "mean": 0.9657031297683716
+    },
+    "bitacc_bright08": {
+     "mean": 0.9799218773841858
+    },
+    "bitacc_contrast12": {
+     "mean": 0.972781240940094
+    },
+    "bitacc_contrast08": {
+     "mean": 0.9792656302452087
+    },
+    "bitacc_erase10": {
+     "mean": 0.949343740940094
+    },
+    "bitacc_crop09": {
+     "mean": 0.5112812519073486
+    },
+    "bitacc_crop075": {
+     "mean": 0.49821874499320984
+    },
+    "bitacc_rotate10": {
+     "mean": 0.4975312352180481
     }
    },
    "dwtdct": {
@@ -2654,6 +2752,1208 @@
    }
   },
   "n_bitacc_endpoints": 29
+ },
+ "i6_vs_fin": {
+  "endpoints": {
+   "v1p": {
+    "psnr_rgb": {
+     "theta_hat": 0.007370037078857422,
+     "ci95_bootstrap": [
+      -0.04232531797885894,
+      0.05938450696468353
+     ],
+     "ci95_seed_t": [
+      -0.0034053257416171183,
+      0.018145399899331963
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "ssim": {
+     "theta_hat": -0.009917806893587112,
+     "ci95_bootstrap": [
+      -0.012400045651569963,
+      -0.007437875032424927
+     ],
+     "ci95_seed_t": [
+      -0.014496355753106233,
+      -0.005339258034067995
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_clean": {
+     "theta_hat": 0.02200390625,
+     "ci95_bootstrap": [
+      0.0212421875,
+      0.02276171875
+     ],
+     "ci95_seed_t": [
+      0.021562225832354325,
+      0.022445586667645675
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_jpeg10": {
+     "theta_hat": -0.277765625,
+     "ci95_bootstrap": [
+      -0.28115244140624995,
+      -0.27449609375
+     ],
+     "ci95_seed_t": [
+      -0.2819619772070964,
+      -0.2735692727929036
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_jpeg20": {
+     "theta_hat": -0.3012734375,
+     "ci95_bootstrap": [
+      -0.31273466796875,
+      -0.29368359375
+     ],
+     "ci95_seed_t": [
+      -0.31939021970152387,
+      -0.28315665529847617
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_jpeg30": {
+     "theta_hat": -0.2282734375,
+     "ci95_bootstrap": [
+      -0.24354716796875,
+      -0.21649599609375
+     ],
+     "ci95_seed_t": [
+      -0.2536799126153339,
+      -0.20286696238466612
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_jpeg40": {
+     "theta_hat": -0.1448828125,
+     "ci95_bootstrap": [
+      -0.163723046875,
+      -0.1298515625
+     ],
+     "ci95_seed_t": [
+      -0.17705443013185174,
+      -0.1127111948681483
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_jpeg50": {
+     "theta_hat": -0.0764453125,
+     "ci95_bootstrap": [
+      -0.09285166015625,
+      -0.063453125
+     ],
+     "ci95_seed_t": [
+      -0.1043892556741698,
+      -0.0485013693258302
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_jpeg60": {
+     "theta_hat": -0.0269765625,
+     "ci95_bootstrap": [
+      -0.03862919921875,
+      -0.017820019531250005
+     ],
+     "ci95_seed_t": [
+      -0.04667389699479042,
+      -0.0072792280052095815
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_jpeg70": {
+     "theta_hat": 0.002546875,
+     "ci95_bootstrap": [
+      -0.004328125,
+      0.007121191406249999
+     ],
+     "ci95_seed_t": [
+      -0.008491358293420037,
+      0.013585108293420039
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg80": {
+     "theta_hat": 0.01428515625,
+     "ci95_bootstrap": [
+      0.01152734375,
+      0.01640234375
+     ],
+     "ci95_seed_t": [
+      0.009850386664031815,
+      0.018719925835968185
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_jpeg90": {
+     "theta_hat": 0.0183671875,
+     "ci95_bootstrap": [
+      0.0169765625,
+      0.019578125
+     ],
+     "ci95_seed_t": [
+      0.016354421491443973,
+      0.020379953508556026
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_webp50": {
+     "theta_hat": -0.01796875,
+     "ci95_bootstrap": [
+      -0.03383203125,
+      -0.00653125
+     ],
+     "ci95_seed_t": [
+      -0.043957620829777916,
+      0.008020120829777912
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_webp75": {
+     "theta_hat": 0.00659765625,
+     "ci95_bootstrap": [
+      -0.0005626953124999998,
+      0.011265625
+     ],
+     "ci95_seed_t": [
+      -0.0048283436666557555,
+      0.018023656166655758
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_blur05": {
+     "theta_hat": 0.01590625,
+     "ci95_bootstrap": [
+      0.01519921875,
+      0.016578125
+     ],
+     "ci95_seed_t": [
+      0.01531964099777331,
+      0.01649285900222669
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_blur1": {
+     "theta_hat": 0.0703125,
+     "ci95_bootstrap": [
+      0.06641787109375,
+      0.07457041015625
+     ],
+     "ci95_seed_t": [
+      0.06322607552768048,
+      0.07739892447231952
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_blur2": {
+     "theta_hat": -0.13683984375,
+     "ci95_bootstrap": [
+      -0.14079326171875,
+      -0.13305068359375
+     ],
+     "ci95_seed_t": [
+      -0.14111545484133378,
+      -0.1325642326586662
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_noise001": {
+     "theta_hat": 0.02226171875,
+     "ci95_bootstrap": [
+      0.02148427734375,
+      0.02304306640625
+     ],
+     "ci95_seed_t": [
+      0.021761414788450048,
+      0.02276202271154995
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_noise002": {
+     "theta_hat": 0.02316015625,
+     "ci95_bootstrap": [
+      0.0223359375,
+      0.0239921875
+     ],
+     "ci95_seed_t": [
+      0.02254261728308292,
+      0.023777695216917083
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_noise005": {
+     "theta_hat": 0.03423046875,
+     "ci95_bootstrap": [
+      0.03292578125,
+      0.035511816406249994
+     ],
+     "ci95_seed_t": [
+      0.03256615749979826,
+      0.03589478000020174
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_median3": {
+     "theta_hat": 0.07221484375,
+     "ci95_bootstrap": [
+      0.06369521484375,
+      0.08232421875
+     ],
+     "ci95_seed_t": [
+      0.05522737191666727,
+      0.08920231558333272
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_resize05": {
+     "theta_hat": -0.026453125,
+     "ci95_bootstrap": [
+      -0.080535546875,
+      0.023601953124999995
+     ],
+     "ci95_seed_t": [
+      -0.12843483982241177,
+      0.07552858982241177
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_resize075": {
+     "theta_hat": 0.0168515625,
+     "ci95_bootstrap": [
+      0.01572646484375,
+      0.01796884765625
+     ],
+     "ci95_seed_t": [
+      0.01514180006007622,
+      0.018561324939923782
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_bright12": {
+     "theta_hat": 0.02596484375,
+     "ci95_bootstrap": [
+      0.02486318359375,
+      0.0270703125
+     ],
+     "ci95_seed_t": [
+      0.025243285120380685,
+      0.026686402379619317
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_bright08": {
+     "theta_hat": 0.01963671875,
+     "ci95_bootstrap": [
+      0.01890234375,
+      0.02036328125
+     ],
+     "ci95_seed_t": [
+      0.019164378903526035,
+      0.02010905859647396
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_contrast12": {
+     "theta_hat": 0.0243046875,
+     "ci95_bootstrap": [
+      0.023328125,
+      0.02528916015625
+     ],
+     "ci95_seed_t": [
+      0.0235235820075954,
+      0.025085792992404602
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_contrast08": {
+     "theta_hat": 0.0202890625,
+     "ci95_bootstrap": [
+      0.0195390625,
+      0.0210390625
+     ],
+     "ci95_seed_t": [
+      0.019792842298744052,
+      0.020785282701255948
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_erase10": {
+     "theta_hat": 0.0415,
+     "ci95_bootstrap": [
+      0.039718652343749994,
+      0.0431875
+     ],
+     "ci95_seed_t": [
+      0.03880493000739217,
+      0.04419506999260782
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_crop09": {
+     "theta_hat": -0.012953125,
+     "ci95_bootstrap": [
+      -0.0175861328125,
+      -0.0081640625
+     ],
+     "ci95_seed_t": [
+      -0.020414773171937024,
+      -0.005491476828062979
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_crop075": {
+     "theta_hat": 0.0018203125,
+     "ci95_bootstrap": [
+      -0.00122275390625,
+      0.004859375
+     ],
+     "ci95_seed_t": [
+      -0.0006032320676444209,
+      0.004243857067644421
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_rotate10": {
+     "theta_hat": 0.00396875,
+     "ci95_bootstrap": [
+      0.00066015625,
+      0.007347753906249999
+     ],
+     "ci95_seed_t": [
+      0.00021920842406871746,
+      0.007718291575931282
+     ],
+     "two_interval_direction": "variant"
+    }
+   },
+   "v2": {
+    "psnr_rgb": {
+     "theta_hat": -0.0007312850952148437,
+     "ci95_bootstrap": [
+      -0.04973403050899505,
+      0.05135444676876066
+     ],
+     "ci95_seed_t": [
+      -0.007039193581066458,
+      0.0055766233906367705
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "ssim": {
+     "theta_hat": -0.0047481201440095905,
+     "ci95_bootstrap": [
+      -0.0054984794057905675,
+      -0.00376622702293098
+     ],
+     "ci95_seed_t": [
+      -0.0063515999587252445,
+      -0.0031446403292939348
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_clean": {
+     "theta_hat": 0.022046875,
+     "ci95_bootstrap": [
+      0.02130859375,
+      0.02278125
+     ],
+     "ci95_seed_t": [
+      0.021650626187630587,
+      0.022443123812369414
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_jpeg10": {
+     "theta_hat": -0.2081953125,
+     "ci95_bootstrap": [
+      -0.26506279296874996,
+      -0.15107001953125002
+     ],
+     "ci95_seed_t": [
+      -0.31192284697183237,
+      -0.10446777802816763
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_jpeg20": {
+     "theta_hat": -0.1661796875,
+     "ci95_bootstrap": [
+      -0.2679416015625,
+      -0.06349501953125002
+     ],
+     "ci95_seed_t": [
+      -0.35300163133583407,
+      0.020642256335834025
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg30": {
+     "theta_hat": -0.08931640625,
+     "ci95_bootstrap": [
+      -0.17662890625,
+      -0.0014021484375000028
+     ],
+     "ci95_seed_t": [
+      -0.24960046770191432,
+      0.07096765520191431
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg40": {
+     "theta_hat": -0.043125,
+     "ci95_bootstrap": [
+      -0.09699609375,
+      0.010839941406249998
+     ],
+     "ci95_seed_t": [
+      -0.14188040166885807,
+      0.055630401668858076
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg50": {
+     "theta_hat": -0.01567578125,
+     "ci95_bootstrap": [
+      -0.046832519531250005,
+      0.0155703125
+     ],
+     "ci95_seed_t": [
+      -0.07296453523900778,
+      0.041612972739007784
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg60": {
+     "theta_hat": -0.0008984375,
+     "ci95_bootstrap": [
+      -0.018211328125,
+      0.016394921874999996
+     ],
+     "ci95_seed_t": [
+      -0.032861226574722596,
+      0.031064351574722593
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg70": {
+     "theta_hat": 0.00823828125,
+     "ci95_bootstrap": [
+      -0.0007032226562499999,
+      0.01721484375
+     ],
+     "ci95_seed_t": [
+      -0.008263660114726375,
+      0.024740222614726373
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg80": {
+     "theta_hat": 0.013296875,
+     "ci95_bootstrap": [
+      0.007753613281250001,
+      0.018918164062499996
+     ],
+     "ci95_seed_t": [
+      0.0030499769850992273,
+      0.023543773014900772
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_jpeg90": {
+     "theta_hat": 0.01736328125,
+     "ci95_bootstrap": [
+      0.01354287109375,
+      0.02123828125
+     ],
+     "ci95_seed_t": [
+      0.010338789423328361,
+      0.024387773076671636
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_webp50": {
+     "theta_hat": -0.00291015625,
+     "ci95_bootstrap": [
+      -0.02194560546875,
+      0.01647666015625
+     ],
+     "ci95_seed_t": [
+      -0.038440449269271246,
+      0.03262013676927125
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_webp75": {
+     "theta_hat": 0.00996484375,
+     "ci95_bootstrap": [
+      -0.0005708984374999995,
+      0.0204921875
+     ],
+     "ci95_seed_t": [
+      -0.009781876708621951,
+      0.029711564208621952
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_blur05": {
+     "theta_hat": 0.016015625,
+     "ci95_bootstrap": [
+      0.01538671875,
+      0.016625
+     ],
+     "ci95_seed_t": [
+      0.015772867025918187,
+      0.01625838297408181
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_blur1": {
+     "theta_hat": 0.0818828125,
+     "ci95_bootstrap": [
+      0.07947265625,
+      0.08414453125
+     ],
+     "ci95_seed_t": [
+      0.07878258876680848,
+      0.08498303623319149
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_blur2": {
+     "theta_hat": 0.0429140625,
+     "ci95_bootstrap": [
+      -0.10436728515625,
+      0.19093779296875
+     ],
+     "ci95_seed_t": [
+      -0.2271156209821864,
+      0.31294374598218644
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_noise001": {
+     "theta_hat": 0.0223515625,
+     "ci95_bootstrap": [
+      0.0216015625,
+      0.02310546875
+     ],
+     "ci95_seed_t": [
+      0.021955573778772733,
+      0.022747551221227263
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_noise002": {
+     "theta_hat": 0.023203125,
+     "ci95_bootstrap": [
+      0.0224140625,
+      0.0239921875
+     ],
+     "ci95_seed_t": [
+      0.022679625455200848,
+      0.02372662454479915
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_noise005": {
+     "theta_hat": 0.03333984375,
+     "ci95_bootstrap": [
+      0.03151171875,
+      0.03518759765624999
+     ],
+     "ci95_seed_t": [
+      0.030289073350566,
+      0.036390614149434
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_median3": {
+     "theta_hat": 0.11790625,
+     "ci95_bootstrap": [
+      0.110578125,
+      0.1252970703125
+     ],
+     "ci95_seed_t": [
+      0.10482109175088264,
+      0.13099140824911734
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_resize05": {
+     "theta_hat": 0.11235546875,
+     "ci95_bootstrap": [
+      0.1035076171875,
+      0.11908603515625
+     ],
+     "ci95_seed_t": [
+      0.09781836269074634,
+      0.12689257480925367
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_resize075": {
+     "theta_hat": 0.01792578125,
+     "ci95_bootstrap": [
+      0.01703125,
+      0.018796875
+     ],
+     "ci95_seed_t": [
+      0.016809741508445577,
+      0.01904182099155442
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_bright12": {
+     "theta_hat": 0.0247109375,
+     "ci95_bootstrap": [
+      0.02149609375,
+      0.027625
+     ],
+     "ci95_seed_t": [
+      0.01932506161709728,
+      0.030096813382902717
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_bright08": {
+     "theta_hat": 0.0197421875,
+     "ci95_bootstrap": [
+      0.01905849609375,
+      0.02043359375
+     ],
+     "ci95_seed_t": [
+      0.019439377304646677,
+      0.02004499769535332
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_contrast12": {
+     "theta_hat": 0.02337109375,
+     "ci95_bootstrap": [
+      0.02167578125,
+      0.025
+     ],
+     "ci95_seed_t": [
+      0.020691099059085068,
+      0.026051088440914937
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_contrast08": {
+     "theta_hat": 0.0203984375,
+     "ci95_bootstrap": [
+      0.01970693359375,
+      0.0211015625
+     ],
+     "ci95_seed_t": [
+      0.020113145866471057,
+      0.02068372913352894
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_erase10": {
+     "theta_hat": 0.04273828125,
+     "ci95_bootstrap": [
+      0.0405546875,
+      0.04487890625
+     ],
+     "ci95_seed_t": [
+      0.039089936904762805,
+      0.04638662559523719
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_crop09": {
+     "theta_hat": -0.0212890625,
+     "ci95_bootstrap": [
+      -0.02864853515625,
+      -0.013640527343750002
+     ],
+     "ci95_seed_t": [
+      -0.03432245984452614,
+      -0.008255665155473862
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_crop075": {
+     "theta_hat": -0.00303515625,
+     "ci95_bootstrap": [
+      -0.00811328125,
+      0.0022188476562499983
+     ],
+     "ci95_seed_t": [
+      -0.011433073182527507,
+      0.005362760682527506
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_rotate10": {
+     "theta_hat": -0.00041796875,
+     "ci95_bootstrap": [
+      -0.00713291015625,
+      0.005984375
+     ],
+     "ci95_seed_t": [
+      -0.011747640943673915,
+      0.010911703443673917
+     ],
+     "two_interval_direction": "not resolved"
+    }
+   },
+   "v3": {
+    "psnr_rgb": {
+     "theta_hat": -0.002748638153076172,
+     "ci95_bootstrap": [
+      -0.05216006498336792,
+      0.048931759929656954
+     ],
+     "ci95_seed_t": [
+      -0.006761166649235359,
+      0.0012638903430830153
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "ssim": {
+     "theta_hat": -0.005506797805428505,
+     "ci95_bootstrap": [
+      -0.0077309416372329,
+      -0.0033122013565152885
+     ],
+     "ci95_seed_t": [
+      -0.009543464186842602,
+      -0.0014701314240144082
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_clean": {
+     "theta_hat": 0.02195703125,
+     "ci95_bootstrap": [
+      0.02094140625,
+      0.0228828125
+     ],
+     "ci95_seed_t": [
+      0.020766141697031112,
+      0.02314792080296889
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_jpeg10": {
+     "theta_hat": -0.1514140625,
+     "ci95_bootstrap": [
+      -0.21954306640625001,
+      -0.08325771484375
+     ],
+     "ci95_seed_t": [
+      -0.2760190355437364,
+      -0.02680908945626359
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_jpeg20": {
+     "theta_hat": -0.1006953125,
+     "ci95_bootstrap": [
+      -0.18965390625,
+      -0.012073925781250005
+     ],
+     "ci95_seed_t": [
+      -0.26301718225463266,
+      0.061626557254632675
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg30": {
+     "theta_hat": -0.04244140625,
+     "ci95_bootstrap": [
+      -0.09130146484375,
+      0.006031445312499997
+     ],
+     "ci95_seed_t": [
+      -0.13183723866083905,
+      0.04695442616083905
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg40": {
+     "theta_hat": -0.0040703125,
+     "ci95_bootstrap": [
+      -0.0192890625,
+      0.010773925781249994
+     ],
+     "ci95_seed_t": [
+      -0.03205298569969546,
+      0.02391236069969546
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_jpeg50": {
+     "theta_hat": 0.0101875,
+     "ci95_bootstrap": [
+      0.006249902343750001,
+      0.014742285156249998
+     ],
+     "ci95_seed_t": [
+      0.0022307885863583395,
+      0.018144211413641656
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_jpeg60": {
+     "theta_hat": 0.0146953125,
+     "ci95_bootstrap": [
+      0.01287109375,
+      0.01693359375
+     ],
+     "ci95_seed_t": [
+      0.011207563107945875,
+      0.018183061892054125
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_jpeg70": {
+     "theta_hat": 0.0171953125,
+     "ci95_bootstrap": [
+      0.0156873046875,
+      0.01858984375
+     ],
+     "ci95_seed_t": [
+      0.014944754233073372,
+      0.01944587076692663
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_jpeg80": {
+     "theta_hat": 0.0195234375,
+     "ci95_bootstrap": [
+      0.018234375,
+      0.02070703125
+     ],
+     "ci95_seed_t": [
+      0.017677827006191874,
+      0.02136904799380812
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_jpeg90": {
+     "theta_hat": 0.02123828125,
+     "ci95_bootstrap": [
+      0.02009755859375,
+      0.02226181640625
+     ],
+     "ci95_seed_t": [
+      0.019739155143765418,
+      0.022737407356234578
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_webp50": {
+     "theta_hat": 0.02965625,
+     "ci95_bootstrap": [
+      0.026745996093750002,
+      0.033140625
+     ],
+     "ci95_seed_t": [
+      0.024486847074272115,
+      0.03482565292572789
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_webp75": {
+     "theta_hat": 0.02116015625,
+     "ci95_bootstrap": [
+      0.01940234375,
+      0.0228125
+     ],
+     "ci95_seed_t": [
+      0.018452624089875618,
+      0.023867688410124387
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_blur05": {
+     "theta_hat": 0.01580078125,
+     "ci95_bootstrap": [
+      0.0148828125,
+      0.01660947265625
+     ],
+     "ci95_seed_t": [
+      0.014638614210860802,
+      0.016962948289139197
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_blur1": {
+     "theta_hat": 0.07997265625,
+     "ci95_bootstrap": [
+      0.07771074218749999,
+      0.08244541015625001
+     ],
+     "ci95_seed_t": [
+      0.07687483446737997,
+      0.08307047803262002
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_blur2": {
+     "theta_hat": -0.03653125,
+     "ci95_bootstrap": [
+      -0.14158984375,
+      0.06871113281249999
+     ],
+     "ci95_seed_t": [
+      -0.23951522261732733,
+      0.1664527226173273
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_noise001": {
+     "theta_hat": 0.0221796875,
+     "ci95_bootstrap": [
+      0.0211328125,
+      0.02313671875
+     ],
+     "ci95_seed_t": [
+      0.020862112206197242,
+      0.023497262793802758
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_noise002": {
+     "theta_hat": 0.023046875,
+     "ci95_bootstrap": [
+      0.02189052734375,
+      0.02406640625
+     ],
+     "ci95_seed_t": [
+      0.02154464232018347,
+      0.024549107679816533
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_noise005": {
+     "theta_hat": 0.03339453125,
+     "ci95_bootstrap": [
+      0.0304375,
+      0.03558203125
+     ],
+     "ci95_seed_t": [
+      0.02869229972601839,
+      0.03809676277398161
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_median3": {
+     "theta_hat": 0.111046875,
+     "ci95_bootstrap": [
+      0.09849609375,
+      0.123796875
+     ],
+     "ci95_seed_t": [
+      0.08811990997694952,
+      0.13397384002305046
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_resize05": {
+     "theta_hat": 0.1250546875,
+     "ci95_bootstrap": [
+      0.121984375,
+      0.1283828125
+     ],
+     "ci95_seed_t": [
+      0.12081775140397355,
+      0.12929162359602647
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_resize075": {
+     "theta_hat": 0.01769140625,
+     "ci95_bootstrap": [
+      0.016359375,
+      0.018796875
+     ],
+     "ci95_seed_t": [
+      0.01572044610630995,
+      0.01966236639369005
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_bright12": {
+     "theta_hat": 0.0209375,
+     "ci95_bootstrap": [
+      0.017703125,
+      0.0233671875
+     ],
+     "ci95_seed_t": [
+      0.015933204376625983,
+      0.02594179562337402
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_bright08": {
+     "theta_hat": 0.01954296875,
+     "ci95_bootstrap": [
+      0.0186171875,
+      0.0203984375
+     ],
+     "ci95_seed_t": [
+      0.018443671251124033,
+      0.020642266248875968
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_contrast12": {
+     "theta_hat": 0.0197734375,
+     "ci95_bootstrap": [
+      0.01666396484375,
+      0.022222851562499996
+     ],
+     "ci95_seed_t": [
+      0.01473399853042141,
+      0.024812876469578585
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_contrast08": {
+     "theta_hat": 0.0202265625,
+     "ci95_bootstrap": [
+      0.01928115234375,
+      0.02110546875
+     ],
+     "ci95_seed_t": [
+      0.019130620639412763,
+      0.021322504360587236
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_erase10": {
+     "theta_hat": 0.0406640625,
+     "ci95_bootstrap": [
+      0.036515625,
+      0.043828125
+     ],
+     "ci95_seed_t": [
+      0.033902506792562244,
+      0.04742561820743777
+     ],
+     "two_interval_direction": "variant"
+    },
+    "bitacc_crop09": {
+     "theta_hat": -0.015703125,
+     "ci95_bootstrap": [
+      -0.02077744140625,
+      -0.010921875
+     ],
+     "ci95_seed_t": [
+      -0.023335254149606143,
+      -0.008070995850393854
+     ],
+     "two_interval_direction": "baseline"
+    },
+    "bitacc_crop075": {
+     "theta_hat": -0.005359375,
+     "ci95_bootstrap": [
+      -0.01057841796875,
+      0.00014853515624999858
+     ],
+     "ci95_seed_t": [
+      -0.014139310133097448,
+      0.0034205601330974493
+     ],
+     "two_interval_direction": "not resolved"
+    },
+    "bitacc_rotate10": {
+     "theta_hat": -0.0049609375,
+     "ci95_bootstrap": [
+      -0.012289453124999999,
+      0.002636914062499997
+     ],
+     "ci95_seed_t": [
+      -0.018186180547891118,
+      0.008264305547891116
+     ],
+     "two_interval_direction": "not resolved"
+    }
+   }
+  },
+  "direction_counts_bitacc": {
+   "v1p": {
+    "variant": 16,
+    "baseline": 8,
+    "not resolved": 5
+   },
+   "v2": {
+    "variant": 16,
+    "baseline": 2,
+    "not resolved": 11
+   },
+   "v3": {
+    "variant": 21,
+    "baseline": 2,
+    "not resolved": 6
+   }
+  },
+  "n_bitacc_endpoints": 29,
+  "fin_strength_matched_40dB": 1.9849579939618707
+ },
+ "i6_released_checkpoints": {
+  "fin64": {
+   "native": {
+    "psnr_rgb": 45.79914093017578,
+    "ssim": 0.9941230416297913,
+    "bitacc_clean": 1.0,
+    "bitacc_jpeg50": 0.9938750267028809,
+    "bitacc_jpeg30": 0.9415624737739563,
+    "bitacc_webp50": 0.872796893119812,
+    "bitacc_blur1": 0.8079843521118164,
+    "bitacc_resize05": 0.7589218616485596,
+    "bitacc_crop09": 0.5073437690734863,
+    "bitacc_rotate10": 0.49904686212539673
+   },
+   "matched_40dB": {
+    "psnr_rgb": 40.008522033691406,
+    "ssim": 0.9794995188713074,
+    "bitacc_clean": 0.977468729019165,
+    "bitacc_jpeg50": 0.9764531254768372,
+    "bitacc_jpeg30": 0.9713125228881836,
+    "bitacc_webp50": 0.9472968578338623,
+    "bitacc_blur1": 0.9159687757492065,
+    "bitacc_resize05": 0.8686406016349792,
+    "bitacc_crop09": 0.5112812519073486,
+    "bitacc_rotate10": 0.4975312352180481
+   }
+  },
+  "hidden30": {
+   "native": {
+    "psnr_rgb": 31.91321563720703,
+    "ssim": 0.951943576335907,
+    "bitacc_clean": 0.8884666562080383,
+    "bitacc_jpeg50": 0.5810999870300293,
+    "bitacc_jpeg30": 0.550266683101654,
+    "bitacc_webp50": 0.5987333059310913,
+    "bitacc_blur1": 0.8182000517845154,
+    "bitacc_resize05": 0.8025999665260315,
+    "bitacc_crop09": 0.8615999817848206,
+    "bitacc_rotate10": 0.8115666508674622
+   },
+   "matched_40dB": {
+    "psnr_rgb": 39.9344367980957,
+    "ssim": 0.9918690919876099,
+    "bitacc_clean": 0.8747332692146301,
+    "bitacc_jpeg50": 0.5280999541282654,
+    "bitacc_jpeg30": 0.5145999789237976,
+    "bitacc_webp50": 0.537933349609375,
+    "bitacc_blur1": 0.7692332863807678,
+    "bitacc_resize05": 0.7269999980926514,
+    "bitacc_crop09": 0.8127999901771545,
+    "bitacc_rotate10": 0.7592000365257263
+   }
+  },
+  "mbrs30": {
+   "status": "unavailable"
+  }
  },
  "cross_dataset_40dB": {
   "v1p": {

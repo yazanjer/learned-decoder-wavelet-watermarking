@@ -27,7 +27,8 @@ from matplotlib.lines import Line2D
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SRC = {"i4": "results/i4/i4_final.json", "i4s": "results/i4/i4_secondary.json",
-       "i5": "results/i5_interim/summary.json", "cmp": "results/i5_compare/i5_compare.json"}
+       "i5": "results/i5_interim/summary.json", "cmp": "results/i5_compare/i5_compare.json",
+       "i6": "results/i6_public/i6_public.json", "i6c": "results/i6_public/i6_fin_compare.json"}
 TAB = "manuscript/tables"
 FIG = "manuscript/figures"
 OUT = "results/analysis"
@@ -36,14 +37,15 @@ plt.rcParams.update({"font.family": "serif", "font.serif": ["DejaVu Serif"], "fo
                      "axes.linewidth": 0.6, "lines.linewidth": 1.0, "pdf.fonttype": 42, "ps.fonttype": 42})
 # Muted, print-safe palette (same family as manuscript/scripts/fig_sweep.py).
 PAL = {"v1p": "#9c6b30", "v2": "#33608c", "v3": "#4f7f86", "mbrs": "#8c3b3b", "hidden": "#7a5c8a",
-       "dwtdct": "#6b6b6b"}
-MARK = {"v1p": "s", "v2": "o", "v3": "^", "mbrs": "D", "hidden": "v", "dwtdct": "x"}
+       "dwtdct": "#6b6b6b", "fin64": "#5b7f4a"}
+MARK = {"v1p": "s", "v2": "o", "v3": "^", "mbrs": "D", "hidden": "v", "dwtdct": "x", "fin64": "P"}
 NAME = {"v1p": "V1+ (fixed CDF 9/7)", "v2": "V2 (learned lifting)", "v3": "V3 (learned coupling)",
-        "mbrs": "MBRS", "hidden": "HiDDeN", "dwtdct": "DWT-DCT"}
-SHORT = {"v1p": "V1+", "v2": "V2", "v3": "V3", "mbrs": "MBRS", "hidden": "HiDDeN", "dwtdct": "DWT-DCT"}
+        "mbrs": "MBRS", "hidden": "HiDDeN", "dwtdct": "DWT-DCT", "fin64": "FIN (released)"}
+SHORT = {"v1p": "V1+", "v2": "V2", "v3": "V3", "mbrs": "MBRS", "hidden": "HiDDeN", "dwtdct": "DWT-DCT",
+         "fin64": "FIN"}
 VARIANTS = ["v1p", "v2", "v3"]
 # HiDDeN removed from the manuscript by owner decision d-2026-10-27-m07 (I-5 model failed; FIN added after stage I-6).
-BASELINES = ["mbrs", "dwtdct"]
+BASELINES = ["mbrs", "fin64", "dwtdct"]   # fin64: released FIN checkpoint, stage I-6 (docs/PROTOCOL_I6.md)
 JPEG_Q = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 ATTACKS = (["bitacc_clean"] + [f"bitacc_jpeg{q}" for q in JPEG_Q] +
            ["bitacc_webp50", "bitacc_webp75", "bitacc_blur05", "bitacc_blur1", "bitacc_blur2",
@@ -219,12 +221,21 @@ def main():
         sm = i5["seed_means"][f"coco__matched_40dB__{v}"]
         prof[v] = {k: {"mean": sm[k]["mean"], "sd": sd(sm[k]["per_seed"]), "per_seed": sm[k]["per_seed"]}
                    for k in ["psnr_rgb", "ssim"] + ATTACKS}
+    i6 = load("i6")
     for b in BASELINES:
+        if b == "fin64":  # released checkpoint (I-6): same test split, messages and matched-40 dB rule
+            fm = i6["models"]["fin64"]
+            assert fm["status"] == "ok", "fin64 not evaluated"
+            pt = fm["points"]["coco"]["matched_40dB"]
+            prof[b] = {k: {"mean": pt[k]} for k in ["psnr_rgb", "ssim"] + ATTACKS}
+            continue
         m = ca["methods"][b]
         assert m["status"] == "ok" and not m["missing_keys"], f"baseline {b} incomplete"
         prof[b] = {k: {"mean": m["mean"][k]} for k in ["psnr_rgb", "ssim"] + ATTACKS}
     summary["i5_profile_coco_40dB"] = {"variants_seeds": ca["seeds_used"], "baseline_validity":
-                                       {b: ca["methods"][b]["validity"] for b in BASELINES}, "values": prof}
+                                       {b: (ca["methods"][b]["validity"] if b in ca["methods"] else
+                                            "released checkpoint (I-6), one model") for b in BASELINES},
+                                       "values": prof}
     rows = []
     for k in ["psnr_rgb", "ssim"] + ATTACKS:
         nd = 2 if k == "psnr_rgb" else 3
@@ -233,11 +244,12 @@ def main():
         rows.append(f"{ATTACK_LABEL[k]} & " + " & ".join(cells) + " \\\\")
         if k in ("ssim", "bitacc_clean", "bitacc_jpeg90", "bitacc_erase10") and k != ATTACKS[-1]:
             rows.append("\\midrule")
-    write(f"{TAB}/tab_a3_robustness.tex", header(["i5", "cmp"]) + "\n".join([
+    write(f"{TAB}/tab_a3_robustness.tex", header(["i5", "cmp", "i6"]) + "\n".join([
         "\\begin{table*}[t]", "\\centering",
         "\\caption{Fidelity and bit accuracy at matched 40~dB on the COCO test split (64 bits, $128\\times128$). "
         f"WMNet variants: mean $\\pm$ SD over seeds {ca['seeds_used'][0]}--{ca['seeds_used'][-1]}. MBRS: one "
-        "trained model (seed 0); DWT-DCT: fixed transform without training, which embeds in the U channel only and "
+        "trained model (seed 0); FIN: checkpoint released by its authors (trained on DIV2K), residual scaled by "
+        f"{i6['models']['fin64']['strengths_from_val']['matched_40dB']:.2f} to reach 40~dB; DWT-DCT: fixed transform without training, which embeds in the U channel only and "
         "was designed for images of at least $256\\times256$ pixels; baselines descriptive only.}",
         "\\label{tab:robustness}", "\\small",
         "\\begin{tabular}{l" + "c" * len(VARIANTS + BASELINES) + "}", "\\toprule",
@@ -281,6 +293,64 @@ def main():
         "\\begin{tabular}{lrrr}", "\\toprule",
         "Condition & V1+ $-$ MBRS & V2 $-$ MBRS & V3 $-$ MBRS \\\\", "\\midrule", *rows, "\\midrule",
         count_row, "\\bottomrule", "\\end{tabular}", "\\end{table}", ""]))
+
+    # ---- Table A7: variant - released FIN checkpoint with both intervals (stage I-6) ----
+    i6c = load("i6c")
+    fdiff, a7, rows = i6c["differences"], {}, []
+    dmap = {"variant higher": "variant", "FIN higher": "baseline", "not resolved": "not resolved"}
+    for k in ["psnr_rgb", "ssim"] + ATTACKS:
+        cells = []
+        for v in VARIANTS:
+            d = fdiff[f"{v}-fin64"][k]
+            dirn = direction(d["ci95_hier_bootstrap"], d["seed_paired_t_ci95"])
+            assert dirn == dmap[d["direction"]], f"direction mismatch {v} {k}"
+            a7.setdefault(v, {})[k] = {"theta_hat": d["theta_hat"], "ci95_bootstrap": d["ci95_hier_bootstrap"],
+                                       "ci95_seed_t": d["seed_paired_t_ci95"], "two_interval_direction": dirn}
+            mark = {"variant": "$^{+}$", "baseline": "$^{-}$", "not resolved": ""}[dirn]
+            cells.append((f"{d['theta_hat']:+.2f}" if k == "psnr_rgb" else pp(d["theta_hat"])) + mark)
+        rows.append(f"{ATTACK_LABEL[k]} & " + " & ".join(cells) + " \\\\")
+    counts7 = {v: {c: sum(a7[v][k]["two_interval_direction"] == c for k in ATTACKS)
+                   for c in ("variant", "baseline", "not resolved")} for v in VARIANTS}
+    summary["i6_vs_fin"] = {"endpoints": a7, "direction_counts_bitacc": counts7, "n_bitacc_endpoints": len(ATTACKS),
+                            "fin_strength_matched_40dB": i6["models"]["fin64"]["strengths_from_val"]["matched_40dB"]}
+    write(f"{TAB}/tab_a7_vs_fin.tex", header(["i6", "i6c"]) + "\n".join([
+        "\\begin{table}[t]", "\\centering",
+        "\\caption{Image-level paired difference, variant $-$ FIN, at matched 40~dB on the COCO test split (PSNR in "
+        "dB, otherwise percentage points). $^{+}$: variant higher and $^{-}$: FIN higher, where the two-level "
+        "bootstrap and the seed-level paired $t$ 95\\,\\% intervals both exclude zero; unmarked: not resolved. FIN: "
+        "the checkpoint released by its authors (64 bits, trained on DIV2K), residual scaled to 40~dB; one model; "
+        "descriptive only.}",
+        "\\label{tab:vsfin}", "\\small", "\\begin{tabular}{lrrr}", "\\toprule",
+        "Condition & V1+ $-$ FIN & V2 $-$ FIN & V3 $-$ FIN \\\\", "\\midrule", *rows, "\\midrule",
+        "Counts ($+$/$-$/n.r.) & " + " & ".join(f"{counts7[v]['variant']}/{counts7[v]['baseline']}/"
+                                               f"{counts7[v]['not resolved']}" for v in VARIANTS) + " \\\\",
+        "\\bottomrule", "\\end{tabular}", "\\end{table}", ""]))
+
+    # ---- Table A8: released checkpoints at matched 40 dB and at native strength (stage I-6) ----
+    ref_keys = ["psnr_rgb", "ssim", "bitacc_clean", "bitacc_jpeg50", "bitacc_jpeg30", "bitacc_webp50",
+                "bitacc_blur1", "bitacc_resize05", "bitacc_crop09", "bitacc_rotate10"]
+    a8, rows = {}, []
+    names8 = {"fin64": "FIN (64 bits)", "hidden30": "HiDDeN (30 bits)", "mbrs30": "MBRS (30 bits)"}
+    for m, r in i6["models"].items():
+        if r["status"] != "ok":
+            rows.append(f"{names8[m]} & \\multicolumn{{{len(ref_keys) + 1}}}{{l}}{{not evaluated: checkpoint "
+                        f"unavailable}} \\\\")
+            a8[m] = {"status": r["status"]}
+            continue
+        for lab, tag in (("native", "native"), ("matched_40dB", "40 dB")):
+            pt = r["points"]["coco"][lab]
+            a8.setdefault(m, {})[lab] = {k: pt[k] for k in ref_keys}
+            cells = [f"{pt['psnr_rgb']:.2f}"] + [f"{pt[k]:.3f}" for k in ref_keys[1:]]
+            rows.append(f"{names8[m]} & {tag} & " + " & ".join(cells) + " \\\\")
+    summary["i6_released_checkpoints"] = a8
+    write(f"{TAB}/tab_a8_released.tex", header(["i6"]) + "\n".join([
+        "\\begin{table*}[t]", "\\centering",
+        "\\caption{Publicly released checkpoints (FIN: authors' release; HiDDeN: community implementation), evaluated without retraining on the COCO test split at "
+        "their native strength and with the residual scaled to 40~dB. One model each; HiDDeN carries 30 bits, so "
+        "its row is a reference at its native payload and is not comparable bit for bit. Descriptive only.}",
+        "\\label{tab:released}", "\\small", "\\begin{tabular}{ll" + "c" * len(ref_keys) + "}", "\\toprule",
+        "Model & Point & " + " & ".join(ATTACK_LABEL[k] for k in ref_keys) + " \\\\", "\\midrule", *rows,
+        "\\bottomrule", "\\end{tabular}", "\\end{table*}", ""]))
 
     # ---- Table A5: cross-dataset transfer (COCO-trained models, matched 40 dB) ----
     cross_keys = ["psnr_rgb", "ssim", "bitacc_clean", "bitacc_jpeg30", "bitacc_jpeg50", "bitacc_jpeg70",
@@ -387,7 +457,7 @@ def main():
         ax.errorbar(i + 0.12, statistics.mean(q50[v]), yerr=sd(q50[v]), fmt=MARK[v], color=PAL[v], ms=4,
                     capsize=2, lw=0.8, zorder=2)
     ax.axhline(0.96, color="0.4", lw=0.5, ls="--")
-    ax.text(2.35, 0.962, "card target 0.96", fontsize=6, ha="right", va="bottom", color="0.3")
+    ax.text(2.35, 0.962, "0.96", fontsize=6, ha="right", va="bottom", color="0.3")
     ax.set_xticks(list(xs))
     ax.set_xticklabels([NAME[v] for v in VARIANTS], fontsize=6.5)
     ax.set_xlim(-0.3, 2.4)

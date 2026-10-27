@@ -1,8 +1,9 @@
 # Learned decoder-side wavelet transforms for deep image watermarking
 
 Code, configurations, split lists and evaluation outputs for the article
-*Learned Decoder-Side Wavelet Transforms for Deep Image Watermarking: a Controlled Study at Matched Image Fidelity*
-(submitted to *Signal Processing: Image Communication*).
+*Learned Decoder-Side Wavelet Transforms for Deep Image Watermarking: A Controlled Study at Matched Image Fidelity*
+(manuscript in preparation for the *International Journal of Intelligent Engineering and Systems*).
+Supplementary tables and analyses are listed in [`docs/SUPPLEMENT.md`](docs/SUPPLEMENT.md).
 
 The encoder embeds a 64-bit message in the deepest sub-bands of a fixed wavelet transform (CDF 9/7 or Haar);
 the decoder analyses the received image with a learned multi-level transform that is initialised at the encoder's

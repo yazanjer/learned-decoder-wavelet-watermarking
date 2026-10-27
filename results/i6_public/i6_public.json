@@ -1,0 +1,565 @@
+{
+ "protocol": "docs/PROTOCOL_I6.md",
+ "attacks": [
+  "clean",
+  "jpeg10",
+  "jpeg20",
+  "jpeg30",
+  "jpeg40",
+  "jpeg50",
+  "jpeg60",
+  "jpeg70",
+  "jpeg80",
+  "jpeg90",
+  "webp50",
+  "webp75",
+  "blur05",
+  "blur1",
+  "blur2",
+  "noise001",
+  "noise002",
+  "noise005",
+  "median3",
+  "resize05",
+  "resize075",
+  "crop075",
+  "crop09",
+  "bright12",
+  "bright08",
+  "contrast12",
+  "contrast08",
+  "rotate10",
+  "erase10"
+ ],
+ "required": [
+  "fin64"
+ ],
+ "message_seed": 0,
+ "eval_batch": 50,
+ "versions": {
+  "torch": "2.8.0+cu128",
+  "torchvision": "0.23.0+cu128",
+  "numpy": "2.1.2",
+  "scipy": "1.14.1",
+  "pillow": "11.0.0",
+  "kornia": "0.9.0",
+  "gdown": null
+ },
+ "config": {
+  "bits_default": 64,
+  "target_psnr": 40.0,
+  "operating_points": [
+   "matched_40dB",
+   "native"
+  ]
+ },
+ "models": {
+  "fin64": {
+   "repo": "fin",
+   "bits": 64,
+   "checkpoint": "experiments/JPEG/FED.pt",
+   "training_data": "DIV2K",
+   "payload_matched": true,
+   "pinned_commit": "f77222f",
+   "licence": "none (comparison only)",
+   "checkpoint_sha256": "c4c10216637bb418bdd8cd4bed8f2aef59533802c4668c593d17378802c64c08",
+   "status": "ok",
+   "strengths_from_val": {
+    "matched_40dB": 1.9849579939618707,
+    "native": 1.0
+   },
+   "points": {
+    "coco": {
+     "matched_40dB": {
+      "strength": 1.9849579939618707,
+      "psnr_rgb": 40.008522033691406,
+      "psnr_y": 40.00899124145508,
+      "ssim": 0.9794995188713074,
+      "bitacc_clean": 0.977468729019165,
+      "bitacc_jpeg10": 0.8370468616485596,
+      "bitacc_jpeg20": 0.9517499804496765,
+      "bitacc_jpeg30": 0.9713125228881836,
+      "bitacc_jpeg40": 0.9758594036102295,
+      "bitacc_jpeg50": 0.9764531254768372,
+      "bitacc_jpeg60": 0.9769843816757202,
+      "bitacc_jpeg70": 0.9779219031333923,
+      "bitacc_jpeg80": 0.9779531359672546,
+      "bitacc_jpeg90": 0.9777187705039978,
+      "bitacc_webp50": 0.9472968578338623,
+      "bitacc_webp75": 0.9738906025886536,
+      "bitacc_blur05": 0.9836562275886536,
+      "bitacc_blur1": 0.9159687757492065,
+      "bitacc_blur2": 0.6461406350135803,
+      "bitacc_noise001": 0.9771562218666077,
+      "bitacc_noise002": 0.9760781526565552,
+      "bitacc_noise005": 0.9623749852180481,
+      "bitacc_median3": 0.8708906173706055,
+      "bitacc_resize05": 0.8686406016349792,
+      "bitacc_resize075": 0.9811406135559082,
+      "bitacc_crop075": 0.49821874499320984,
+      "bitacc_crop09": 0.5112812519073486,
+      "bitacc_bright12": 0.9657031297683716,
+      "bitacc_bright08": 0.9799218773841858,
+      "bitacc_contrast12": 0.972781240940094,
+      "bitacc_contrast08": 0.9792656302452087,
+      "bitacc_rotate10": 0.4975312352180481,
+      "bitacc_erase10": 0.949343740940094
+     },
+     "native": {
+      "strength": 1.0,
+      "psnr_rgb": 45.79914093017578,
+      "psnr_y": 45.80088424682617,
+      "ssim": 0.9941230416297913,
+      "bitacc_clean": 1.0,
+      "bitacc_jpeg10": 0.6982969045639038,
+      "bitacc_jpeg20": 0.8561718463897705,
+      "bitacc_jpeg30": 0.9415624737739563,
+      "bitacc_jpeg40": 0.9792187213897705,
+      "bitacc_jpeg50": 0.9938750267028809,
+      "bitacc_jpeg60": 0.9988593459129333,
+      "bitacc_jpeg70": 0.9998593926429749,
+      "bitacc_jpeg80": 1.0,
+      "bitacc_jpeg90": 1.0,
+      "bitacc_webp50": 0.872796893119812,
+      "bitacc_webp75": 0.9474999904632568,
+      "bitacc_blur05": 0.999218761920929,
+      "bitacc_blur1": 0.8079843521118164,
+      "bitacc_blur2": 0.5775781273841858,
+      "bitacc_noise001": 1.0,
+      "bitacc_noise002": 0.9991562366485596,
+      "bitacc_noise005": 0.9315468668937683,
+      "bitacc_median3": 0.7819374799728394,
+      "bitacc_resize05": 0.7589218616485596,
+      "bitacc_resize075": 0.944937527179718,
+      "bitacc_crop075": 0.4985937476158142,
+      "bitacc_crop09": 0.5073437690734863,
+      "bitacc_bright12": 0.9819999933242798,
+      "bitacc_bright08": 1.0,
+      "bitacc_contrast12": 0.9861875176429749,
+      "bitacc_contrast08": 1.0,
+      "bitacc_rotate10": 0.49904686212539673,
+      "bitacc_erase10": 0.9683437347412109
+     }
+    }
+   },
+   "seconds": 118.07968163490295,
+   "message_seed": 0,
+   "preserved": true
+  },
+  "hidden30": {
+   "repo": "hidden",
+   "bits": 30,
+   "checkpoint": "experiments/combined-noise/checkpoints/combined-noise--epoch-400.pyt",
+   "training_data": "COCO (10,000 images)",
+   "payload_matched": false,
+   "pinned_commit": "556f76d",
+   "licence": "MIT",
+   "checkpoint_sha256": "ef9741110627561a634bf54a9fae82d3c3b8b4621596a5770f5aa8f8a31b532d",
+   "status": "ok",
+   "strengths_from_val": {
+    "matched_40dB": 0.39491282356902957,
+    "native": 1.0
+   },
+   "points": {
+    "coco": {
+     "matched_40dB": {
+      "strength": 0.39491282356902957,
+      "psnr_rgb": 39.9344367980957,
+      "psnr_y": 41.964725494384766,
+      "ssim": 0.9918690919876099,
+      "bitacc_clean": 0.8747332692146301,
+      "bitacc_jpeg10": 0.5038999915122986,
+      "bitacc_jpeg20": 0.5094999670982361,
+      "bitacc_jpeg30": 0.5145999789237976,
+      "bitacc_jpeg40": 0.5182666778564453,
+      "bitacc_jpeg50": 0.5280999541282654,
+      "bitacc_jpeg60": 0.5313667058944702,
+      "bitacc_jpeg70": 0.5405333042144775,
+      "bitacc_jpeg80": 0.5591999888420105,
+      "bitacc_jpeg90": 0.5982666611671448,
+      "bitacc_webp50": 0.537933349609375,
+      "bitacc_webp75": 0.5589666962623596,
+      "bitacc_blur05": 0.8541333079338074,
+      "bitacc_blur1": 0.7692332863807678,
+      "bitacc_blur2": 0.6080666780471802,
+      "bitacc_noise001": 0.8228332996368408,
+      "bitacc_noise002": 0.7412667274475098,
+      "bitacc_noise005": 0.59170001745224,
+      "bitacc_median3": 0.7598667144775391,
+      "bitacc_resize05": 0.7269999980926514,
+      "bitacc_resize075": 0.7974333763122559,
+      "bitacc_crop075": 0.7733666896820068,
+      "bitacc_crop09": 0.8127999901771545,
+      "bitacc_bright12": 0.868566632270813,
+      "bitacc_bright08": 0.870366632938385,
+      "bitacc_contrast12": 0.8669999837875366,
+      "bitacc_contrast08": 0.8696333169937134,
+      "bitacc_rotate10": 0.7592000365257263,
+      "bitacc_erase10": 0.8711999654769897
+     },
+     "native": {
+      "strength": 1.0,
+      "psnr_rgb": 31.91321563720703,
+      "psnr_y": 33.929744720458984,
+      "ssim": 0.951943576335907,
+      "bitacc_clean": 0.8884666562080383,
+      "bitacc_jpeg10": 0.5078333020210266,
+      "bitacc_jpeg20": 0.5285000205039978,
+      "bitacc_jpeg30": 0.550266683101654,
+      "bitacc_jpeg40": 0.5685666799545288,
+      "bitacc_jpeg50": 0.5810999870300293,
+      "bitacc_jpeg60": 0.5928666591644287,
+      "bitacc_jpeg70": 0.6129666566848755,
+      "bitacc_jpeg80": 0.6416999697685242,
+      "bitacc_jpeg90": 0.7129999995231628,
+      "bitacc_webp50": 0.5987333059310913,
+      "bitacc_webp75": 0.6538333296775818,
+      "bitacc_blur05": 0.8849000334739685,
+      "bitacc_blur1": 0.8182000517845154,
+      "bitacc_blur2": 0.7083333730697632,
+      "bitacc_noise001": 0.8792333006858826,
+      "bitacc_noise002": 0.854699969291687,
+      "bitacc_noise005": 0.7220999598503113,
+      "bitacc_median3": 0.8055999875068665,
+      "bitacc_resize05": 0.8025999665260315,
+      "bitacc_resize075": 0.8472332954406738,
+      "bitacc_crop075": 0.8280999660491943,
+      "bitacc_crop09": 0.8615999817848206,
+      "bitacc_bright12": 0.8855666518211365,
+      "bitacc_bright08": 0.8876999616622925,
+      "bitacc_contrast12": 0.8857332468032837,
+      "bitacc_contrast08": 0.8879666924476624,
+      "bitacc_rotate10": 0.8115666508674622,
+      "bitacc_erase10": 0.8880999684333801
+     }
+    }
+   },
+   "seconds": 107.05497217178345,
+   "message_seed": 0,
+   "preserved": true
+  },
+  "mbrs30": {
+   "repo": "mbrs",
+   "bits": 30,
+   "checkpoint": "MBRS_Diffusion_128_m30/models/EC_114.pth (Google Drive)",
+   "training_data": "ImageNet",
+   "payload_matched": false,
+   "pinned_commit": "2bab0df",
+   "licence": "none (comparison only)",
+   "status": "unavailable",
+   "error": "FileNotFoundError('expected exactly one MBRS_Diffusion_128_m30/models/EC_114.pth in the Drive download, found 0: []')",
+   "trace": "Traceback (most recent call last):\n  File \"/workspace/repo/src/trackd_wm/i6.py\", line 207, in step_i6_public\n    wm, ck = load_public(name, Path(cfg.work) / \"repos\", dev)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/repo/src/trackd_wm/i6.py\", line 99, in load_public\n    ck = fetch_mbrs30(repos / \"mbrs_drive\")\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/repo/src/trackd_wm/i6.py\", line 73, in fetch_mbrs30\n    return mbrs30_path(dest)\n           ^^^^^^^^^^^^^^^^^\n  File \"/workspace/repo/src/trackd_wm/i6.py\", line 82, in mbrs30_path\n    raise FileNotFoundError(f\"expected exactly one {MBRS30_PROJECT}/models/EC_{MBRS30_EPOCH}.pth in the Drive \"\nFileNotFoundError: expected exactly one MBRS_Diffusion_128_m30/models/EC_114.pth in the Drive download, found 0: []\n",
+   "seconds": 15.939343452453613,
+   "message_seed": 0,
+   "preserved": true
+  }
+ },
+ "splits": {
+  "val": {
+   "split_list": "src/trackd_wm/splits/coco_val.txt",
+   "sha256": "d92aa090d428e7657374a3633008095242e19ba30f3c839638222ecf6cefee62",
+   "images": 1000
+  },
+  "test": {
+   "split_list": "src/trackd_wm/splits/coco_test.txt",
+   "sha256": "19f1d122007d83706a2f71e21ac782b42b1a703309eb2ecbfe738fbd95fc6876",
+   "images": 1000
+  }
+ },
+ "attack_smoke": {
+  "attacks": 29,
+  "images": 4,
+  "status": "ok"
+ },
+ "provenance": {
+  "commit": "144cd6b66e4c7e198d7ced9dfbce2d0fe196cc08",
+  "trackd_wm": "0.1.0.dev0",
+  "torch": "2.8.0+cu128",
+  "device": "NVIDIA A40",
+  "seed": 0,
+  "pod": "aab3gd842nxiru",
+  "time_utc": "2026-10-27T13:27:04Z",
+  "config": {
+   "seed": 0,
+   "image_size": 128,
+   "bits": 64,
+   "work": "/workspace/trackd",
+   "data_root": "/workspace/trackd/data",
+   "methods": [
+    "proposed",
+    "cdf97",
+    "coupling",
+    "hidden",
+    "fin",
+    "mbrs",
+    "cin"
+   ],
+   "g3_epochs": 20,
+   "eval_every": 2,
+   "target_psnr": 40.0,
+   "eval_batch": 50,
+   "method_timeout_s": null,
+   "max_steps": null,
+   "n_candidates": {
+    "train": 13000,
+    "val": 1300
+   },
+   "coco": {
+    "train": "http://images.cocodataset.org/zips/train2017.zip",
+    "val": "http://images.cocodataset.org/zips/val2017.zip"
+   },
+   "wmnet": {
+    "lr": 0.001,
+    "batch_size": 16,
+    "num_workers": 4,
+    "strict_determinism": true,
+    "common": {
+     "bits": 64,
+     "image_size": 128,
+     "levels": 2,
+     "lift_hidden": 16,
+     "attention": true
+    },
+    "variants": {
+     "proposed": "lift_learned",
+     "cdf97": "lift_cdf97",
+     "coupling": "coupling_matched",
+     "v1": "lift_cdf97",
+     "v2": "lift_learned",
+     "v3": "coupling_haar_matched",
+     "v0": "lift_learned",
+     "v1p": "lift_cdf97",
+     "v2l1": "lift_learned",
+     "v2l3": "lift_learned",
+     "v2o2": "lift_learned",
+     "v2s": "lift_learned"
+    },
+    "freeze_encoder_transform": [
+     "v2",
+     "v3",
+     "v2l1",
+     "v2l3",
+     "v2o2",
+     "v2s"
+    ],
+    "model_overrides": {
+     "v2l1": {
+      "levels": 1
+     },
+     "v2l3": {
+      "levels": 3
+     },
+     "v2s": {
+      "attention": false
+     }
+    },
+    "decoder_frontend_hidden": {
+     "v1p": 98
+    }
+   },
+   "i2": {
+    "variants": [
+     "v1",
+     "v2",
+     "v3"
+    ],
+    "objective": "psnr_projection",
+    "target_psnr": 40.0,
+    "epochs": 20,
+    "smoke_steps": 5,
+    "smoke_images": 50,
+    "bootstrap": 10000,
+    "go_margin": 0.01
+   },
+   "i3a": {
+    "variants": [
+     "v0",
+     "v1p"
+    ],
+    "recon_images": 200,
+    "power_iters": 30,
+    "power_images": 4,
+    "margin": 0.01
+   },
+   "i2b": {
+    "methods": [
+     "hidden",
+     "mbrs",
+     "cin"
+    ]
+   },
+   "i3b": {
+    "variants": [
+     "v2l1",
+     "v2l3",
+     "v2o2",
+     "v2s"
+    ],
+    "objective_override": {
+     "v2o2": "dual_ascent"
+    },
+    "margin": 0.01
+   },
+   "i4": {
+    "variants": [
+     "v1p",
+     "v2",
+     "v3"
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "targets": [
+     35.0,
+     40.0,
+     45.0
+    ],
+    "bootstrap": 10000,
+    "margin": 0.01,
+    "message_seed": 0
+   },
+   "i4_recover": {
+    "recover": [
+     "v1p_s2",
+     "v2_s2",
+     "v3_s2",
+     "v1p_s3",
+     "v2_s3",
+     "v3_s3",
+     "v1p_s4",
+     "v2_s4"
+    ],
+    "new": [
+     "v3_s4"
+    ]
+   },
+   "i5": {
+    "bootstrap": 10000,
+    "inputs": {
+     "A": [
+      "i4_s0_v1p",
+      "i4_s0_v2",
+      "i4_s0_v3",
+      "i4_s1_v1p",
+      "i4_s1_v2",
+      "i4_s1_v3",
+      "i4_s2_v1p",
+      "i4_s2_v2",
+      "i4_s2_v3",
+      "i4_s3_v1p",
+      "i4_s3_v2",
+      "i4_s3_v3"
+     ],
+     "B": [
+      "g3_mbrs"
+     ],
+     "C": [
+      "g3_hidden"
+     ]
+    },
+    "input_sha256": {
+     "i4_s2_v1p": "8899379a9e6e13e2799a00530f928a036f35ee0fb9314f84c23c820a6b124349",
+     "i4_s2_v2": "fa55c404a6fb4fb2d4a4a238aeaa314e8001442190facdf728ea4ae943d70c40",
+     "i4_s2_v3": "8e351ead0f975dcaab80195bbcff42ff6c1cea52bdd19d9103a8dd179257f813",
+     "i4_s3_v1p": "2a575e183cd6a1c7fc0571c320a0a22685e066d3dd258278c1bca0c208a66460",
+     "i4_s3_v2": "fd08dda673f970e45446ad642e855c1e740c6a6fd28808ae2204524b8dc102a1",
+     "i4_s3_v3": "f9c4be6cdb26244e0c139e74ac77405b423d7543963f7ffbe60f2b7e50416950"
+    },
+    "m1": {
+     "variants": [
+      "v1p",
+      "v2",
+      "v3"
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "targets": [
+      35.0,
+      40.0,
+      45.0
+     ],
+     "comparisons": [
+      [
+       "v2",
+       "v1p"
+      ],
+      [
+       "v3",
+       "v1p"
+      ],
+      [
+       "v2",
+       "v3"
+      ]
+     ],
+     "recon_images": 50,
+     "power_iters": 10
+    },
+    "div2k": {
+     "url": "http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_HR.zip",
+     "n_images": 100,
+     "tiles_per_image": 10,
+     "seed": 0
+    },
+    "baselines": {
+     "start_epoch": 20,
+     "total_epochs": 120,
+     "archive_every": 10,
+     "target_psnr": 40.0,
+     "validity": {
+      "mbrs": "preliminary: single seed (0); 120 epochs (20 pilot + 100 continued); discriminator re-initialised at epoch 20 and optimiser state not restored (MBRS's own continuation restores none); about 74 times the parameters of WMNet",
+      "hidden": "preliminary: single seed (0); 120 epochs (20 pilot + 100 continued with HiDDeN's own continue command; models, optimisers and discriminator restored)"
+     },
+     "seed_validity": {
+      "mbrs": "preliminary: further training seed (I5_TRAIN_SEED); 120 epochs (20 from initialisation with the pilot G3 settings + 100 continued); discriminator re-initialised at epoch 20 and optimiser state not restored, as for seed 0; about 74 times the parameters of WMNet"
+     }
+    },
+    "compare": {
+     "branches": {
+      "m1": "r/pilot-p1-i5_m1",
+      "mbrs": "r/pilot-p1-i5_mbrs",
+      "hidden": "r/pilot-p1-i5_hidden",
+      "dwtdct": "r/pilot-p1-i5_dwtdct",
+      "mbrs_s1": "r/pilot-p1-i5_mbrs_s1"
+     },
+     "baselines": [
+      "mbrs",
+      "hidden",
+      "dwtdct"
+     ],
+     "extra_seeds": {
+      "mbrs": [
+       1
+      ]
+     },
+     "strength": "matched_40dB",
+     "table_attacks": [
+      "clean",
+      "jpeg50",
+      "jpeg75",
+      "webp50",
+      "blur1",
+      "noise002",
+      "median3",
+      "resize05",
+      "crop075",
+      "bright12",
+      "contrast08",
+      "rotate10",
+      "erase10"
+     ]
+    }
+   }
+  }
+ },
+ "status": "ok",
+ "missing_required": []
+}
