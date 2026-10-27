@@ -1,0 +1,279 @@
+{
+ "source_commit": "50b20df54c1efd6c43c38bdf3d6cd0867bcbb971",
+ "analysis": {
+  "family_primary": {
+   "H1": {
+    "theta_hat": 0.06076953187584877,
+    "ci95": [
+     0.022733692033216357,
+     0.09891112949699161
+    ],
+    "ci90": [
+     0.027370703034102918,
+     0.0953599564731121
+    ],
+    "seed_means_A": [
+     0.9898281097412109,
+     0.9934375286102295,
+     0.9359999895095825,
+     0.9238437414169312
+    ],
+    "seed_means_B": [
+     0.8756250143051147,
+     0.9117656350135803,
+     0.898812472820282,
+     0.9138281345367432
+    ],
+    "seed_diffs": [
+     0.11420312523841858,
+     0.08167187869548798,
+     0.03718750178813934,
+     0.010015624575316906
+    ],
+    "mixed_model": {
+     "effect": 0.06076953125066479,
+     "se": 0.020028161292803603,
+     "p": 0.0024117112416633616,
+     "converged": true
+    },
+    "p_holm": 0.004823422483326723,
+    "decision": "advantage",
+    "ci95_half_width": 0.03808871873188763,
+    "precise_enough": false
+   },
+   "H2": {
+    "theta_hat": -0.0258632805198431,
+    "ci95": [
+     -0.055601953994482756,
+     0.003652539063477886
+    ],
+    "ci90": [
+     -0.05122656021267176,
+     0.0018402344314381424
+    ],
+    "seed_means_A": [
+     0.9898281097412109,
+     0.9934375286102295,
+     0.9359999895095825,
+     0.9238437414169312
+    ],
+    "seed_means_B": [
+     0.9831406474113464,
+     0.9934062361717224,
+     0.9825937747955322,
+     0.9874218702316284
+    ],
+    "seed_diffs": [
+     0.006687500048428774,
+     3.125000148429535e-05,
+     -0.04659375175833702,
+     -0.06357812136411667
+    ],
+    "mixed_model": {
+     "effect": -0.02586328125044178,
+     "se": 0.01816738810780224,
+     "p": 0.1545593059354043,
+     "converged": true
+    },
+    "p_holm": 0.1545593059354043,
+    "decision": "inconclusive",
+    "ci95_half_width": 0.02962724652898032,
+    "precise_enough": false
+   }
+  },
+  "secondary": {},
+  "seeds_used": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "seeds_complete": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "descriptive_and_sensitivity": {
+  "H1": {
+   "seed_paired_t_ci95": [
+    -0.012864327062258568,
+    0.1344033908139561
+   ],
+   "wilcoxon_seed_averaged_conditional_p": 0.0,
+   "empirical_logit_lmm": {
+    "effect": 1.260570541176379,
+    "se": 0.5291144923803474,
+    "p": 0.017199481153868785,
+    "converged": true
+   }
+  },
+  "H2": {
+   "seed_paired_t_ci95": [
+    -0.08084874237884415,
+    0.029122181339157956
+   ],
+   "wilcoxon_seed_averaged_conditional_p": 0.0,
+   "empirical_logit_lmm": {
+    "effect": -0.6549919793144054,
+    "se": 0.5340180719695774,
+    "p": 0.2199973257462544,
+    "converged": true
+   }
+  }
+ },
+ "provenance": {
+  "commit": "504af6d21679fc43f59d622f2620ff414fbc6963",
+  "trackd_wm": "0.1.0.dev0",
+  "torch": "2.8.0+cu128",
+  "device": "cpu",
+  "seed": 0,
+  "pod": "8vzxmr6tz3zoye",
+  "time_utc": "2026-10-23T18:48:32Z",
+  "config": {
+   "seed": 0,
+   "image_size": 128,
+   "bits": 64,
+   "work": "/workspace/trackd",
+   "data_root": "/workspace/trackd/data",
+   "methods": [
+    "proposed",
+    "cdf97",
+    "coupling",
+    "hidden",
+    "fin",
+    "mbrs",
+    "cin"
+   ],
+   "g3_epochs": 20,
+   "eval_every": 2,
+   "target_psnr": 40.0,
+   "eval_batch": 50,
+   "method_timeout_s": null,
+   "max_steps": null,
+   "n_candidates": {
+    "train": 13000,
+    "val": 1300
+   },
+   "coco": {
+    "train": "http://images.cocodataset.org/zips/train2017.zip",
+    "val": "http://images.cocodataset.org/zips/val2017.zip"
+   },
+   "wmnet": {
+    "lr": 0.001,
+    "batch_size": 16,
+    "num_workers": 4,
+    "strict_determinism": true,
+    "common": {
+     "bits": 64,
+     "image_size": 128,
+     "levels": 2,
+     "lift_hidden": 16,
+     "attention": true
+    },
+    "variants": {
+     "proposed": "lift_learned",
+     "cdf97": "lift_cdf97",
+     "coupling": "coupling_matched",
+     "v1": "lift_cdf97",
+     "v2": "lift_learned",
+     "v3": "coupling_haar_matched",
+     "v0": "lift_learned",
+     "v1p": "lift_cdf97",
+     "v2l1": "lift_learned",
+     "v2l3": "lift_learned",
+     "v2o2": "lift_learned",
+     "v2s": "lift_learned"
+    },
+    "freeze_encoder_transform": [
+     "v2",
+     "v3",
+     "v2l1",
+     "v2l3",
+     "v2o2",
+     "v2s"
+    ],
+    "model_overrides": {
+     "v2l1": {
+      "levels": 1
+     },
+     "v2l3": {
+      "levels": 3
+     },
+     "v2s": {
+      "attention": false
+     }
+    },
+    "decoder_frontend_hidden": {
+     "v1p": 98
+    }
+   },
+   "i2": {
+    "variants": [
+     "v1",
+     "v2",
+     "v3"
+    ],
+    "objective": "psnr_projection",
+    "target_psnr": 40.0,
+    "epochs": 20,
+    "smoke_steps": 5,
+    "smoke_images": 50,
+    "bootstrap": 10000,
+    "go_margin": 0.01
+   },
+   "i3a": {
+    "variants": [
+     "v0",
+     "v1p"
+    ],
+    "recon_images": 200,
+    "power_iters": 30,
+    "power_images": 4,
+    "margin": 0.01
+   },
+   "i2b": {
+    "methods": [
+     "hidden",
+     "mbrs",
+     "cin"
+    ]
+   },
+   "i3b": {
+    "variants": [
+     "v2l1",
+     "v2l3",
+     "v2o2",
+     "v2s"
+    ],
+    "objective_override": {
+     "v2o2": "dual_ascent"
+    },
+    "margin": 0.01
+   },
+   "i4": {
+    "variants": [
+     "v1p",
+     "v2",
+     "v3"
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "targets": [
+     35.0,
+     40.0,
+     45.0
+    ],
+    "bootstrap": 10000,
+    "margin": 0.01,
+    "message_seed": 0
+   }
+  }
+ }
+}

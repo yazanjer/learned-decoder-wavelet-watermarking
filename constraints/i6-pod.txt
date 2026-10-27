@@ -1,0 +1,19 @@
+# Exact versions for the I-6 evaluation pod (request d-2026-10-27-i6c). Used through PIP_CONSTRAINT by every pip call
+# on the pod (bootstrap.sh and the gdown install in trackd_wm.i6). torch/torchvision/kornia are the versions recorded
+# in POD_LOG of the I-5 pods (torch 2.8.0+cu128, torchvision 0.23.0+cu128, kornia 0.9.0); the others were checked to
+# exist as binary wheels for CPython 3.11 and 3.12 on manylinux x86_64 (kornia 0.9.0 requires Python >= 3.11).
+torch==2.8.0
+torchvision==0.23.0
+numpy==2.1.2
+scipy==1.14.1
+pillow==11.0.0
+pandas==2.2.3
+statsmodels==0.14.4
+omegaconf==2.3.0
+pyyaml==6.0.2
+kornia==0.9.0
+natsort==8.4.0
+opencv-python-headless==4.11.0.86
+PyWavelets==1.8.0
+pytest==8.3.5
+gdown==5.2.0

@@ -1,0 +1,85 @@
+{
+ "source": "scripts/report/model_budget.py count",
+ "torch": "2.14.1+cu130",
+ "wmnet_config_from": "results/i5_interim/i5_m1.json provenance.config.wmnet",
+ "methods": {
+  "v1p": {
+   "embed_extract_total": 262892,
+   "embed_extract_trainable": 262892,
+   "encoder": 118605,
+   "decoder": 144287,
+   "transform": 0,
+   "discriminator": 0,
+   "config": {
+    "bits": 64,
+    "image_size": 128,
+    "levels": 2,
+    "lift_hidden": 16,
+    "attention": true,
+    "transform": "lift_cdf97",
+    "freeze_encoder_transform": false,
+    "decoder_frontend_hidden": 98
+   }
+  },
+  "v2": {
+   "embed_extract_total": 283998,
+   "embed_extract_trainable": 262806,
+   "encoder": 139797,
+   "decoder": 144201,
+   "transform": 42384,
+   "discriminator": 0,
+   "config": {
+    "bits": 64,
+    "image_size": 128,
+    "levels": 2,
+    "lift_hidden": 16,
+    "attention": true,
+    "transform": "lift_learned",
+    "freeze_encoder_transform": true,
+    "decoder_frontend_hidden": 0
+   }
+  },
+  "v3": {
+   "embed_extract_total": 283534,
+   "embed_extract_trainable": 262574,
+   "encoder": 139565,
+   "decoder": 143969,
+   "transform": 41920,
+   "discriminator": 0,
+   "config": {
+    "bits": 64,
+    "image_size": 128,
+    "levels": 2,
+    "lift_hidden": 16,
+    "attention": true,
+    "transform": "coupling_haar_matched",
+    "freeze_encoder_transform": true,
+    "decoder_frontend_hidden": 0
+   }
+  },
+  "mbrs": {
+   "embed_extract_total": 20805391,
+   "embed_extract_trainable": 20805391,
+   "encoder": 561292,
+   "decoder": 20244099,
+   "discriminator": 113153,
+   "pinned_commit": "2bab0df",
+   "config": "EncoderDecoder(128, 128, 64, ['Identity()']) as in baselines/wrappers.py; Discriminator()"
+  },
+  "hidden": {
+   "embed_extract_total": 454403,
+   "embed_extract_trainable": 454403,
+   "encoder": 188931,
+   "decoder": 265472,
+   "discriminator": 76097,
+   "pinned_commit": "556f76d",
+   "config": "HiDDenConfiguration of main.py 'new' with --size 128 --message 64; Discriminator(config)"
+  },
+  "dwtdct": {
+   "embed_extract_total": 0,
+   "embed_extract_trainable": 0,
+   "discriminator": 0,
+   "config": "invisible-watermark EmbedMaxDct (no learned parameters)"
+  }
+ }
+}

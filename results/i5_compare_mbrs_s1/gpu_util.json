@@ -1,0 +1,10 @@
+{
+ "source": "gpu.csv of r/pilot-p1-i5_mbrs_s1 (nvidia-smi every 5 s; scripts/gpu_monitor.sh was not used at code commit 35965a9)",
+ "samples": 6504,
+ "hours": 9.186527777777778,
+ "util_mean_pct": 51.31411439114391,
+ "util_p95_pct": 100.0,
+ "util_mean_busy_pct": 57.71174131073837,
+ "peak_mem_mb": 8438.0,
+ "mem_total_mb": 46068.0
+}

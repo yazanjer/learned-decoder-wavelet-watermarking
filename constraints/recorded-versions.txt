@@ -1,0 +1,9 @@
+# Versions behind recorded results (manual session 2026-10-27). Use as: pip install -e .[train,analysis] -c constraints/recorded-versions.txt
+# torch: recorded in every run record (results/i4/i4.json, i4_final.json, i5_compare.json) as 2.8.0+cu128;
+#        pod image runpod/pytorch:1.1.0-cu1281-torch280-ubuntu2204.
+torch==2.8.0
+# numpy/scipy: versions of the CPU recomputations that reproduced the stored intervals
+# (job 546: numpy 2.4.6, scipy 1.17.1; job 624 rerun environment: numpy 2.5.3, scipy 1.18.1).
+# The pod versions of numpy, scipy, pandas and statsmodels were not recorded; this file pins the job 546 set.
+numpy==2.4.6
+scipy==1.17.1

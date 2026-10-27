@@ -1,0 +1,4052 @@
+{
+ "source": {
+  "i5_compare_pod": "0pxt518u3hjcj5",
+  "code_commit": "2d8536f937af768cbf81c15cc9e579cf48e89dc9",
+  "inputs": {
+   "m1": {
+    "branch": "r/pilot-p1-i5_m1",
+    "commit": "799b0acbe342342c20817dac2ab47d86397ff377"
+   },
+   "mbrs": {
+    "branch": "r/pilot-p1-i5_mbrs",
+    "commit": "b7f6165d2ae1e0224f3ea20bce6b89de81bbe076"
+   },
+   "hidden": {
+    "branch": "r/pilot-p1-i5_hidden",
+    "commit": "9379fa5252ddb5afb2abadefbc88420c9b0b80c4"
+   },
+   "dwtdct": {
+    "branch": "r/pilot-p1-i5_dwtdct",
+    "commit": "20e979f5e91983c9c0f1448ccc6d65639e8cbe5e"
+   }
+  }
+ },
+ "strength": "matched_40dB",
+ "dataset": "coco_test",
+ "seeds_used": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "used_for_decisions": false,
+ "validity": "preliminary; conditional on one trained model per baseline (seed 0)",
+ "max_abs_dev_vs_interim_seed_means": 2.9449462886077526e-06,
+ "means": {
+  "v1p": {
+   "psnr_rgb": 40.01589292526245,
+   "psnr_y": 40.160720084190366,
+   "ssim": 0.9695817175209522,
+   "bitacc_clean": 0.99947265625,
+   "bitacc_jpeg10": 0.55928125,
+   "bitacc_jpeg20": 0.6504765625,
+   "bitacc_jpeg30": 0.7430390625,
+   "bitacc_jpeg40": 0.8309765625,
+   "bitacc_jpeg50": 0.9000078125,
+   "bitacc_jpeg60": 0.9500078125,
+   "bitacc_jpeg70": 0.98046875,
+   "bitacc_jpeg80": 0.99223828125,
+   "bitacc_jpeg90": 0.9960859375,
+   "bitacc_webp50": 0.929328125,
+   "bitacc_webp75": 0.98048828125,
+   "bitacc_blur05": 0.9995625,
+   "bitacc_blur1": 0.98628125,
+   "bitacc_blur2": 0.50930078125,
+   "bitacc_noise001": 0.99941796875,
+   "bitacc_noise002": 0.99923828125,
+   "bitacc_noise005": 0.99660546875,
+   "bitacc_median3": 0.94310546875,
+   "bitacc_resize05": 0.8421875,
+   "bitacc_resize075": 0.9979921875,
+   "bitacc_crop075": 0.5000390625,
+   "bitacc_crop09": 0.498328125,
+   "bitacc_bright12": 0.99166796875,
+   "bitacc_bright08": 0.99955859375,
+   "bitacc_contrast12": 0.9970859375,
+   "bitacc_contrast08": 0.9995546875,
+   "bitacc_rotate10": 0.5015,
+   "bitacc_erase10": 0.99084375
+  },
+  "v2": {
+   "psnr_rgb": 40.00779160308838,
+   "psnr_y": 40.84175965309143,
+   "ssim": 0.9747514042705298,
+   "bitacc_clean": 0.999515625,
+   "bitacc_jpeg10": 0.6288515625,
+   "bitacc_jpeg20": 0.7855703125,
+   "bitacc_jpeg30": 0.88199609375,
+   "bitacc_jpeg40": 0.932734375,
+   "bitacc_jpeg50": 0.96077734375,
+   "bitacc_jpeg60": 0.9760859375,
+   "bitacc_jpeg70": 0.98616015625,
+   "bitacc_jpeg80": 0.99125,
+   "bitacc_jpeg90": 0.99508203125,
+   "bitacc_webp50": 0.94438671875,
+   "bitacc_webp75": 0.98385546875,
+   "bitacc_blur05": 0.999671875,
+   "bitacc_blur1": 0.9978515625,
+   "bitacc_blur2": 0.6890546875,
+   "bitacc_noise001": 0.9995078125,
+   "bitacc_noise002": 0.99928125,
+   "bitacc_noise005": 0.99571484375,
+   "bitacc_median3": 0.988796875,
+   "bitacc_resize05": 0.98099609375,
+   "bitacc_resize075": 0.99906640625,
+   "bitacc_crop075": 0.49518359375,
+   "bitacc_crop09": 0.4899921875,
+   "bitacc_bright12": 0.9904140625,
+   "bitacc_bright08": 0.9996640625,
+   "bitacc_contrast12": 0.99615234375,
+   "bitacc_contrast08": 0.9996640625,
+   "bitacc_rotate10": 0.49711328125,
+   "bitacc_erase10": 0.99208203125
+  },
+  "v3": {
+   "psnr_rgb": 40.00577425003052,
+   "psnr_y": 40.26118631839752,
+   "ssim": 0.9739927266091108,
+   "bitacc_clean": 0.99942578125,
+   "bitacc_jpeg10": 0.6856328125,
+   "bitacc_jpeg20": 0.8510546875,
+   "bitacc_jpeg30": 0.92887109375,
+   "bitacc_jpeg40": 0.9717890625,
+   "bitacc_jpeg50": 0.986640625,
+   "bitacc_jpeg60": 0.9916796875,
+   "bitacc_jpeg70": 0.9951171875,
+   "bitacc_jpeg80": 0.9974765625,
+   "bitacc_jpeg90": 0.99895703125,
+   "bitacc_webp50": 0.976953125,
+   "bitacc_webp75": 0.99505078125,
+   "bitacc_blur05": 0.99945703125,
+   "bitacc_blur1": 0.99594140625,
+   "bitacc_blur2": 0.609609375,
+   "bitacc_noise001": 0.9993359375,
+   "bitacc_noise002": 0.999125,
+   "bitacc_noise005": 0.99576953125,
+   "bitacc_median3": 0.9819375,
+   "bitacc_resize05": 0.9936953125,
+   "bitacc_resize075": 0.99883203125,
+   "bitacc_crop075": 0.492859375,
+   "bitacc_crop09": 0.495578125,
+   "bitacc_bright12": 0.986640625,
+   "bitacc_bright08": 0.99946484375,
+   "bitacc_contrast12": 0.9925546875,
+   "bitacc_contrast08": 0.9994921875,
+   "bitacc_rotate10": 0.4925703125,
+   "bitacc_erase10": 0.9900078125
+  },
+  "mbrs": {
+   "psnr_rgb": 39.94179068374634,
+   "psnr_y": 39.51506902885437,
+   "ssim": 0.9852506278157234,
+   "bitacc_clean": 1.0,
+   "bitacc_jpeg10": 0.76790625,
+   "bitacc_jpeg20": 0.928734375,
+   "bitacc_jpeg30": 0.98025,
+   "bitacc_jpeg40": 0.9949375,
+   "bitacc_jpeg50": 0.999015625,
+   "bitacc_jpeg60": 0.9998125,
+   "bitacc_jpeg70": 0.999984375,
+   "bitacc_jpeg80": 0.999984375,
+   "bitacc_jpeg90": 0.99996875,
+   "bitacc_webp50": 0.949421875,
+   "bitacc_webp75": 0.9845625,
+   "bitacc_blur05": 1.0,
+   "bitacc_blur1": 0.990109375,
+   "bitacc_blur2": 0.696640625,
+   "bitacc_noise001": 1.0,
+   "bitacc_noise002": 0.9999375,
+   "bitacc_noise005": 0.959328125,
+   "bitacc_median3": 0.980953125,
+   "bitacc_resize05": 0.97046875,
+   "bitacc_resize075": 0.99996875,
+   "bitacc_crop075": 0.504375,
+   "bitacc_crop09": 0.49871875,
+   "bitacc_bright12": 0.98871875,
+   "bitacc_bright08": 1.0,
+   "bitacc_contrast12": 0.994078125,
+   "bitacc_contrast08": 1.0,
+   "bitacc_rotate10": 0.49975,
+   "bitacc_erase10": 0.984484375
+  },
+  "hidden": {
+   "psnr_rgb": 39.90600534820557,
+   "psnr_y": 42.6433833694458,
+   "ssim": 0.989596450150013,
+   "bitacc_clean": 0.72259375,
+   "bitacc_jpeg10": 0.49965625,
+   "bitacc_jpeg20": 0.50415625,
+   "bitacc_jpeg30": 0.508765625,
+   "bitacc_jpeg40": 0.51259375,
+   "bitacc_jpeg50": 0.51596875,
+   "bitacc_jpeg60": 0.520984375,
+   "bitacc_jpeg70": 0.526078125,
+   "bitacc_jpeg80": 0.53346875,
+   "bitacc_jpeg90": 0.55721875,
+   "bitacc_webp50": 0.5229375,
+   "bitacc_webp75": 0.5384375,
+   "bitacc_blur05": 0.713890625,
+   "bitacc_blur1": 0.67328125,
+   "bitacc_blur2": 0.553609375,
+   "bitacc_noise001": 0.693171875,
+   "bitacc_noise002": 0.636546875,
+   "bitacc_noise005": 0.545765625,
+   "bitacc_median3": 0.665578125,
+   "bitacc_resize05": 0.637921875,
+   "bitacc_resize075": 0.691390625,
+   "bitacc_crop075": 0.692421875,
+   "bitacc_crop09": 0.702,
+   "bitacc_bright12": 0.720296875,
+   "bitacc_bright08": 0.720296875,
+   "bitacc_contrast12": 0.720375,
+   "bitacc_contrast08": 0.720484375,
+   "bitacc_rotate10": 0.672796875,
+   "bitacc_erase10": 0.721625
+  },
+  "dwtdct": {
+   "psnr_rgb": 39.90919138717651,
+   "psnr_y": 57.52999086380005,
+   "ssim": 0.9852224969863892,
+   "bitacc_clean": 0.707859375,
+   "bitacc_jpeg10": 0.4994375,
+   "bitacc_jpeg20": 0.495375,
+   "bitacc_jpeg30": 0.4993125,
+   "bitacc_jpeg40": 0.498828125,
+   "bitacc_jpeg50": 0.501296875,
+   "bitacc_jpeg60": 0.499515625,
+   "bitacc_jpeg70": 0.49825,
+   "bitacc_jpeg80": 0.50221875,
+   "bitacc_jpeg90": 0.507265625,
+   "bitacc_webp50": 0.495453125,
+   "bitacc_webp75": 0.496734375,
+   "bitacc_blur05": 0.629171875,
+   "bitacc_blur1": 0.52515625,
+   "bitacc_blur2": 0.49790625,
+   "bitacc_noise001": 0.70203125,
+   "bitacc_noise002": 0.69321875,
+   "bitacc_noise005": 0.60253125,
+   "bitacc_median3": 0.55128125,
+   "bitacc_resize05": 0.51059375,
+   "bitacc_resize075": 0.546875,
+   "bitacc_crop075": 0.50096875,
+   "bitacc_crop09": 0.514171875,
+   "bitacc_bright12": 0.73153125,
+   "bitacc_bright08": 0.56946875,
+   "bitacc_contrast12": 0.71246875,
+   "bitacc_contrast08": 0.5693125,
+   "bitacc_rotate10": 0.50321875,
+   "bitacc_erase10": 0.708421875
+  }
+ },
+ "direction_counts": {
+  "v1p-mbrs": {
+   "variant higher": 4,
+   "baseline higher": 21,
+   "not resolved": 4
+  },
+  "v2-mbrs": {
+   "variant higher": 6,
+   "baseline higher": 18,
+   "not resolved": 5
+  },
+  "v3-mbrs": {
+   "variant higher": 6,
+   "baseline higher": 16,
+   "not resolved": 7
+  },
+  "v1p-hidden": {
+   "variant higher": 25,
+   "baseline higher": 4,
+   "not resolved": 0
+  },
+  "v2-hidden": {
+   "variant higher": 25,
+   "baseline higher": 3,
+   "not resolved": 1
+  },
+  "v3-hidden": {
+   "variant higher": 25,
+   "baseline higher": 3,
+   "not resolved": 1
+  },
+  "v1p-dwtdct": {
+   "variant higher": 26,
+   "baseline higher": 1,
+   "not resolved": 2
+  },
+  "v2-dwtdct": {
+   "variant higher": 26,
+   "baseline higher": 2,
+   "not resolved": 1
+  },
+  "v3-dwtdct": {
+   "variant higher": 26,
+   "baseline higher": 3,
+   "not resolved": 0
+  }
+ },
+ "pairs": {
+  "v1p-mbrs": {
+   "psnr_rgb": {
+    "theta_hat": 0.07410224151611328,
+    "ci95_hier_bootstrap": [
+     0.00943475708961487,
+     0.14026856892108916
+    ],
+    "seed_paired_t_ci95": [
+     0.06332687869563873,
+     0.08487760433658782
+    ],
+    "share_images_variant_better": 0.515,
+    "direction": "variant higher"
+   },
+   "psnr_y": {
+    "theta_hat": 0.6456510553359985,
+    "ci95_hier_bootstrap": [
+     0.5436326725959778,
+     0.7514372328281402
+    ],
+    "seed_paired_t_ci95": [
+     0.5029083660650409,
+     0.7883937446069562
+    ],
+    "share_images_variant_better": 0.619,
+    "direction": "variant higher"
+   },
+   "ssim": {
+    "theta_hat": -0.015668910294771195,
+    "ci95_hier_bootstrap": [
+     -0.01815548523105681,
+     -0.013173379980400204
+    ],
+    "seed_paired_t_ci95": [
+     -0.020247459154290312,
+     -0.011090361435252077
+    ],
+    "share_images_variant_better": 0.065,
+    "direction": "baseline higher"
+   },
+   "bitacc_clean": {
+    "theta_hat": -0.00052734375,
+    "ci95_hier_bootstrap": [
+     -0.00078515625,
+     -0.00027734375
+    ],
+    "seed_paired_t_ci95": [
+     -0.0009690241676456757,
+     -8.566333235432438e-05
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg10": {
+    "theta_hat": -0.208625,
+    "ci95_hier_bootstrap": [
+     -0.21268359375,
+     -0.204875
+    ],
+    "seed_paired_t_ci95": [
+     -0.21282135220709647,
+     -0.20442864779290354
+    ],
+    "share_images_variant_better": 0.009,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg20": {
+    "theta_hat": -0.2782578125,
+    "ci95_hier_bootstrap": [
+     -0.2896640625,
+     -0.2707107421875
+    ],
+    "seed_paired_t_ci95": [
+     -0.29637459470152394,
+     -0.26014103029847613
+    ],
+    "share_images_variant_better": 0.001,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg30": {
+    "theta_hat": -0.2372109375,
+    "ci95_hier_bootstrap": [
+     -0.25236728515624995,
+     -0.22561318359375
+    ],
+    "seed_paired_t_ci95": [
+     -0.2626174126153339,
+     -0.2118044623846661
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg40": {
+    "theta_hat": -0.1639609375,
+    "ci95_hier_bootstrap": [
+     -0.1827232421875,
+     -0.14896484375
+    ],
+    "seed_paired_t_ci95": [
+     -0.19613255513185174,
+     -0.1317893198681483
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg50": {
+    "theta_hat": -0.0990078125,
+    "ci95_hier_bootstrap": [
+     -0.11528125,
+     -0.0860703125
+    ],
+    "seed_paired_t_ci95": [
+     -0.12695175567416978,
+     -0.07106386932583018
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg60": {
+    "theta_hat": -0.0498046875,
+    "ci95_hier_bootstrap": [
+     -0.0613125,
+     -0.04073427734375001
+    ],
+    "seed_paired_t_ci95": [
+     -0.06950202199479041,
+     -0.030107353005209586
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg70": {
+    "theta_hat": -0.019515625,
+    "ci95_hier_bootstrap": [
+     -0.0263984375,
+     -0.015046875
+    ],
+    "seed_paired_t_ci95": [
+     -0.03055385829342004,
+     -0.008477391706579964
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg80": {
+    "theta_hat": -0.00774609375,
+    "ci95_hier_bootstrap": [
+     -0.01046103515625,
+     -0.00580859375
+    ],
+    "seed_paired_t_ci95": [
+     -0.012180863335968187,
+     -0.0033113241640318125
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg90": {
+    "theta_hat": -0.0038828125,
+    "ci95_hier_bootstrap": [
+     -0.00509765625,
+     -0.00293359375
+    ],
+    "seed_paired_t_ci95": [
+     -0.005895578508556027,
+     -0.0018700464914439725
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_webp50": {
+    "theta_hat": -0.02009375,
+    "ci95_hier_bootstrap": [
+     -0.035965136718750006,
+     -0.008597460937500002
+    ],
+    "seed_paired_t_ci95": [
+     -0.04608262082977792,
+     0.005895120829777913
+    ],
+    "share_images_variant_better": 0.218,
+    "direction": "baseline higher"
+   },
+   "bitacc_webp75": {
+    "theta_hat": -0.00407421875,
+    "ci95_hier_bootstrap": [
+     -0.0112580078125,
+     0.000578125
+    ],
+    "seed_paired_t_ci95": [
+     -0.015500218666655755,
+     0.007351781166655756
+    ],
+    "share_images_variant_better": 0.18,
+    "direction": "not resolved"
+   },
+   "bitacc_blur05": {
+    "theta_hat": -0.0004375,
+    "ci95_hier_bootstrap": [
+     -0.0007852539062499999,
+     -0.00015234375
+    ],
+    "seed_paired_t_ci95": [
+     -0.00102410900222669,
+     0.00014910900222669005
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_blur1": {
+    "theta_hat": -0.003828125,
+    "ci95_hier_bootstrap": [
+     -0.00733994140625,
+     0.0003790039062499986
+    ],
+    "seed_paired_t_ci95": [
+     -0.010914549472319528,
+     0.0032582994723195278
+    ],
+    "share_images_variant_better": 0.275,
+    "direction": "not resolved"
+   },
+   "bitacc_blur2": {
+    "theta_hat": -0.18733984375,
+    "ci95_hier_bootstrap": [
+     -0.19152744140625,
+     -0.183265625
+    ],
+    "seed_paired_t_ci95": [
+     -0.1916154548413338,
+     -0.18306423265866623
+    ],
+    "share_images_variant_better": 0.017,
+    "direction": "baseline higher"
+   },
+   "bitacc_noise001": {
+    "theta_hat": -0.00058203125,
+    "ci95_hier_bootstrap": [
+     -0.0008633789062499999,
+     -0.0003046875
+    ],
+    "seed_paired_t_ci95": [
+     -0.0010823352115499505,
+     -8.172728845004952e-05
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_noise002": {
+    "theta_hat": -0.00069921875,
+    "ci95_hier_bootstrap": [
+     -0.001046875,
+     -0.00035546875
+    ],
+    "seed_paired_t_ci95": [
+     -0.0013167577169170813,
+     -8.167978308291858e-05
+    ],
+    "share_images_variant_better": 0.004,
+    "direction": "baseline higher"
+   },
+   "bitacc_noise005": {
+    "theta_hat": 0.03727734375,
+    "ci95_hier_bootstrap": [
+     0.035625,
+     0.0388828125
+    ],
+    "seed_paired_t_ci95": [
+     0.035613032499798254,
+     0.03894165500020174
+    ],
+    "share_images_variant_better": 0.719,
+    "direction": "variant higher"
+   },
+   "bitacc_median3": {
+    "theta_hat": -0.03784765625,
+    "ci95_hier_bootstrap": [
+     -0.045832128906250005,
+     -0.027909960937500002
+    ],
+    "seed_paired_t_ci95": [
+     -0.05483512808333271,
+     -0.020860184416667284
+    ],
+    "share_images_variant_better": 0.13,
+    "direction": "baseline higher"
+   },
+   "bitacc_resize05": {
+    "theta_hat": -0.12828125,
+    "ci95_hier_bootstrap": [
+     -0.18193378906250002,
+     -0.0784607421875
+    ],
+    "seed_paired_t_ci95": [
+     -0.23026296482241176,
+     -0.02629953517758825
+    ],
+    "share_images_variant_better": 0.002,
+    "direction": "baseline higher"
+   },
+   "bitacc_resize075": {
+    "theta_hat": -0.0019765625,
+    "ci95_hier_bootstrap": [
+     -0.00295322265625,
+     -0.00102734375
+    ],
+    "seed_paired_t_ci95": [
+     -0.003686324939923778,
+     -0.00026680006007622197
+    ],
+    "share_images_variant_better": 0.002,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop075": {
+    "theta_hat": -0.0043359375,
+    "ci95_hier_bootstrap": [
+     -0.00734775390625,
+     -0.00133203125
+    ],
+    "seed_paired_t_ci95": [
+     -0.006759482067644421,
+     -0.0019123929323555796
+    ],
+    "share_images_variant_better": 0.448,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop09": {
+    "theta_hat": -0.000390625,
+    "ci95_hier_bootstrap": [
+     -0.00502353515625,
+     0.004441503906249999
+    ],
+    "seed_paired_t_ci95": [
+     -0.007852273171937024,
+     0.007071023171937025
+    ],
+    "share_images_variant_better": 0.491,
+    "direction": "not resolved"
+   },
+   "bitacc_bright12": {
+    "theta_hat": 0.00294921875,
+    "ci95_hier_bootstrap": [
+     0.00216796875,
+     0.0037265625
+    ],
+    "seed_paired_t_ci95": [
+     0.002227660120380686,
+     0.003670777379619314
+    ],
+    "share_images_variant_better": 0.169,
+    "direction": "variant higher"
+   },
+   "bitacc_bright08": {
+    "theta_hat": -0.00044140625,
+    "ci95_hier_bootstrap": [
+     -0.0007265625,
+     -0.0001953125
+    ],
+    "seed_paired_t_ci95": [
+     -0.0009137460964739648,
+     3.0933596473964754e-05
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_contrast12": {
+    "theta_hat": 0.0030078125,
+    "ci95_hier_bootstrap": [
+     0.00232802734375,
+     0.00369921875
+    ],
+    "seed_paired_t_ci95": [
+     0.0022267070075953996,
+     0.0037889179924046005
+    ],
+    "share_images_variant_better": 0.134,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast08": {
+    "theta_hat": -0.0004453125,
+    "ci95_hier_bootstrap": [
+     -0.00074609375,
+     -0.0001875
+    ],
+    "seed_paired_t_ci95": [
+     -0.0009415327012559482,
+     5.090770125594827e-05
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_rotate10": {
+    "theta_hat": 0.00175,
+    "ci95_hier_bootstrap": [
+     -0.00155078125,
+     0.0051875
+    ],
+    "seed_paired_t_ci95": [
+     -0.001999541575931283,
+     0.005499541575931283
+    ],
+    "share_images_variant_better": 0.497,
+    "direction": "not resolved"
+   },
+   "bitacc_erase10": {
+    "theta_hat": 0.006359375,
+    "ci95_hier_bootstrap": [
+     0.00476953125,
+     0.007839941406249998
+    ],
+    "seed_paired_t_ci95": [
+     0.0036643050073921733,
+     0.009054444992607828
+    ],
+    "share_images_variant_better": 0.635,
+    "direction": "variant higher"
+   }
+  },
+  "v2-mbrs": {
+   "psnr_rgb": {
+    "theta_hat": 0.06600091934204101,
+    "ci95_hier_bootstrap": [
+     0.002720115447044373,
+     0.13117151210308073
+    ],
+    "seed_paired_t_ci95": [
+     0.059693010856189395,
+     0.07230882782789262
+    ],
+    "share_images_variant_better": 0.51,
+    "direction": "variant higher"
+   },
+   "psnr_y": {
+    "theta_hat": 1.3266906242370606,
+    "ci95_hier_bootstrap": [
+     1.0772734267115593,
+     1.512328810083866
+    ],
+    "seed_paired_t_ci95": [
+     0.9340920710079996,
+     1.7192891774661216
+    ],
+    "share_images_variant_better": 0.709,
+    "direction": "variant higher"
+   },
+   "ssim": {
+    "theta_hat": -0.010499223545193672,
+    "ci95_hier_bootstrap": [
+     -0.011296509810909629,
+     -0.009495816629752516
+    ],
+    "seed_paired_t_ci95": [
+     -0.01210270335990933,
+     -0.008895743730478018
+    ],
+    "share_images_variant_better": 0.121,
+    "direction": "baseline higher"
+   },
+   "bitacc_clean": {
+    "theta_hat": -0.000484375,
+    "ci95_hier_bootstrap": [
+     -0.0006953125,
+     -0.00024609375
+    ],
+    "seed_paired_t_ci95": [
+     -0.0008806238123694138,
+     -8.81261876305862e-05
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg10": {
+    "theta_hat": -0.1390546875,
+    "ci95_hier_bootstrap": [
+     -0.19604697265625,
+     -0.08172255859375
+    ],
+    "seed_paired_t_ci95": [
+     -0.24278222197183236,
+     -0.03532715302816762
+    ],
+    "share_images_variant_better": 0.052,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg20": {
+    "theta_hat": -0.1431640625,
+    "ci95_hier_bootstrap": [
+     -0.24515244140625,
+     -0.04027646484375001
+    ],
+    "seed_paired_t_ci95": [
+     -0.329986006335834,
+     0.04365788133583404
+    ],
+    "share_images_variant_better": 0.018,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg30": {
+    "theta_hat": -0.09825390625,
+    "ci95_hier_bootstrap": [
+     -0.18558984375,
+     -0.010237207031250016
+    ],
+    "seed_paired_t_ci95": [
+     -0.2585379677019143,
+     0.06203015520191432
+    ],
+    "share_images_variant_better": 0.018,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg40": {
+    "theta_hat": -0.062203125,
+    "ci95_hier_bootstrap": [
+     -0.116000390625,
+     -0.008218457031250005
+    ],
+    "seed_paired_t_ci95": [
+     -0.16095852666885807,
+     0.036552276668858075
+    ],
+    "share_images_variant_better": 0.01,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg50": {
+    "theta_hat": -0.03823828125,
+    "ci95_hier_bootstrap": [
+     -0.06938671875,
+     -0.007046875
+    ],
+    "seed_paired_t_ci95": [
+     -0.0955270352390078,
+     0.019050472739007777
+    ],
+    "share_images_variant_better": 0.002,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg60": {
+    "theta_hat": -0.0237265625,
+    "ci95_hier_bootstrap": [
+     -0.04105869140625,
+     -0.0064765625
+    ],
+    "seed_paired_t_ci95": [
+     -0.05568935157472259,
+     0.008236226574722588
+    ],
+    "share_images_variant_better": 0.004,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg70": {
+    "theta_hat": -0.01382421875,
+    "ci95_hier_bootstrap": [
+     -0.022828125,
+     -0.00483984375
+    ],
+    "seed_paired_t_ci95": [
+     -0.030326160114726372,
+     0.0026777226147263727
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg80": {
+    "theta_hat": -0.008734375,
+    "ci95_hier_bootstrap": [
+     -0.01428525390625,
+     -0.003140625
+    ],
+    "seed_paired_t_ci95": [
+     -0.01898127301490077,
+     0.0015125230149007733
+    ],
+    "share_images_variant_better": 0.001,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg90": {
+    "theta_hat": -0.00488671875,
+    "ci95_hier_bootstrap": [
+     -0.008734375,
+     -0.0010546875
+    ],
+    "seed_paired_t_ci95": [
+     -0.011911210576671636,
+     0.002137773076671637
+    ],
+    "share_images_variant_better": 0.001,
+    "direction": "baseline higher"
+   },
+   "bitacc_webp50": {
+    "theta_hat": -0.00503515625,
+    "ci95_hier_bootstrap": [
+     -0.02414853515625,
+     0.01435546875
+    ],
+    "seed_paired_t_ci95": [
+     -0.04056544926927125,
+     0.03049513676927125
+    ],
+    "share_images_variant_better": 0.302,
+    "direction": "not resolved"
+   },
+   "bitacc_webp75": {
+    "theta_hat": -0.00070703125,
+    "ci95_hier_bootstrap": [
+     -0.0113439453125,
+     0.009879003906249998
+    ],
+    "seed_paired_t_ci95": [
+     -0.020453751708621952,
+     0.01903968920862195
+    ],
+    "share_images_variant_better": 0.22,
+    "direction": "not resolved"
+   },
+   "bitacc_blur05": {
+    "theta_hat": -0.000328125,
+    "ci95_hier_bootstrap": [
+     -0.00046875,
+     -0.00017578125
+    ],
+    "seed_paired_t_ci95": [
+     -0.0005708829740818119,
+     -8.536702591818815e-05
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_blur1": {
+    "theta_hat": 0.0077421875,
+    "ci95_hier_bootstrap": [
+     0.00580078125,
+     0.009109375
+    ],
+    "seed_paired_t_ci95": [
+     0.004641963766808491,
+     0.010842411233191511
+    ],
+    "share_images_variant_better": 0.382,
+    "direction": "variant higher"
+   },
+   "bitacc_blur2": {
+    "theta_hat": -0.0075859375,
+    "ci95_hier_bootstrap": [
+     -0.15490234375,
+     0.14048935546875
+    ],
+    "seed_paired_t_ci95": [
+     -0.2776156209821865,
+     0.26244374598218645
+    ],
+    "share_images_variant_better": 0.458,
+    "direction": "not resolved"
+   },
+   "bitacc_noise001": {
+    "theta_hat": -0.0004921875,
+    "ci95_hier_bootstrap": [
+     -0.000703125,
+     -0.0002578125
+    ],
+    "seed_paired_t_ci95": [
+     -0.0008881762212272652,
+     -9.61987787727348e-05
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_noise002": {
+    "theta_hat": -0.00065625,
+    "ci95_hier_bootstrap": [
+     -0.0009336914062499998,
+     -0.0003515625
+    ],
+    "seed_paired_t_ci95": [
+     -0.0011797495447991504,
+     -0.0001327504552008495
+    ],
+    "share_images_variant_better": 0.004,
+    "direction": "baseline higher"
+   },
+   "bitacc_noise005": {
+    "theta_hat": 0.03638671875,
+    "ci95_hier_bootstrap": [
+     0.034218652343749996,
+     0.0384962890625
+    ],
+    "seed_paired_t_ci95": [
+     0.033335948350566004,
+     0.039437489149434006
+    ],
+    "share_images_variant_better": 0.713,
+    "direction": "variant higher"
+   },
+   "bitacc_median3": {
+    "theta_hat": 0.00784375,
+    "ci95_hier_bootstrap": [
+     0.0006247070312500003,
+     0.014996191406249998
+    ],
+    "seed_paired_t_ci95": [
+     -0.0052414082491173426,
+     0.02092890824911734
+    ],
+    "share_images_variant_better": 0.455,
+    "direction": "variant higher"
+   },
+   "bitacc_resize05": {
+    "theta_hat": 0.01052734375,
+    "ci95_hier_bootstrap": [
+     0.0017263671875000003,
+     0.0167578125
+    ],
+    "seed_paired_t_ci95": [
+     -0.00400976230925367,
+     0.025064449809253674
+    ],
+    "share_images_variant_better": 0.541,
+    "direction": "variant higher"
+   },
+   "bitacc_resize075": {
+    "theta_hat": -0.00090234375,
+    "ci95_hier_bootstrap": [
+     -0.001578125,
+     -0.00039453125
+    ],
+    "seed_paired_t_ci95": [
+     -0.002018383491554419,
+     0.00021369599155441916
+    ],
+    "share_images_variant_better": 0.002,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop075": {
+    "theta_hat": -0.00919140625,
+    "ci95_hier_bootstrap": [
+     -0.01424609375,
+     -0.00391796875
+    ],
+    "seed_paired_t_ci95": [
+     -0.017589323182527504,
+     -0.0007934893174724924
+    ],
+    "share_images_variant_better": 0.428,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop09": {
+    "theta_hat": -0.0087265625,
+    "ci95_hier_bootstrap": [
+     -0.01612509765625,
+     -0.0011249023437500014
+    ],
+    "seed_paired_t_ci95": [
+     -0.02175995984452614,
+     0.004306834844526139
+    ],
+    "share_images_variant_better": 0.433,
+    "direction": "baseline higher"
+   },
+   "bitacc_bright12": {
+    "theta_hat": 0.0016953125,
+    "ci95_hier_bootstrap": [
+     -0.001390625,
+     0.0044609375
+    ],
+    "seed_paired_t_ci95": [
+     -0.003690563382902721,
+     0.00708118838290272
+    ],
+    "share_images_variant_better": 0.157,
+    "direction": "not resolved"
+   },
+   "bitacc_bright08": {
+    "theta_hat": -0.0003359375,
+    "ci95_hier_bootstrap": [
+     -0.0005078125,
+     -0.0001640625
+    ],
+    "seed_paired_t_ci95": [
+     -0.0006387476953533204,
+     -3.31273046466795e-05
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_contrast12": {
+    "theta_hat": 0.00207421875,
+    "ci95_hier_bootstrap": [
+     0.0005390625,
+     0.00354296875
+    ],
+    "seed_paired_t_ci95": [
+     -0.0006057759409149334,
+     0.004754213440914933
+    ],
+    "share_images_variant_better": 0.131,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast08": {
+    "theta_hat": -0.0003359375,
+    "ci95_hier_bootstrap": [
+     -0.0005,
+     -0.000171875
+    ],
+    "seed_paired_t_ci95": [
+     -0.0006212291335289399,
+     -5.064586647106009e-05
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_rotate10": {
+    "theta_hat": -0.00263671875,
+    "ci95_hier_bootstrap": [
+     -0.009379296874999998,
+     0.0036916015624999968
+    ],
+    "seed_paired_t_ci95": [
+     -0.013966390943673915,
+     0.008692953443673917
+    ],
+    "share_images_variant_better": 0.477,
+    "direction": "not resolved"
+   },
+   "bitacc_erase10": {
+    "theta_hat": 0.00759765625,
+    "ci95_hier_bootstrap": [
+     0.005515625,
+     0.0096015625
+    ],
+    "seed_paired_t_ci95": [
+     0.003949311904762815,
+     0.011246000595237185
+    ],
+    "share_images_variant_better": 0.655,
+    "direction": "variant higher"
+   }
+  },
+  "v3-mbrs": {
+   "psnr_rgb": {
+    "theta_hat": 0.06398356628417969,
+    "ci95_hier_bootstrap": [
+     0.0006079614400863651,
+     0.129478507733345
+    ],
+    "seed_paired_t_ci95": [
+     0.05997103778802051,
+     0.06799609478033888
+    ],
+    "share_images_variant_better": 0.512,
+    "direction": "variant higher"
+   },
+   "psnr_y": {
+    "theta_hat": 0.7461172895431518,
+    "ci95_hier_bootstrap": [
+     0.6227994817376137,
+     0.8639782373428345
+    ],
+    "seed_paired_t_ci95": [
+     0.557391541045127,
+     0.9348430380411766
+    ],
+    "share_images_variant_better": 0.633,
+    "direction": "variant higher"
+   },
+   "ssim": {
+    "theta_hat": -0.011257901206612587,
+    "ci95_hier_bootstrap": [
+     -0.013496054289117454,
+     -0.009063155261427164
+    ],
+    "seed_paired_t_ci95": [
+     -0.015294567588026685,
+     -0.007221234825198492
+    ],
+    "share_images_variant_better": 0.113,
+    "direction": "baseline higher"
+   },
+   "bitacc_clean": {
+    "theta_hat": -0.00057421875,
+    "ci95_hier_bootstrap": [
+     -0.00132421875,
+     -0.000125
+    ],
+    "seed_paired_t_ci95": [
+     -0.0017651083029688929,
+     0.0006166708029688927
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg10": {
+    "theta_hat": -0.0822734375,
+    "ci95_hier_bootstrap": [
+     -0.15059775390625,
+     -0.013972363281250004
+    ],
+    "seed_paired_t_ci95": [
+     -0.20687841054373646,
+     0.042331535543736434
+    ],
+    "share_images_variant_better": 0.172,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg20": {
+    "theta_hat": -0.0776796875,
+    "ci95_hier_bootstrap": [
+     -0.16664462890625,
+     0.011082128906249999
+    ],
+    "seed_paired_t_ci95": [
+     -0.24000155725463268,
+     0.08464218225463267
+    ],
+    "share_images_variant_better": 0.086,
+    "direction": "not resolved"
+   },
+   "bitacc_jpeg30": {
+    "theta_hat": -0.05137890625,
+    "ci95_hier_bootstrap": [
+     -0.099976953125,
+     -0.0028121093750000056
+    ],
+    "seed_paired_t_ci95": [
+     -0.14077473866083906,
+     0.03801692616083906
+    ],
+    "share_images_variant_better": 0.047,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg40": {
+    "theta_hat": -0.0231484375,
+    "ci95_hier_bootstrap": [
+     -0.03826953125,
+     -0.008296582031250005
+    ],
+    "seed_paired_t_ci95": [
+     -0.05113111069969546,
+     0.004834235699695457
+    ],
+    "share_images_variant_better": 0.064,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg50": {
+    "theta_hat": -0.012375,
+    "ci95_hier_bootstrap": [
+     -0.01630869140625,
+     -0.007905761718750006
+    ],
+    "seed_paired_t_ci95": [
+     -0.020331711413641658,
+     -0.0044182885863583415
+    ],
+    "share_images_variant_better": 0.031,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg60": {
+    "theta_hat": -0.0081328125,
+    "ci95_hier_bootstrap": [
+     -0.00973828125,
+     -0.00594140625
+    ],
+    "seed_paired_t_ci95": [
+     -0.011620561892054125,
+     -0.004645063107945874
+    ],
+    "share_images_variant_better": 0.006,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg70": {
+    "theta_hat": -0.0048671875,
+    "ci95_hier_bootstrap": [
+     -0.00619541015625,
+     -0.0036796875
+    ],
+    "seed_paired_t_ci95": [
+     -0.007117745766926629,
+     -0.002616629233073371
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg80": {
+    "theta_hat": -0.0025078125,
+    "ci95_hier_bootstrap": [
+     -0.0036015625,
+     -0.00158984375
+    ],
+    "seed_paired_t_ci95": [
+     -0.004353422993808122,
+     -0.0006622020061918781
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_jpeg90": {
+    "theta_hat": -0.00101171875,
+    "ci95_hier_bootstrap": [
+     -0.0019453125,
+     -0.000390625
+    ],
+    "seed_paired_t_ci95": [
+     -0.002510844856234579,
+     0.00048740735623457876
+    ],
+    "share_images_variant_better": 0.002,
+    "direction": "baseline higher"
+   },
+   "bitacc_webp50": {
+    "theta_hat": 0.02753125,
+    "ci95_hier_bootstrap": [
+     0.02431240234375,
+     0.031203125
+    ],
+    "seed_paired_t_ci95": [
+     0.022361847074272117,
+     0.03270065292572789
+    ],
+    "share_images_variant_better": 0.522,
+    "direction": "variant higher"
+   },
+   "bitacc_webp75": {
+    "theta_hat": 0.01048828125,
+    "ci95_hier_bootstrap": [
+     0.0086015625,
+     0.0123046875
+    ],
+    "seed_paired_t_ci95": [
+     0.007780749089875614,
+     0.013195813410124387
+    ],
+    "share_images_variant_better": 0.27,
+    "direction": "variant higher"
+   },
+   "bitacc_blur05": {
+    "theta_hat": -0.00054296875,
+    "ci95_hier_bootstrap": [
+     -0.00126962890625,
+     -9.375e-05
+    ],
+    "seed_paired_t_ci95": [
+     -0.0017051357891391967,
+     0.0006191982891391969
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_blur1": {
+    "theta_hat": 0.00583203125,
+    "ci95_hier_bootstrap": [
+     0.00434765625,
+     0.0077421875
+    ],
+    "seed_paired_t_ci95": [
+     0.002734209467379976,
+     0.008929853032620024
+    ],
+    "share_images_variant_better": 0.374,
+    "direction": "variant higher"
+   },
+   "bitacc_blur2": {
+    "theta_hat": -0.08703125,
+    "ci95_hier_bootstrap": [
+     -0.192027734375,
+     0.018254199218749996
+    ],
+    "seed_paired_t_ci95": [
+     -0.2900152226173273,
+     0.11595272261732731
+    ],
+    "share_images_variant_better": 0.167,
+    "direction": "not resolved"
+   },
+   "bitacc_noise001": {
+    "theta_hat": -0.0006640625,
+    "ci95_hier_bootstrap": [
+     -0.00148828125,
+     -0.00015625
+    ],
+    "seed_paired_t_ci95": [
+     -0.0019816377938027575,
+     0.0006535127938027574
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_noise002": {
+    "theta_hat": -0.0008125,
+    "ci95_hier_bootstrap": [
+     -0.00175,
+     -0.00024609375
+    ],
+    "seed_paired_t_ci95": [
+     -0.002314732679816534,
+     0.0006897326798165343
+    ],
+    "share_images_variant_better": 0.004,
+    "direction": "baseline higher"
+   },
+   "bitacc_noise005": {
+    "theta_hat": 0.03644140625,
+    "ci95_hier_bootstrap": [
+     0.0333083984375,
+     0.03894140625
+    ],
+    "seed_paired_t_ci95": [
+     0.03173917472601839,
+     0.04114363777398161
+    ],
+    "share_images_variant_better": 0.717,
+    "direction": "variant higher"
+   },
+   "bitacc_median3": {
+    "theta_hat": 0.000984375,
+    "ci95_hier_bootstrap": [
+     -0.01151572265625,
+     0.013550878906249997
+    ],
+    "seed_paired_t_ci95": [
+     -0.021942590023050476,
+     0.023911340023050474
+    ],
+    "share_images_variant_better": 0.362,
+    "direction": "not resolved"
+   },
+   "bitacc_resize05": {
+    "theta_hat": 0.0232265625,
+    "ci95_hier_bootstrap": [
+     0.02109765625,
+     0.025953125
+    ],
+    "seed_paired_t_ci95": [
+     0.01898962640397354,
+     0.027463498596026457
+    ],
+    "share_images_variant_better": 0.691,
+    "direction": "variant higher"
+   },
+   "bitacc_resize075": {
+    "theta_hat": -0.00113671875,
+    "ci95_hier_bootstrap": [
+     -0.00238671875,
+     -0.00040625
+    ],
+    "seed_paired_t_ci95": [
+     -0.0031076788936900517,
+     0.000834241393690052
+    ],
+    "share_images_variant_better": 0.002,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop075": {
+    "theta_hat": -0.011515625,
+    "ci95_hier_bootstrap": [
+     -0.01676962890625,
+     -0.00604296875
+    ],
+    "seed_paired_t_ci95": [
+     -0.020295560133097447,
+     -0.0027356898669025492
+    ],
+    "share_images_variant_better": 0.426,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop09": {
+    "theta_hat": -0.003140625,
+    "ci95_hier_bootstrap": [
+     -0.00819150390625,
+     0.0015625976562499986
+    ],
+    "seed_paired_t_ci95": [
+     -0.010772754149606146,
+     0.004491504149606145
+    ],
+    "share_images_variant_better": 0.456,
+    "direction": "not resolved"
+   },
+   "bitacc_bright12": {
+    "theta_hat": -0.002078125,
+    "ci95_hier_bootstrap": [
+     -0.00520703125,
+     3.90625e-05
+    ],
+    "seed_paired_t_ci95": [
+     -0.007082420623374019,
+     0.0029261706233740187
+    ],
+    "share_images_variant_better": 0.119,
+    "direction": "not resolved"
+   },
+   "bitacc_bright08": {
+    "theta_hat": -0.00053515625,
+    "ci95_hier_bootstrap": [
+     -0.00121484375,
+     -8.59375e-05
+    ],
+    "seed_paired_t_ci95": [
+     -0.0016344537488759668,
+     0.0005641412488759667
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_contrast12": {
+    "theta_hat": -0.0015234375,
+    "ci95_hier_bootstrap": [
+     -0.00463671875,
+     0.0007734375
+    ],
+    "seed_paired_t_ci95": [
+     -0.006562876469578588,
+     0.0035160014695785878
+    ],
+    "share_images_variant_better": 0.091,
+    "direction": "not resolved"
+   },
+   "bitacc_contrast08": {
+    "theta_hat": -0.0005078125,
+    "ci95_hier_bootstrap": [
+     -0.0011953125,
+     -9.375e-05
+    ],
+    "seed_paired_t_ci95": [
+     -0.0016037543605872384,
+     0.0005881293605872384
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_rotate10": {
+    "theta_hat": -0.0071796875,
+    "ci95_hier_bootstrap": [
+     -0.01448447265625,
+     0.00036748046874999574
+    ],
+    "seed_paired_t_ci95": [
+     -0.020404930547891116,
+     0.0060455555478911155
+    ],
+    "share_images_variant_better": 0.437,
+    "direction": "not resolved"
+   },
+   "bitacc_erase10": {
+    "theta_hat": 0.0055234375,
+    "ci95_hier_bootstrap": [
+     0.00137109375,
+     0.008543066406249997
+    ],
+    "seed_paired_t_ci95": [
+     -0.0012381182074377604,
+     0.012284993207437759
+    ],
+    "share_images_variant_better": 0.603,
+    "direction": "variant higher"
+   }
+  },
+  "v1p-hidden": {
+   "psnr_rgb": {
+    "theta_hat": 0.10988757705688476,
+    "ci95_hier_bootstrap": [
+     0.04894932250976562,
+     0.17185331728458403
+    ],
+    "seed_paired_t_ci95": [
+     0.09911221423641023,
+     0.12066293987735932
+    ],
+    "share_images_variant_better": 0.503,
+    "direction": "variant higher"
+   },
+   "psnr_y": {
+    "theta_hat": -2.4826632852554322,
+    "ci95_hier_bootstrap": [
+     -2.5808052837848665,
+     -2.381450863170624
+    ],
+    "seed_paired_t_ci95": [
+     -2.6254059745263896,
+     -2.339920595984475
+    ],
+    "share_images_variant_better": 0.104,
+    "direction": "baseline higher"
+   },
+   "ssim": {
+    "theta_hat": -0.020014732629060745,
+    "ci95_hier_bootstrap": [
+     -0.022503725365176797,
+     -0.017525264851376416
+    ],
+    "seed_paired_t_ci95": [
+     -0.024593281488579862,
+     -0.015436183769541627
+    ],
+    "share_images_variant_better": 0.037,
+    "direction": "baseline higher"
+   },
+   "bitacc_clean": {
+    "theta_hat": 0.27687890625,
+    "ci95_hier_bootstrap": [
+     0.27519921875,
+     0.2784845703125
+    ],
+    "seed_paired_t_ci95": [
+     0.2764372258323543,
+     0.2773205866676457
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg10": {
+    "theta_hat": 0.059625,
+    "ci95_hier_bootstrap": [
+     0.05591015625,
+     0.06316816406249999
+    ],
+    "seed_paired_t_ci95": [
+     0.05542864779290355,
+     0.06382135220709645
+    ],
+    "share_images_variant_better": 0.773,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg20": {
+    "theta_hat": 0.1463203125,
+    "ci95_hier_bootstrap": [
+     0.134855078125,
+     0.1542736328125
+    ],
+    "seed_paired_t_ci95": [
+     0.12820353029847611,
+     0.16443709470152387
+    ],
+    "share_images_variant_better": 0.961,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg30": {
+    "theta_hat": 0.2342734375,
+    "ci95_hier_bootstrap": [
+     0.2189841796875,
+     0.24619140625
+    ],
+    "seed_paired_t_ci95": [
+     0.20886696238466612,
+     0.2596799126153339
+    ],
+    "share_images_variant_better": 0.997,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg40": {
+    "theta_hat": 0.3183828125,
+    "ci95_hier_bootstrap": [
+     0.29962744140625,
+     0.33357041015625
+    ],
+    "seed_paired_t_ci95": [
+     0.2862111948681483,
+     0.3505544301318517
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg50": {
+    "theta_hat": 0.3840390625,
+    "ci95_hier_bootstrap": [
+     0.3676439453125,
+     0.3970859375
+    ],
+    "seed_paired_t_ci95": [
+     0.35609511932583016,
+     0.4119830056741698
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg60": {
+    "theta_hat": 0.4290234375,
+    "ci95_hier_bootstrap": [
+     0.4172458984375,
+     0.43837890625
+    ],
+    "seed_paired_t_ci95": [
+     0.40932610300520966,
+     0.44872077199479043
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg70": {
+    "theta_hat": 0.454390625,
+    "ci95_hier_bootstrap": [
+     0.44748046875,
+     0.45959794921874997
+    ],
+    "seed_paired_t_ci95": [
+     0.4433523917065799,
+     0.46542885829341996
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg80": {
+    "theta_hat": 0.45876953125,
+    "ci95_hier_bootstrap": [
+     0.4554140625,
+     0.46165234375
+    ],
+    "seed_paired_t_ci95": [
+     0.45433476166403186,
+     0.4632043008359682
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg90": {
+    "theta_hat": 0.4388671875,
+    "ci95_hier_bootstrap": [
+     0.43652734375,
+     0.44111328125
+    ],
+    "seed_paired_t_ci95": [
+     0.436854421491444,
+     0.4408799535085561
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp50": {
+    "theta_hat": 0.406390625,
+    "ci95_hier_bootstrap": [
+     0.3905857421875,
+     0.41823056640624995
+    ],
+    "seed_paired_t_ci95": [
+     0.3804017541702221,
+     0.4323794958297779
+    ],
+    "share_images_variant_better": 0.999,
+    "direction": "variant higher"
+   },
+   "bitacc_webp75": {
+    "theta_hat": 0.44205078125,
+    "ci95_hier_bootstrap": [
+     0.43474208984375,
+     0.4472658203125
+    ],
+    "seed_paired_t_ci95": [
+     0.4306247813333443,
+     0.45347678116665574
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur05": {
+    "theta_hat": 0.285671875,
+    "ci95_hier_bootstrap": [
+     0.2839765625,
+     0.2873515625
+    ],
+    "seed_paired_t_ci95": [
+     0.28508526599777334,
+     0.2862584840022267
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur1": {
+    "theta_hat": 0.313,
+    "ci95_hier_bootstrap": [
+     0.30901943359375,
+     0.31737109375
+    ],
+    "seed_paired_t_ci95": [
+     0.3059135755276804,
+     0.3200864244723195
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur2": {
+    "theta_hat": -0.04430859375,
+    "ci95_hier_bootstrap": [
+     -0.04776953125,
+     -0.04083193359375
+    ],
+    "seed_paired_t_ci95": [
+     -0.048584204841333786,
+     -0.040032982658666214
+    ],
+    "share_images_variant_better": 0.248,
+    "direction": "baseline higher"
+   },
+   "bitacc_noise001": {
+    "theta_hat": 0.30624609375,
+    "ci95_hier_bootstrap": [
+     0.304421875,
+     0.30798837890624997
+    ],
+    "seed_paired_t_ci95": [
+     0.30574578978845,
+     0.30674639771155
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_noise002": {
+    "theta_hat": 0.36269140625,
+    "ci95_hier_bootstrap": [
+     0.36073046875,
+     0.36460556640624997
+    ],
+    "seed_paired_t_ci95": [
+     0.362073867283083,
+     0.36330894521691715
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_noise005": {
+    "theta_hat": 0.45083984375,
+    "ci95_hier_bootstrap": [
+     0.448703125,
+     0.45294150390625
+    ],
+    "seed_paired_t_ci95": [
+     0.44917553249979825,
+     0.4525041550002018
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_median3": {
+    "theta_hat": 0.27752734375,
+    "ci95_hier_bootstrap": [
+     0.26934375,
+     0.28755517578125
+    ],
+    "seed_paired_t_ci95": [
+     0.2605398719166673,
+     0.2945148155833327
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize05": {
+    "theta_hat": 0.204265625,
+    "ci95_hier_bootstrap": [
+     0.150424609375,
+     0.25401582031250003
+    ],
+    "seed_paired_t_ci95": [
+     0.10228391017758824,
+     0.30624733982241176
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize075": {
+    "theta_hat": 0.3066015625,
+    "ci95_hier_bootstrap": [
+     0.30463271484375004,
+     0.30850400390625
+    ],
+    "seed_paired_t_ci95": [
+     0.3048918000600762,
+     0.30831132493992375
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_crop075": {
+    "theta_hat": -0.1923828125,
+    "ci95_hier_bootstrap": [
+     -0.19537109375,
+     -0.1895390625
+    ],
+    "seed_paired_t_ci95": [
+     -0.19480635706764443,
+     -0.18995926793235557
+    ],
+    "share_images_variant_better": 0.001,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop09": {
+    "theta_hat": -0.203671875,
+    "ci95_hier_bootstrap": [
+     -0.2082931640625,
+     -0.19890205078125
+    ],
+    "seed_paired_t_ci95": [
+     -0.21113352317193704,
+     -0.19621022682806297
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_bright12": {
+    "theta_hat": 0.27137109375,
+    "ci95_hier_bootstrap": [
+     0.26957802734375,
+     0.27313291015624996
+    ],
+    "seed_paired_t_ci95": [
+     0.27064953512038065,
+     0.27209265237961927
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_bright08": {
+    "theta_hat": 0.27926171875,
+    "ci95_hier_bootstrap": [
+     0.27756240234375,
+     0.28090625
+    ],
+    "seed_paired_t_ci95": [
+     0.278789378903526,
+     0.279734058596474
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast12": {
+    "theta_hat": 0.2767109375,
+    "ci95_hier_bootstrap": [
+     0.27501162109375005,
+     0.27833203125
+    ],
+    "seed_paired_t_ci95": [
+     0.2759298320075954,
+     0.27749204299240454
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast08": {
+    "theta_hat": 0.2790703125,
+    "ci95_hier_bootstrap": [
+     0.27737880859375,
+     0.2806953125
+    ],
+    "seed_paired_t_ci95": [
+     0.2785740922987441,
+     0.279566532701256
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_rotate10": {
+    "theta_hat": -0.171296875,
+    "ci95_hier_bootstrap": [
+     -0.17460957031250002,
+     -0.16800390625
+    ],
+    "seed_paired_t_ci95": [
+     -0.17504641657593126,
+     -0.16754733342406872
+    ],
+    "share_images_variant_better": 0.002,
+    "direction": "baseline higher"
+   },
+   "bitacc_erase10": {
+    "theta_hat": 0.26921875,
+    "ci95_hier_bootstrap": [
+     0.2669765625,
+     0.271359375
+    ],
+    "seed_paired_t_ci95": [
+     0.2665236800073922,
+     0.27191381999260783
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   }
+  },
+  "v2-hidden": {
+   "psnr_rgb": {
+    "theta_hat": 0.1017862548828125,
+    "ci95_hier_bootstrap": [
+     0.0418466281414032,
+     0.16247886254787444
+    ],
+    "seed_paired_t_ci95": [
+     0.0954783463969609,
+     0.10809416336866412
+    ],
+    "share_images_variant_better": 0.506,
+    "direction": "variant higher"
+   },
+   "psnr_y": {
+    "theta_hat": -1.80162371635437,
+    "ci95_hier_bootstrap": [
+     -2.0507818747520443,
+     -1.6226889518499374
+    ],
+    "seed_paired_t_ci95": [
+     -2.1942222695834315,
+     -1.4090251631253092
+    ],
+    "share_images_variant_better": 0.174,
+    "direction": "baseline higher"
+   },
+   "ssim": {
+    "theta_hat": -0.014845045879483224,
+    "ci95_hier_bootstrap": [
+     -0.015674018609151245,
+     -0.013835132084786893
+    ],
+    "seed_paired_t_ci95": [
+     -0.016448525694198878,
+     -0.013241566064767568
+    ],
+    "share_images_variant_better": 0.056,
+    "direction": "baseline higher"
+   },
+   "bitacc_clean": {
+    "theta_hat": 0.276921875,
+    "ci95_hier_bootstrap": [
+     0.275265625,
+     0.27853125
+    ],
+    "seed_paired_t_ci95": [
+     0.27652562618763055,
+     0.2773181238123694
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg10": {
+    "theta_hat": 0.1291953125,
+    "ci95_hier_bootstrap": [
+     0.07237880859375,
+     0.18630859375
+    ],
+    "seed_paired_t_ci95": [
+     0.025467778028167617,
+     0.23292284697183235
+    ],
+    "share_images_variant_better": 0.957,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg20": {
+    "theta_hat": 0.2814140625,
+    "ci95_hier_bootstrap": [
+     0.17946005859375,
+     0.38426572265625
+    ],
+    "seed_paired_t_ci95": [
+     0.094592118664166,
+     0.468236006335834
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg30": {
+    "theta_hat": 0.37323046875,
+    "ci95_hier_bootstrap": [
+     0.28589414062499996,
+     0.4613048828125
+    ],
+    "seed_paired_t_ci95": [
+     0.2129464072980857,
+     0.5335145302019143
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg40": {
+    "theta_hat": 0.420140625,
+    "ci95_hier_bootstrap": [
+     0.3662103515625,
+     0.4741798828125
+    ],
+    "seed_paired_t_ci95": [
+     0.32138522333114183,
+     0.518896026668858
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg50": {
+    "theta_hat": 0.44480859375,
+    "ci95_hier_bootstrap": [
+     0.41342578125,
+     0.4761759765625
+    ],
+    "seed_paired_t_ci95": [
+     0.38751983976099225,
+     0.5020973477390078
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg60": {
+    "theta_hat": 0.4551015625,
+    "ci95_hier_bootstrap": [
+     0.437597265625,
+     0.47258203125
+    ],
+    "seed_paired_t_ci95": [
+     0.4231387734252774,
+     0.4870643515747226
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg70": {
+    "theta_hat": 0.46008203125,
+    "ci95_hier_bootstrap": [
+     0.45108154296875,
+     0.4692267578125
+    ],
+    "seed_paired_t_ci95": [
+     0.44358008988527364,
+     0.4765839726147264
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg80": {
+    "theta_hat": 0.45778125,
+    "ci95_hier_bootstrap": [
+     0.4520896484375,
+     0.46360947265624997
+    ],
+    "seed_paired_t_ci95": [
+     0.4475343519850993,
+     0.4680281480149008
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg90": {
+    "theta_hat": 0.43786328125,
+    "ci95_hier_bootstrap": [
+     0.433625,
+     0.44207431640625
+    ],
+    "seed_paired_t_ci95": [
+     0.43083878942332837,
+     0.44488777307667166
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp50": {
+    "theta_hat": 0.42144921875,
+    "ci95_hier_bootstrap": [
+     0.40239443359375004,
+     0.440832421875
+    ],
+    "seed_paired_t_ci95": [
+     0.3859189257307288,
+     0.45697951176927126
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp75": {
+    "theta_hat": 0.44541796875,
+    "ci95_hier_bootstrap": [
+     0.4347693359375,
+     0.456140625
+    ],
+    "seed_paired_t_ci95": [
+     0.42567124829137803,
+     0.46516468920862186
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur05": {
+    "theta_hat": 0.28578125,
+    "ci95_hier_bootstrap": [
+     0.284109375,
+     0.28741015625
+    ],
+    "seed_paired_t_ci95": [
+     0.2855384920259182,
+     0.2860240079740818
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur1": {
+    "theta_hat": 0.3245703125,
+    "ci95_hier_bootstrap": [
+     0.32200390625,
+     0.32690244140624997
+    ],
+    "seed_paired_t_ci95": [
+     0.3214700887668085,
+     0.32767053623319153
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur2": {
+    "theta_hat": 0.1354453125,
+    "ci95_hier_bootstrap": [
+     -0.011703125,
+     0.28344160156250003
+    ],
+    "seed_paired_t_ci95": [
+     -0.13458437098218648,
+     0.4054749959821865
+    ],
+    "share_images_variant_better": 0.975,
+    "direction": "not resolved"
+   },
+   "bitacc_noise001": {
+    "theta_hat": 0.3063359375,
+    "ci95_hier_bootstrap": [
+     0.30454287109375,
+     0.30807431640625
+    ],
+    "seed_paired_t_ci95": [
+     0.30593994877877273,
+     0.30673192622122725
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_noise002": {
+    "theta_hat": 0.362734375,
+    "ci95_hier_bootstrap": [
+     0.360796875,
+     0.36468359375
+    ],
+    "seed_paired_t_ci95": [
+     0.36221087545520086,
+     0.36325787454479913
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_noise005": {
+    "theta_hat": 0.44994921875,
+    "ci95_hier_bootstrap": [
+     0.44743740234375,
+     0.45243359375
+    ],
+    "seed_paired_t_ci95": [
+     0.446898448350566,
+     0.45299998914943407
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_median3": {
+    "theta_hat": 0.32321875,
+    "ci95_hier_bootstrap": [
+     0.31592568359375,
+     0.33051953125
+    ],
+    "seed_paired_t_ci95": [
+     0.3101335917508826,
+     0.3363039082491174
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize05": {
+    "theta_hat": 0.34307421875,
+    "ci95_hier_bootstrap": [
+     0.3341912109375,
+     0.3495548828125
+    ],
+    "seed_paired_t_ci95": [
+     0.3285371126907463,
+     0.3576113248092537
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize075": {
+    "theta_hat": 0.30767578125,
+    "ci95_hier_bootstrap": [
+     0.305828125,
+     0.3094453125
+    ],
+    "seed_paired_t_ci95": [
+     0.30655974150844556,
+     0.30879182099155444
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_crop075": {
+    "theta_hat": -0.19723828125,
+    "ci95_hier_bootstrap": [
+     -0.20225390625,
+     -0.19205068359375
+    ],
+    "seed_paired_t_ci95": [
+     -0.20563619818252749,
+     -0.18884036431747248
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop09": {
+    "theta_hat": -0.2120078125,
+    "ci95_hier_bootstrap": [
+     -0.2194140625,
+     -0.2045037109375
+    ],
+    "seed_paired_t_ci95": [
+     -0.22504120984452614,
+     -0.19897441515547387
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "bitacc_bright12": {
+    "theta_hat": 0.2701171875,
+    "ci95_hier_bootstrap": [
+     0.266625,
+     0.27330869140624997
+    ],
+    "seed_paired_t_ci95": [
+     0.2647313116170973,
+     0.27550306338290276
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_bright08": {
+    "theta_hat": 0.2793671875,
+    "ci95_hier_bootstrap": [
+     0.27768359375,
+     0.281
+    ],
+    "seed_paired_t_ci95": [
+     0.2790643773046466,
+     0.2796699976953533
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast12": {
+    "theta_hat": 0.27577734375,
+    "ci95_hier_bootstrap": [
+     0.27359365234375005,
+     0.27787890625
+    ],
+    "seed_paired_t_ci95": [
+     0.27309734905908506,
+     0.27845733844091497
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast08": {
+    "theta_hat": 0.2791796875,
+    "ci95_hier_bootstrap": [
+     0.277515625,
+     0.28077744140625
+    ],
+    "seed_paired_t_ci95": [
+     0.2788943958664711,
+     0.2794649791335289
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_rotate10": {
+    "theta_hat": -0.17568359375,
+    "ci95_hier_bootstrap": [
+     -0.18242207031250002,
+     -0.16942958984375
+    ],
+    "seed_paired_t_ci95": [
+     -0.1870132659436739,
+     -0.16435392155632605
+    ],
+    "share_images_variant_better": 0.003,
+    "direction": "baseline higher"
+   },
+   "bitacc_erase10": {
+    "theta_hat": 0.27045703125,
+    "ci95_hier_bootstrap": [
+     0.2678671875,
+     0.27292978515625
+    ],
+    "seed_paired_t_ci95": [
+     0.2668086869047628,
+     0.2741053755952372
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   }
+  },
+  "v3-hidden": {
+   "psnr_rgb": {
+    "theta_hat": 0.09976890182495117,
+    "ci95_hier_bootstrap": [
+     0.03982594356536866,
+     0.16031278052330017
+    ],
+    "seed_paired_t_ci95": [
+     0.095756373328792,
+     0.10378143032111037
+    ],
+    "share_images_variant_better": 0.506,
+    "direction": "variant higher"
+   },
+   "psnr_y": {
+    "theta_hat": -2.3821970510482786,
+    "ci95_hier_bootstrap": [
+     -2.501783106780052,
+     -2.268522864484787
+    ],
+    "seed_paired_t_ci95": [
+     -2.5709227995463038,
+     -2.1934713025502535
+    ],
+    "share_images_variant_better": 0.108,
+    "direction": "baseline higher"
+   },
+   "ssim": {
+    "theta_hat": -0.015603723540902137,
+    "ci95_hier_bootstrap": [
+     -0.01783101206533611,
+     -0.013392178197577594
+    ],
+    "seed_paired_t_ci95": [
+     -0.01964038992231623,
+     -0.011567057159488041
+    ],
+    "share_images_variant_better": 0.046,
+    "direction": "baseline higher"
+   },
+   "bitacc_clean": {
+    "theta_hat": 0.27683203125,
+    "ci95_hier_bootstrap": [
+     0.275046875,
+     0.27851953125
+    ],
+    "seed_paired_t_ci95": [
+     0.2756411416970311,
+     0.2780229208029689
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg10": {
+    "theta_hat": 0.1859765625,
+    "ci95_hier_bootstrap": [
+     0.11766015625,
+     0.254191796875
+    ],
+    "seed_paired_t_ci95": [
+     0.06137158945626356,
+     0.31058153554373646
+    ],
+    "share_images_variant_better": 0.997,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg20": {
+    "theta_hat": 0.3468984375,
+    "ci95_hier_bootstrap": [
+     0.2577341796875,
+     0.4356720703125
+    ],
+    "seed_paired_t_ci95": [
+     0.18457656774536735,
+     0.5092203072546327
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg30": {
+    "theta_hat": 0.42010546875,
+    "ci95_hier_bootstrap": [
+     0.3709751953125,
+     0.46880947265625
+    ],
+    "seed_paired_t_ci95": [
+     0.33070963633916095,
+     0.509501301160839
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg40": {
+    "theta_hat": 0.4591953125,
+    "ci95_hier_bootstrap": [
+     0.44383974609375004,
+     0.47421875
+    ],
+    "seed_paired_t_ci95": [
+     0.43121263930030457,
+     0.48717798569969545
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg50": {
+    "theta_hat": 0.470671875,
+    "ci95_hier_bootstrap": [
+     0.4662068359375,
+     0.47557451171875
+    ],
+    "seed_paired_t_ci95": [
+     0.46271516358635834,
+     0.4786285864136417
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg60": {
+    "theta_hat": 0.4706953125,
+    "ci95_hier_bootstrap": [
+     0.46799599609375003,
+     0.47359375
+    ],
+    "seed_paired_t_ci95": [
+     0.4672075631079458,
+     0.4741830618920541
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg70": {
+    "theta_hat": 0.4690390625,
+    "ci95_hier_bootstrap": [
+     0.46668349609375004,
+     0.4713203125
+    ],
+    "seed_paired_t_ci95": [
+     0.46678850423307333,
+     0.47128962076692654
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg80": {
+    "theta_hat": 0.4640078125,
+    "ci95_hier_bootstrap": [
+     0.4617771484375,
+     0.46616416015624995
+    ],
+    "seed_paired_t_ci95": [
+     0.4621622020061919,
+     0.4658534229938081
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg90": {
+    "theta_hat": 0.44173828125,
+    "ci95_hier_bootstrap": [
+     0.4395859375,
+     0.44384765625
+    ],
+    "seed_paired_t_ci95": [
+     0.44023915514376544,
+     0.4432374073562346
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp50": {
+    "theta_hat": 0.454015625,
+    "ci95_hier_bootstrap": [
+     0.45074599609375005,
+     0.45768759765625
+    ],
+    "seed_paired_t_ci95": [
+     0.448846222074272,
+     0.45918502792572785
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp75": {
+    "theta_hat": 0.45661328125,
+    "ci95_hier_bootstrap": [
+     0.4541015625,
+     0.45905859375
+    ],
+    "seed_paired_t_ci95": [
+     0.45390574908987563,
+     0.4593208134101244
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur05": {
+    "theta_hat": 0.28556640625,
+    "ci95_hier_bootstrap": [
+     0.28377734375,
+     0.28728125
+    ],
+    "seed_paired_t_ci95": [
+     0.2844042392108608,
+     0.28672857328913914
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur1": {
+    "theta_hat": 0.32266015625,
+    "ci95_hier_bootstrap": [
+     0.320296875,
+     0.3251328125
+    ],
+    "seed_paired_t_ci95": [
+     0.31956233446737997,
+     0.32575797803262
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur2": {
+    "theta_hat": 0.056,
+    "ci95_hier_bootstrap": [
+     -0.04907822265625,
+     0.16108623046874998
+    ],
+    "seed_paired_t_ci95": [
+     -0.14698397261732732,
+     0.2589839726173273
+    ],
+    "share_images_variant_better": 0.779,
+    "direction": "not resolved"
+   },
+   "bitacc_noise001": {
+    "theta_hat": 0.3061640625,
+    "ci95_hier_bootstrap": [
+     0.304234375,
+     0.30803125
+    ],
+    "seed_paired_t_ci95": [
+     0.3048464872061972,
+     0.3074816377938028
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_noise002": {
+    "theta_hat": 0.362578125,
+    "ci95_hier_bootstrap": [
+     0.3604880859375,
+     0.3646328125
+    ],
+    "seed_paired_t_ci95": [
+     0.3610758923201834,
+     0.36408035767981656
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_noise005": {
+    "theta_hat": 0.45000390625,
+    "ci95_hier_bootstrap": [
+     0.44665625,
+     0.45290234375
+    ],
+    "seed_paired_t_ci95": [
+     0.44530167472601834,
+     0.4547061377739816
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_median3": {
+    "theta_hat": 0.316359375,
+    "ci95_hier_bootstrap": [
+     0.3037578125,
+     0.32896884765624995
+    ],
+    "seed_paired_t_ci95": [
+     0.2934324099769495,
+     0.33928634002305047
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize05": {
+    "theta_hat": 0.3557734375,
+    "ci95_hier_bootstrap": [
+     0.35303125,
+     0.35884775390624996
+    ],
+    "seed_paired_t_ci95": [
+     0.3515365014039735,
+     0.3600103735960265
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize075": {
+    "theta_hat": 0.30744140625,
+    "ci95_hier_bootstrap": [
+     0.30539453125,
+     0.30937890625
+    ],
+    "seed_paired_t_ci95": [
+     0.30547044610630997,
+     0.30941236639369
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_crop075": {
+    "theta_hat": -0.1995625,
+    "ci95_hier_bootstrap": [
+     -0.204796875,
+     -0.1941873046875
+    ],
+    "seed_paired_t_ci95": [
+     -0.20834243513309741,
+     -0.19078256486690254
+    ],
+    "share_images_variant_better": 0.001,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop09": {
+    "theta_hat": -0.206421875,
+    "ci95_hier_bootstrap": [
+     -0.21141015625,
+     -0.20174208984375
+    ],
+    "seed_paired_t_ci95": [
+     -0.21405400414960615,
+     -0.19878974585039386
+    ],
+    "share_images_variant_better": 0.002,
+    "direction": "baseline higher"
+   },
+   "bitacc_bright12": {
+    "theta_hat": 0.26634375,
+    "ci95_hier_bootstrap": [
+     0.26279677734375,
+     0.26933212890624997
+    ],
+    "seed_paired_t_ci95": [
+     0.261339454376626,
+     0.271348045623374
+    ],
+    "share_images_variant_better": 0.999,
+    "direction": "variant higher"
+   },
+   "bitacc_bright08": {
+    "theta_hat": 0.27916796875,
+    "ci95_hier_bootstrap": [
+     0.2773865234375,
+     0.28089462890625
+    ],
+    "seed_paired_t_ci95": [
+     0.27806867125112406,
+     0.28026726624887593
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast12": {
+    "theta_hat": 0.2721796875,
+    "ci95_hier_bootstrap": [
+     0.26882421875,
+     0.27510166015625
+    ],
+    "seed_paired_t_ci95": [
+     0.2671402485304214,
+     0.2772191264695786
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast08": {
+    "theta_hat": 0.2790078125,
+    "ci95_hier_bootstrap": [
+     0.27725380859375004,
+     0.280671875
+    ],
+    "seed_paired_t_ci95": [
+     0.27791187063941275,
+     0.28010375436058726
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_rotate10": {
+    "theta_hat": -0.1802265625,
+    "ci95_hier_bootstrap": [
+     -0.187512109375,
+     -0.17266787109375
+    ],
+    "seed_paired_t_ci95": [
+     -0.1934518055478911,
+     -0.1670013194521089
+    ],
+    "share_images_variant_better": 0.004,
+    "direction": "baseline higher"
+   },
+   "bitacc_erase10": {
+    "theta_hat": 0.2683828125,
+    "ci95_hier_bootstrap": [
+     0.26408203125,
+     0.27192587890625
+    ],
+    "seed_paired_t_ci95": [
+     0.26162125679256226,
+     0.27514436820743776
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   }
+  },
+  "v1p-dwtdct": {
+   "psnr_rgb": {
+    "theta_hat": 0.1067015380859375,
+    "ci95_hier_bootstrap": [
+     0.021313715839385988,
+     0.1906923412084579
+    ],
+    "seed_paired_t_ci95": [
+     0.09592617526546296,
+     0.11747690090641205
+    ],
+    "share_images_variant_better": 0.518,
+    "direction": "variant higher"
+   },
+   "psnr_y": {
+    "theta_hat": -17.369270779609682,
+    "ci95_hier_bootstrap": [
+     -17.468512884545326,
+     -17.271366989088058
+    ],
+    "seed_paired_t_ci95": [
+     -17.51201346888064,
+     -17.226528090338725
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "ssim": {
+    "theta_hat": -0.015640779465436936,
+    "ci95_hier_bootstrap": [
+     -0.01812208391278982,
+     -0.013145527339354158
+    ],
+    "seed_paired_t_ci95": [
+     -0.020219328324956053,
+     -0.011062230605917819
+    ],
+    "share_images_variant_better": 0.1,
+    "direction": "baseline higher"
+   },
+   "bitacc_clean": {
+    "theta_hat": 0.29161328125,
+    "ci95_hier_bootstrap": [
+     0.28784755859375,
+     0.29556640625
+    ],
+    "seed_paired_t_ci95": [
+     0.2911716008323543,
+     0.2920549616676457
+    ],
+    "share_images_variant_better": 0.991,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg10": {
+    "theta_hat": 0.05984375,
+    "ci95_hier_bootstrap": [
+     0.056195019531249994,
+     0.06334375
+    ],
+    "seed_paired_t_ci95": [
+     0.05564739779290356,
+     0.06404010220709645
+    ],
+    "share_images_variant_better": 0.792,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg20": {
+    "theta_hat": 0.1551015625,
+    "ci95_hier_bootstrap": [
+     0.14365224609375,
+     0.16311328125
+    ],
+    "seed_paired_t_ci95": [
+     0.1369847802984761,
+     0.17321834470152386
+    ],
+    "share_images_variant_better": 0.966,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg30": {
+    "theta_hat": 0.2437265625,
+    "ci95_hier_bootstrap": [
+     0.22853095703124998,
+     0.25550400390625
+    ],
+    "seed_paired_t_ci95": [
+     0.21832008738466616,
+     0.2691330376153339
+    ],
+    "share_images_variant_better": 0.997,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg40": {
+    "theta_hat": 0.3321484375,
+    "ci95_hier_bootstrap": [
+     0.31323037109375,
+     0.34712509765625
+    ],
+    "seed_paired_t_ci95": [
+     0.2999768198681483,
+     0.3643200551318517
+    ],
+    "share_images_variant_better": 0.998,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg50": {
+    "theta_hat": 0.3987109375,
+    "ci95_hier_bootstrap": [
+     0.38228027343750004,
+     0.41174609375
+    ],
+    "seed_paired_t_ci95": [
+     0.3707669943258302,
+     0.42665488067416985
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg60": {
+    "theta_hat": 0.4504921875,
+    "ci95_hier_bootstrap": [
+     0.43890625,
+     0.45973486328124996
+    ],
+    "seed_paired_t_ci95": [
+     0.4307948530052096,
+     0.47018952199479036
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg70": {
+    "theta_hat": 0.48221875,
+    "ci95_hier_bootstrap": [
+     0.47527333984375003,
+     0.48739072265625
+    ],
+    "seed_paired_t_ci95": [
+     0.4711805167065799,
+     0.49325698329342005
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg80": {
+    "theta_hat": 0.49001953125,
+    "ci95_hier_bootstrap": [
+     0.48679677734375004,
+     0.492921875
+    ],
+    "seed_paired_t_ci95": [
+     0.48558476166403186,
+     0.4944543008359682
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg90": {
+    "theta_hat": 0.4888203125,
+    "ci95_hier_bootstrap": [
+     0.48650771484375005,
+     0.49106640625
+    ],
+    "seed_paired_t_ci95": [
+     0.486807546491444,
+     0.49083307850855606
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp50": {
+    "theta_hat": 0.433875,
+    "ci95_hier_bootstrap": [
+     0.41804658203125,
+     0.44563671875
+    ],
+    "seed_paired_t_ci95": [
+     0.4078861291702221,
+     0.4598638708297779
+    ],
+    "share_images_variant_better": 0.998,
+    "direction": "variant higher"
+   },
+   "bitacc_webp75": {
+    "theta_hat": 0.48375390625,
+    "ci95_hier_bootstrap": [
+     0.47655439453125004,
+     0.48896103515625
+    ],
+    "seed_paired_t_ci95": [
+     0.47232790633334426,
+     0.4951799061666558
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur05": {
+    "theta_hat": 0.370390625,
+    "ci95_hier_bootstrap": [
+     0.36722646484375004,
+     0.37358994140624996
+    ],
+    "seed_paired_t_ci95": [
+     0.36980401599777324,
+     0.3709772340022267
+    ],
+    "share_images_variant_better": 0.997,
+    "direction": "variant higher"
+   },
+   "bitacc_blur1": {
+    "theta_hat": 0.461125,
+    "ci95_hier_bootstrap": [
+     0.45697646484375004,
+     0.4656015625
+    ],
+    "seed_paired_t_ci95": [
+     0.45403857552768045,
+     0.46821142447231956
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur2": {
+    "theta_hat": 0.01139453125,
+    "ci95_hier_bootstrap": [
+     0.00783583984375,
+     0.014785253906249999
+    ],
+    "seed_paired_t_ci95": [
+     0.007118920158666213,
+     0.015670142341333786
+    ],
+    "share_images_variant_better": 0.572,
+    "direction": "variant higher"
+   },
+   "bitacc_noise001": {
+    "theta_hat": 0.29738671875,
+    "ci95_hier_bootstrap": [
+     0.293828125,
+     0.30099228515625
+    ],
+    "seed_paired_t_ci95": [
+     0.29688641478845,
+     0.29788702271155
+    ],
+    "share_images_variant_better": 0.995,
+    "direction": "variant higher"
+   },
+   "bitacc_noise002": {
+    "theta_hat": 0.30601953125,
+    "ci95_hier_bootstrap": [
+     0.30281630859375,
+     0.30921484375
+    ],
+    "seed_paired_t_ci95": [
+     0.3054019922830829,
+     0.30663707021691705
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_noise005": {
+    "theta_hat": 0.39407421875,
+    "ci95_hier_bootstrap": [
+     0.3916015625,
+     0.3966212890625
+    ],
+    "seed_paired_t_ci95": [
+     0.39240990749979826,
+     0.3957385300002017
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_median3": {
+    "theta_hat": 0.39182421875,
+    "ci95_hier_bootstrap": [
+     0.38360927734375,
+     0.40189492187500003
+    ],
+    "seed_paired_t_ci95": [
+     0.3748367469166673,
+     0.4088116905833327
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize05": {
+    "theta_hat": 0.33159375,
+    "ci95_hier_bootstrap": [
+     0.27788916015625,
+     0.3816640625
+    ],
+    "seed_paired_t_ci95": [
+     0.22961203517758827,
+     0.43357546482241177
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize075": {
+    "theta_hat": 0.4511171875,
+    "ci95_hier_bootstrap": [
+     0.44862099609375,
+     0.4536171875
+    ],
+    "seed_paired_t_ci95": [
+     0.44940742506007614,
+     0.4528269499399238
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_crop075": {
+    "theta_hat": -0.0009296875,
+    "ci95_hier_bootstrap": [
+     -0.00395322265625,
+     0.002082226562499997
+    ],
+    "seed_paired_t_ci95": [
+     -0.0033532320676444207,
+     0.0014938570676444208
+    ],
+    "share_images_variant_better": 0.48,
+    "direction": "not resolved"
+   },
+   "bitacc_crop09": {
+    "theta_hat": -0.01584375,
+    "ci95_hier_bootstrap": [
+     -0.02056640625,
+     -0.010960839843750002
+    ],
+    "seed_paired_t_ci95": [
+     -0.023305398171937025,
+     -0.008382101828062975
+    ],
+    "share_images_variant_better": 0.397,
+    "direction": "baseline higher"
+   },
+   "bitacc_bright12": {
+    "theta_hat": 0.26013671875,
+    "ci95_hier_bootstrap": [
+     0.25563261718749997,
+     0.26471484375
+    ],
+    "seed_paired_t_ci95": [
+     0.2594151601203807,
+     0.2608582773796193
+    ],
+    "share_images_variant_better": 0.966,
+    "direction": "variant higher"
+   },
+   "bitacc_bright08": {
+    "theta_hat": 0.43008984375,
+    "ci95_hier_bootstrap": [
+     0.4267068359375,
+     0.43360556640625
+    ],
+    "seed_paired_t_ci95": [
+     0.42961750390352604,
+     0.4305621835964739
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast12": {
+    "theta_hat": 0.2846171875,
+    "ci95_hier_bootstrap": [
+     0.27981630859375,
+     0.28925419921875
+    ],
+    "seed_paired_t_ci95": [
+     0.2838360820075954,
+     0.28539829299240455
+    ],
+    "share_images_variant_better": 0.97,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast08": {
+    "theta_hat": 0.4302421875,
+    "ci95_hier_bootstrap": [
+     0.42686708984375005,
+     0.43375791015625
+    ],
+    "seed_paired_t_ci95": [
+     0.42974596729874404,
+     0.43073840770125593
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_rotate10": {
+    "theta_hat": -0.00171875,
+    "ci95_hier_bootstrap": [
+     -0.005019726562499999,
+     0.0017578125
+    ],
+    "seed_paired_t_ci95": [
+     -0.005468291575931283,
+     0.0020307915759312832
+    ],
+    "share_images_variant_better": 0.472,
+    "direction": "not resolved"
+   },
+   "bitacc_erase10": {
+    "theta_hat": 0.282421875,
+    "ci95_hier_bootstrap": [
+     0.27846474609375005,
+     0.2864611328125
+    ],
+    "seed_paired_t_ci95": [
+     0.2797268050073922,
+     0.28511694499260787
+    ],
+    "share_images_variant_better": 0.991,
+    "direction": "variant higher"
+   }
+  },
+  "v2-dwtdct": {
+   "psnr_rgb": {
+    "theta_hat": 0.09860021591186524,
+    "ci95_hier_bootstrap": [
+     0.013842853093147277,
+     0.1823169435024261
+    ],
+    "seed_paired_t_ci95": [
+     0.09229230742601363,
+     0.10490812439771685
+    ],
+    "share_images_variant_better": 0.517,
+    "direction": "variant higher"
+   },
+   "psnr_y": {
+    "theta_hat": -16.68823121070862,
+    "ci95_hier_bootstrap": [
+     -16.93541595776081,
+     -16.512473873376845
+    ],
+    "seed_paired_t_ci95": [
+     -17.08082976393768,
+     -16.29563265747956
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "ssim": {
+    "theta_hat": -0.010471092715859413,
+    "ci95_hier_bootstrap": [
+     -0.011305978110805153,
+     -0.009459020395949484
+    ],
+    "seed_paired_t_ci95": [
+     -0.012074572530575067,
+     -0.008867612901143759
+    ],
+    "share_images_variant_better": 0.149,
+    "direction": "baseline higher"
+   },
+   "bitacc_clean": {
+    "theta_hat": 0.29165625,
+    "ci95_hier_bootstrap": [
+     0.28791396484375004,
+     0.29562900390624997
+    ],
+    "seed_paired_t_ci95": [
+     0.2912600011876306,
+     0.2920524988123694
+    ],
+    "share_images_variant_better": 0.991,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg10": {
+    "theta_hat": 0.1294140625,
+    "ci95_hier_bootstrap": [
+     0.072605078125,
+     0.18663681640625002
+    ],
+    "seed_paired_t_ci95": [
+     0.025686528028167607,
+     0.23314159697183234
+    ],
+    "share_images_variant_better": 0.949,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg20": {
+    "theta_hat": 0.2901953125,
+    "ci95_hier_bootstrap": [
+     0.18817900390625,
+     0.39316806640624996
+    ],
+    "seed_paired_t_ci95": [
+     0.103373368664166,
+     0.47701725633583403
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg30": {
+    "theta_hat": 0.38268359375,
+    "ci95_hier_bootstrap": [
+     0.2951208984375,
+     0.47070361328125
+    ],
+    "seed_paired_t_ci95": [
+     0.2223995322980857,
+     0.5429676552019143
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg40": {
+    "theta_hat": 0.43390625,
+    "ci95_hier_bootstrap": [
+     0.37987841796875,
+     0.48804306640624995
+    ],
+    "seed_paired_t_ci95": [
+     0.33515084833114184,
+     0.532661651668858
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg50": {
+    "theta_hat": 0.45948046875,
+    "ci95_hier_bootstrap": [
+     0.4281501953125,
+     0.49079707031250003
+    ],
+    "seed_paired_t_ci95": [
+     0.40219171476099225,
+     0.5167692227390078
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg60": {
+    "theta_hat": 0.4765703125,
+    "ci95_hier_bootstrap": [
+     0.45897236328125,
+     0.49396884765625
+    ],
+    "seed_paired_t_ci95": [
+     0.44460752342527743,
+     0.5085331015747226
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg70": {
+    "theta_hat": 0.48791015625,
+    "ci95_hier_bootstrap": [
+     0.47867958984375003,
+     0.49705498046874996
+    ],
+    "seed_paired_t_ci95": [
+     0.4714082148852736,
+     0.5044120976147264
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg80": {
+    "theta_hat": 0.48903125,
+    "ci95_hier_bootstrap": [
+     0.48325,
+     0.49488681640625
+    ],
+    "seed_paired_t_ci95": [
+     0.4787843519850993,
+     0.4992781480149008
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg90": {
+    "theta_hat": 0.48781640625,
+    "ci95_hier_bootstrap": [
+     0.4835193359375,
+     0.49206650390624995
+    ],
+    "seed_paired_t_ci95": [
+     0.48079191442332836,
+     0.49484089807667164
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp50": {
+    "theta_hat": 0.44893359375,
+    "ci95_hier_bootstrap": [
+     0.42972646484375004,
+     0.46828125
+    ],
+    "seed_paired_t_ci95": [
+     0.41340330073072884,
+     0.4844638867692712
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp75": {
+    "theta_hat": 0.48712109375,
+    "ci95_hier_bootstrap": [
+     0.47644482421875,
+     0.4978359375
+    ],
+    "seed_paired_t_ci95": [
+     0.4673743732913781,
+     0.5068678142086219
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur05": {
+    "theta_hat": 0.3705,
+    "ci95_hier_bootstrap": [
+     0.36734375,
+     0.3736953125
+    ],
+    "seed_paired_t_ci95": [
+     0.37025724202591814,
+     0.37074275797408185
+    ],
+    "share_images_variant_better": 0.997,
+    "direction": "variant higher"
+   },
+   "bitacc_blur1": {
+    "theta_hat": 0.4726953125,
+    "ci95_hier_bootstrap": [
+     0.46987890625,
+     0.47543359375
+    ],
+    "seed_paired_t_ci95": [
+     0.46959508876680844,
+     0.4757955362331915
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur2": {
+    "theta_hat": 0.1911484375,
+    "ci95_hier_bootstrap": [
+     0.043753515625,
+     0.33932089843749996
+    ],
+    "seed_paired_t_ci95": [
+     -0.07888124598218646,
+     0.46117812098218647
+    ],
+    "share_images_variant_better": 0.995,
+    "direction": "variant higher"
+   },
+   "bitacc_noise001": {
+    "theta_hat": 0.2974765625,
+    "ci95_hier_bootstrap": [
+     0.29394521484375,
+     0.30113671875
+    ],
+    "seed_paired_t_ci95": [
+     0.2970805737787727,
+     0.29787255122122724
+    ],
+    "share_images_variant_better": 0.995,
+    "direction": "variant higher"
+   },
+   "bitacc_noise002": {
+    "theta_hat": 0.3060625,
+    "ci95_hier_bootstrap": [
+     0.3028828125,
+     0.309234375
+    ],
+    "seed_paired_t_ci95": [
+     0.3055390004552009,
+     0.30658599954479915
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_noise005": {
+    "theta_hat": 0.39318359375,
+    "ci95_hier_bootstrap": [
+     0.39030458984375005,
+     0.39610546875
+    ],
+    "seed_paired_t_ci95": [
+     0.3901328233505659,
+     0.39623436414943397
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_median3": {
+    "theta_hat": 0.437515625,
+    "ci95_hier_bootstrap": [
+     0.43004296875,
+     0.44480107421875
+    ],
+    "seed_paired_t_ci95": [
+     0.42443046675088264,
+     0.4506007832491173
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize05": {
+    "theta_hat": 0.47040234375,
+    "ci95_hier_bootstrap": [
+     0.4615625,
+     0.47715654296875
+    ],
+    "seed_paired_t_ci95": [
+     0.4558652376907463,
+     0.4849394498092537
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize075": {
+    "theta_hat": 0.45219140625,
+    "ci95_hier_bootstrap": [
+     0.4498046875,
+     0.45463681640625
+    ],
+    "seed_paired_t_ci95": [
+     0.45107536650844565,
+     0.4533074459915544
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_crop075": {
+    "theta_hat": -0.00578515625,
+    "ci95_hier_bootstrap": [
+     -0.0107697265625,
+     -0.0005506835937500014
+    ],
+    "seed_paired_t_ci95": [
+     -0.014183073182527506,
+     0.002612760682527507
+    ],
+    "share_images_variant_better": 0.443,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop09": {
+    "theta_hat": -0.0241796875,
+    "ci95_hier_bootstrap": [
+     -0.03150009765625,
+     -0.016577832031250003
+    ],
+    "seed_paired_t_ci95": [
+     -0.037213084844526144,
+     -0.011146290155473866
+    ],
+    "share_images_variant_better": 0.367,
+    "direction": "baseline higher"
+   },
+   "bitacc_bright12": {
+    "theta_hat": 0.2588828125,
+    "ci95_hier_bootstrap": [
+     0.25356640625,
+     0.26419931640625
+    ],
+    "seed_paired_t_ci95": [
+     0.25349693661709727,
+     0.26426868838290274
+    ],
+    "share_images_variant_better": 0.965,
+    "direction": "variant higher"
+   },
+   "bitacc_bright08": {
+    "theta_hat": 0.4301953125,
+    "ci95_hier_bootstrap": [
+     0.42683203125,
+     0.43370703125
+    ],
+    "seed_paired_t_ci95": [
+     0.42989250230464665,
+     0.4304981226953533
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast12": {
+    "theta_hat": 0.28368359375,
+    "ci95_hier_bootstrap": [
+     0.27869501953125003,
+     0.2885587890625
+    ],
+    "seed_paired_t_ci95": [
+     0.28100359905908506,
+     0.286363588440915
+    ],
+    "share_images_variant_better": 0.97,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast08": {
+    "theta_hat": 0.4303515625,
+    "ci95_hier_bootstrap": [
+     0.42700751953125,
+     0.43382421875
+    ],
+    "seed_paired_t_ci95": [
+     0.43006627086647103,
+     0.430636854133529
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_rotate10": {
+    "theta_hat": -0.00610546875,
+    "ci95_hier_bootstrap": [
+     -0.0128048828125,
+     0.00024628906249999716
+    ],
+    "seed_paired_t_ci95": [
+     -0.017435140943673915,
+     0.005224203443673915
+    ],
+    "share_images_variant_better": 0.459,
+    "direction": "not resolved"
+   },
+   "bitacc_erase10": {
+    "theta_hat": 0.28366015625,
+    "ci95_hier_bootstrap": [
+     0.2795078125,
+     0.28786328125
+    ],
+    "seed_paired_t_ci95": [
+     0.28001181190476276,
+     0.28730850059523716
+    ],
+    "share_images_variant_better": 0.99,
+    "direction": "variant higher"
+   }
+  },
+  "v3-dwtdct": {
+   "psnr_rgb": {
+    "theta_hat": 0.0965828628540039,
+    "ci95_hier_bootstrap": [
+     0.011948433148860934,
+     0.18025746865272513
+    ],
+    "seed_paired_t_ci95": [
+     0.09257033435784473,
+     0.1005953913501631
+    ],
+    "share_images_variant_better": 0.513,
+    "direction": "variant higher"
+   },
+   "psnr_y": {
+    "theta_hat": -17.268804545402528,
+    "ci95_hier_bootstrap": [
+     -17.38977888765335,
+     -17.155962099266052
+    ],
+    "seed_paired_t_ci95": [
+     -17.457530293900554,
+     -17.080078796904502
+    ],
+    "share_images_variant_better": 0.0,
+    "direction": "baseline higher"
+   },
+   "ssim": {
+    "theta_hat": -0.011229770377278328,
+    "ci95_hier_bootstrap": [
+     -0.013469937598332761,
+     -0.009025302588939667
+    ],
+    "seed_paired_t_ci95": [
+     -0.015266436758692426,
+     -0.0071931039958642315
+    ],
+    "share_images_variant_better": 0.142,
+    "direction": "baseline higher"
+   },
+   "bitacc_clean": {
+    "theta_hat": 0.29156640625,
+    "ci95_hier_bootstrap": [
+     0.28770703125,
+     0.29556279296875
+    ],
+    "seed_paired_t_ci95": [
+     0.29037551669703104,
+     0.2927572958029689
+    ],
+    "share_images_variant_better": 0.991,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg10": {
+    "theta_hat": 0.1861953125,
+    "ci95_hier_bootstrap": [
+     0.11794482421875,
+     0.25440244140624996
+    ],
+    "seed_paired_t_ci95": [
+     0.06159033945626355,
+     0.3108002855437364
+    ],
+    "share_images_variant_better": 0.993,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg20": {
+    "theta_hat": 0.3556796875,
+    "ci95_hier_bootstrap": [
+     0.26643720703125,
+     0.44449658203125
+    ],
+    "seed_paired_t_ci95": [
+     0.19335781774536728,
+     0.5180015572546327
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg30": {
+    "theta_hat": 0.42955859375,
+    "ci95_hier_bootstrap": [
+     0.38051826171875,
+     0.478329296875
+    ],
+    "seed_paired_t_ci95": [
+     0.34016276133916096,
+     0.5189544261608391
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg40": {
+    "theta_hat": 0.4729609375,
+    "ci95_hier_bootstrap": [
+     0.45757412109375,
+     0.48801972656250003
+    ],
+    "seed_paired_t_ci95": [
+     0.44497826430030457,
+     0.5009436106996955
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg50": {
+    "theta_hat": 0.48534375,
+    "ci95_hier_bootstrap": [
+     0.480953125,
+     0.4902189453125
+    ],
+    "seed_paired_t_ci95": [
+     0.4773870385863583,
+     0.49330046141364164
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg60": {
+    "theta_hat": 0.4921640625,
+    "ci95_hier_bootstrap": [
+     0.48959765625,
+     0.49499228515625
+    ],
+    "seed_paired_t_ci95": [
+     0.4886763131079459,
+     0.4956518118920541
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg70": {
+    "theta_hat": 0.4968671875,
+    "ci95_hier_bootstrap": [
+     0.49455849609375,
+     0.49920322265625
+    ],
+    "seed_paired_t_ci95": [
+     0.4946166292330734,
+     0.49911774576692663
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg80": {
+    "theta_hat": 0.4952578125,
+    "ci95_hier_bootstrap": [
+     0.49304296875,
+     0.4975
+    ],
+    "seed_paired_t_ci95": [
+     0.4934122020061919,
+     0.4971034229938081
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_jpeg90": {
+    "theta_hat": 0.49169140625,
+    "ci95_hier_bootstrap": [
+     0.48948828125,
+     0.4938828125
+    ],
+    "seed_paired_t_ci95": [
+     0.4901922801437654,
+     0.4931905323562346
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp50": {
+    "theta_hat": 0.4815,
+    "ci95_hier_bootstrap": [
+     0.47817958984375003,
+     0.485223046875
+    ],
+    "seed_paired_t_ci95": [
+     0.4763305970742721,
+     0.48666940292572797
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_webp75": {
+    "theta_hat": 0.49831640625,
+    "ci95_hier_bootstrap": [
+     0.49582802734375003,
+     0.500796875
+    ],
+    "seed_paired_t_ci95": [
+     0.4956088740898756,
+     0.5010239384101245
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur05": {
+    "theta_hat": 0.37028515625,
+    "ci95_hier_bootstrap": [
+     0.36708955078125,
+     0.373508203125
+    ],
+    "seed_paired_t_ci95": [
+     0.36912298921086084,
+     0.3714473232891392
+    ],
+    "share_images_variant_better": 0.997,
+    "direction": "variant higher"
+   },
+   "bitacc_blur1": {
+    "theta_hat": 0.47078515625,
+    "ci95_hier_bootstrap": [
+     0.46809755859375,
+     0.47365234375
+    ],
+    "seed_paired_t_ci95": [
+     0.4676873344673799,
+     0.47388297803262
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_blur2": {
+    "theta_hat": 0.111703125,
+    "ci95_hier_bootstrap": [
+     0.006652050781250001,
+     0.21684833984375
+    ],
+    "seed_paired_t_ci95": [
+     -0.09128084761732731,
+     0.3146870976173273
+    ],
+    "share_images_variant_better": 0.953,
+    "direction": "variant higher"
+   },
+   "bitacc_noise001": {
+    "theta_hat": 0.2973046875,
+    "ci95_hier_bootstrap": [
+     0.29363671875,
+     0.301
+    ],
+    "seed_paired_t_ci95": [
+     0.2959871122061973,
+     0.2986222627938027
+    ],
+    "share_images_variant_better": 0.995,
+    "direction": "variant higher"
+   },
+   "bitacc_noise002": {
+    "theta_hat": 0.30590625,
+    "ci95_hier_bootstrap": [
+     0.30260537109375,
+     0.30917988281250003
+    ],
+    "seed_paired_t_ci95": [
+     0.30440401732018346,
+     0.3074084826798165
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_noise005": {
+    "theta_hat": 0.39323828125,
+    "ci95_hier_bootstrap": [
+     0.38959765625,
+     0.39647265625
+    ],
+    "seed_paired_t_ci95": [
+     0.3885360497260183,
+     0.39794051277398157
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_median3": {
+    "theta_hat": 0.43065625,
+    "ci95_hier_bootstrap": [
+     0.4179958984375,
+     0.44326259765625
+    ],
+    "seed_paired_t_ci95": [
+     0.40772928497694955,
+     0.4535832150230505
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize05": {
+    "theta_hat": 0.4831015625,
+    "ci95_hier_bootstrap": [
+     0.48017958984375003,
+     0.48632041015625
+    ],
+    "seed_paired_t_ci95": [
+     0.4788646264039735,
+     0.48733849859602646
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_resize075": {
+    "theta_hat": 0.45195703125,
+    "ci95_hier_bootstrap": [
+     0.44941015625,
+     0.4545234375
+    ],
+    "seed_paired_t_ci95": [
+     0.44998607110630995,
+     0.4539279913936901
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_crop075": {
+    "theta_hat": -0.008109375,
+    "ci95_hier_bootstrap": [
+     -0.01340634765625,
+     -0.0026092773437500017
+    ],
+    "seed_paired_t_ci95": [
+     -0.016889310133097447,
+     0.0006705601330974503
+    ],
+    "share_images_variant_better": 0.441,
+    "direction": "baseline higher"
+   },
+   "bitacc_crop09": {
+    "theta_hat": -0.01859375,
+    "ci95_hier_bootstrap": [
+     -0.02366015625,
+     -0.0137421875
+    ],
+    "seed_paired_t_ci95": [
+     -0.026225879149606144,
+     -0.010961620850393854
+    ],
+    "share_images_variant_better": 0.381,
+    "direction": "baseline higher"
+   },
+   "bitacc_bright12": {
+    "theta_hat": 0.255109375,
+    "ci95_hier_bootstrap": [
+     0.24980078125,
+     0.26030869140624996
+    ],
+    "seed_paired_t_ci95": [
+     0.250105079376626,
+     0.26011367062337404
+    ],
+    "share_images_variant_better": 0.961,
+    "direction": "variant higher"
+   },
+   "bitacc_bright08": {
+    "theta_hat": 0.42999609375,
+    "ci95_hier_bootstrap": [
+     0.4265546875,
+     0.43355869140625
+    ],
+    "seed_paired_t_ci95": [
+     0.428896796251124,
+     0.43109539124887597
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast12": {
+    "theta_hat": 0.2800859375,
+    "ci95_hier_bootstrap": [
+     0.27455849609375005,
+     0.28535986328125
+    ],
+    "seed_paired_t_ci95": [
+     0.2750464985304214,
+     0.2851253764695786
+    ],
+    "share_images_variant_better": 0.969,
+    "direction": "variant higher"
+   },
+   "bitacc_contrast08": {
+    "theta_hat": 0.4301796875,
+    "ci95_hier_bootstrap": [
+     0.4267421875,
+     0.43370712890624996
+    ],
+    "seed_paired_t_ci95": [
+     0.42908374563941276,
+     0.4312756293605873
+    ],
+    "share_images_variant_better": 1.0,
+    "direction": "variant higher"
+   },
+   "bitacc_rotate10": {
+    "theta_hat": -0.0106484375,
+    "ci95_hier_bootstrap": [
+     -0.0179416015625,
+     -0.003085742187500003
+    ],
+    "seed_paired_t_ci95": [
+     -0.02387368054789112,
+     0.0025768055478911193
+    ],
+    "share_images_variant_better": 0.434,
+    "direction": "baseline higher"
+   },
+   "bitacc_erase10": {
+    "theta_hat": 0.2815859375,
+    "ci95_hier_bootstrap": [
+     0.27623427734375,
+     0.28653525390624995
+    ],
+    "seed_paired_t_ci95": [
+     0.2748243817925622,
+     0.2883474932074378
+    ],
+    "share_images_variant_better": 0.991,
+    "direction": "variant higher"
+   }
+  }
+ }
+}

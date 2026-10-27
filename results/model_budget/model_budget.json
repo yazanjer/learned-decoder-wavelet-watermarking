@@ -1,0 +1,174 @@
+{
+ "used_for_decisions": false,
+ "source": "scripts/report/model_budget.py table",
+ "inputs": [
+  "results/model_budget/param_counts.json",
+  "results/i5_interim/i5_hidden.json",
+  "results/i5_interim/i5_dwtdct.json",
+  "r/pilot-p1-i4@50b20df:i4.json",
+  "r/pilot-p1-g3@23b6a2d:g3.json",
+  "r/pilot-p1-i5_mbrs@b7f6165:i5_mbrs.json"
+ ],
+ "methods": {
+  "v1p": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "epochs": 20,
+   "schedule": "uninterrupted",
+   "batch_size": 16,
+   "lr": 0.001,
+   "steps_per_epoch": 625,
+   "train_seconds_per_seed": [
+    1839.3,
+    2005.7,
+    2231.5,
+    1706.6
+   ],
+   "train_gpu_hours_total": 2.16,
+   "params_trainable_recorded": 262892,
+   "time_basis": "sum over epochs of train.epochs[].seconds (src/trackd_wm/train.py): from the start of the epoch's training loop to the CUDA synchronisation after its last step; excludes checkpoint writing, process start-up and all evaluation (WMNet training runs no in-loop validation)",
+   "record": "r/pilot-p1-i4@50b20df:i4.json runs.v1p_s0-3.train",
+   "params": {
+    "embed_extract_total": 262892,
+    "embed_extract_trainable": 262892,
+    "encoder": 118605,
+    "decoder": 144287,
+    "transform": 0,
+    "discriminator": 0
+   },
+   "params_ratio_to_v2": 0.93
+  },
+  "v2": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "epochs": 20,
+   "schedule": "uninterrupted",
+   "batch_size": 16,
+   "lr": 0.001,
+   "steps_per_epoch": 625,
+   "train_seconds_per_seed": [
+    1971.7,
+    2874.4,
+    1930.2,
+    2811.8
+   ],
+   "train_gpu_hours_total": 2.66,
+   "params_trainable_recorded": 262806,
+   "time_basis": "sum over epochs of train.epochs[].seconds (src/trackd_wm/train.py): from the start of the epoch's training loop to the CUDA synchronisation after its last step; excludes checkpoint writing, process start-up and all evaluation (WMNet training runs no in-loop validation)",
+   "record": "r/pilot-p1-i4@50b20df:i4.json runs.v2_s0-3.train",
+   "params": {
+    "embed_extract_total": 283998,
+    "embed_extract_trainable": 262806,
+    "encoder": 139797,
+    "decoder": 144201,
+    "transform": 42384,
+    "discriminator": 0
+   },
+   "params_ratio_to_v2": 1.0
+  },
+  "v3": {
+   "seeds": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "epochs": 20,
+   "schedule": "uninterrupted",
+   "batch_size": 16,
+   "lr": 0.001,
+   "steps_per_epoch": 625,
+   "train_seconds_per_seed": [
+    2024.9,
+    3382.8,
+    1692.8,
+    1699.2
+   ],
+   "train_gpu_hours_total": 2.44,
+   "params_trainable_recorded": 262574,
+   "time_basis": "sum over epochs of train.epochs[].seconds (src/trackd_wm/train.py): from the start of the epoch's training loop to the CUDA synchronisation after its last step; excludes checkpoint writing, process start-up and all evaluation (WMNet training runs no in-loop validation)",
+   "record": "r/pilot-p1-i4@50b20df:i4.json runs.v3_s0-3.train",
+   "params": {
+    "embed_extract_total": 283534,
+    "embed_extract_trainable": 262574,
+    "encoder": 139565,
+    "decoder": 143969,
+    "transform": 41920,
+    "discriminator": 0
+   },
+   "params_ratio_to_v2": 1.0
+  },
+  "mbrs": {
+   "seeds": [
+    0
+   ],
+   "epochs": 120,
+   "schedule": "20 epochs (pilot G3) + 100 continued",
+   "phase1_seconds": 5617.6,
+   "phase2_seconds": 27316.6,
+   "phase1_process_wall_seconds": 5618.5,
+   "phase1_seconds_per_epoch": 280.9,
+   "phase2_seconds_per_epoch": 273.2,
+   "time_basis": "phase 1 (pilot G3): sum of g3.json epoch_seconds (src/trackd_wm/pilot.py epoch_seconds), the wall time from the run-start marker to the last checkpoint, which includes the baseline's own per-epoch validation and checkpoint writing; phase 2 (I-5 continuation): train.wall_seconds (src/trackd_wm/i5.py), the wall time of the baseline's training subprocess, which additionally includes interpreter start-up and loading of the epoch-20 checkpoint; the I-5 test-split evaluation starts after it and is excluded from both phases",
+   "train_gpu_hours_total": 9.15,
+   "validity": "preliminary: single seed (0); 120 epochs (20 pilot + 100 continued); discriminator re-initialised at epoch 20 and optimiser state not restored (MBRS's own continuation restores none); about 74 times the parameters of WMNet",
+   "record": "r/pilot-p1-g3@23b6a2d:g3.json methods.mbrs; r/pilot-p1-i5_mbrs@b7f6165:i5_mbrs.json",
+   "continuation": "discriminator re-initialised at epoch 20 (pilot archive holds no D_*.pth); optimiser state not restored (MBRS's own train_continue restores none); batch 16, lr 1e-3, noise Combined([JpegMask(50),Jpeg(50),Identity()])",
+   "params": {
+    "embed_extract_total": 20805391,
+    "embed_extract_trainable": 20805391,
+    "encoder": 561292,
+    "decoder": 20244099,
+    "discriminator": 113153
+   },
+   "params_ratio_to_v2": 73.26
+  },
+  "hidden": {
+   "seeds": [
+    0
+   ],
+   "epochs": 120,
+   "schedule": "20 epochs (pilot G3) + 100 continued",
+   "phase1_seconds": 1331.1,
+   "phase2_seconds": 6505.8,
+   "phase1_process_wall_seconds": 1332.5,
+   "phase1_seconds_per_epoch": 66.6,
+   "phase2_seconds_per_epoch": 65.1,
+   "time_basis": "phase 1 (pilot G3): sum of g3.json epoch_seconds (src/trackd_wm/pilot.py epoch_seconds), the wall time from the run-start marker to the last checkpoint, which includes the baseline's own per-epoch validation and checkpoint writing; phase 2 (I-5 continuation): train.wall_seconds (src/trackd_wm/i5.py), the wall time of the baseline's training subprocess, which additionally includes interpreter start-up and loading of the epoch-20 checkpoint; the I-5 test-split evaluation starts after it and is excluded from both phases",
+   "train_gpu_hours_total": 2.18,
+   "validity": "preliminary: single seed (0); 120 epochs (20 pilot + 100 continued with HiDDeN's own continue command; models, optimisers and discriminator restored)",
+   "record": "r/pilot-p1-g3@23b6a2d:g3.json methods.hidden; results/i5_interim/i5_hidden.json",
+   "continuation": "HiDDeN's own `continue` command: encoder-decoder, discriminator and both optimisers restored; batch 32",
+   "params": {
+    "embed_extract_total": 454403,
+    "embed_extract_trainable": 454403,
+    "encoder": 188931,
+    "decoder": 265472,
+    "discriminator": 76097
+   },
+   "params_ratio_to_v2": 1.6
+  },
+  "dwtdct": {
+   "seeds": [],
+   "epochs": 0,
+   "schedule": "no training",
+   "train_gpu_hours_total": 0.0,
+   "eval_seconds": 148.8,
+   "record": "results/i5_interim/i5_dwtdct.json",
+   "params": {
+    "embed_extract_total": 0,
+    "embed_extract_trainable": 0,
+    "discriminator": 0
+   },
+   "params_ratio_to_v2": 0.0
+  }
+ }
+}

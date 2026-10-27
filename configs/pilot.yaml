@@ -1,0 +1,126 @@
+# Paper I pilot configuration (docs/PILOT_P1.md). Overrides: key=value on the command line.
+seed: 0
+image_size: 128
+bits: 64
+work: /workspace/trackd
+data_root: ${work}/data
+methods: [proposed, cdf97, coupling, hidden, fin, mbrs, cin]   # cheapest first (G1 timings)
+g3_epochs: 20
+eval_every: 2
+target_psnr: 40.0
+eval_batch: 50
+method_timeout_s: null       # per-method subprocess timeout (set from the G1 projection)
+max_steps: null              # WMNet only; smoke tests
+n_candidates: {train: 13000, val: 1300}
+coco:
+  train: http://images.cocodataset.org/zips/train2017.zip
+  val: http://images.cocodataset.org/zips/val2017.zip
+wmnet:
+  lr: 1.0e-3
+  batch_size: 16
+  num_workers: 4
+  strict_determinism: true
+  common: {bits: 64, image_size: 128, levels: 2, lift_hidden: 16, attention: true}
+  variants: {proposed: lift_learned, cdf97: lift_cdf97, coupling: coupling_matched,
+             v1: lift_cdf97, v2: lift_learned, v3: coupling_haar_matched,
+             v0: lift_learned, v1p: lift_cdf97,
+             v2l1: lift_learned, v2l3: lift_learned, v2o2: lift_learned, v2s: lift_learned}
+  freeze_encoder_transform: [v2, v3, v2l1, v2l3, v2o2, v2s]
+  # stage I-3b: one factor changed per V2 variant (the "common" values above otherwise)
+  model_overrides: {v2l1: {levels: 1}, v2l3: {levels: 3}, v2s: {attention: false}}   # stage I-2: fixed encoder transform, learned decoder transform
+  # stage I-3a: V0 = original design (learned lifting in encoder AND decoder, not frozen);
+  # V1+ = fixed CDF 9/7 plus a residual front-end of 21,278 parameters on the decoder's deepest sub-bands
+  # (V2's learned decoder transform has 21,192; +0.4 %)
+  decoder_frontend_hidden: {v1p: 98}
+# Stage I-2, minimal feasibility experiment (approved 2026-10-22, 06:15 UTC; hard cap USD 1.60;
+# docs/PHASE1_EXECUTION_PLAN.md and docs/PILOT_P1_REPORT.md Section 8). Validation split only.
+i2:
+  variants: [v1, v2, v3]       # V1 fixed CDF 9/7 both sides; V2 decoder-learned lifting; V3 decoder-learned coupling
+  objective: psnr_projection   # O1, docs/OBJECTIVE_PROPOSAL.md C1
+  target_psnr: 40.0
+  epochs: 20
+  smoke_steps: 5               # in-pod smoke gate (all computation on RunPod; instruction of 2026-10-22)
+  smoke_images: 50
+  bootstrap: 10000
+  go_margin: 0.01              # pre-registered: go if V2 - V1 >= +1.0 pp, JPEG Q50, matched 40 dB
+# Stage I-3a (approved 2026-10-22, 09:36 UTC; hard cap USD 1.20): same objective, data, epochs, seed and
+# evaluation as I-2 (section i2 above is reused); paired comparisons with the archived I-2 results.
+i3a:
+  variants: [v0, v1p]
+  recon_images: 200            # validation images for the reconstruction diagnostics
+  power_iters: 30              # power iterations for the Jacobian spectral-norm estimates
+  power_images: 4
+  margin: 0.01                 # practical margin (1 pp), decision instruction (9)
+i2b:
+  methods: [hidden, mbrs, cin] # FIN skipped (invalid; stability already established)
+# Stage I-3b (approved in session 2026-10-22, 12:51 UTC; hard cap USD 2.20): single-seed V2 ablations on the
+# validation split; I-2 protocol otherwise. Selection rule (pre-registered): the variant with the highest
+# Q50 accuracy at matched 40 dB is carried into I-4 only if it exceeds V2 by >= 1.0 pp; otherwise V2 is kept.
+i3b:
+  variants: [v2l1, v2l3, v2o2, v2s]
+  objective_override: {v2o2: dual_ascent}
+  margin: 0.01
+# Stage I-4 (approved in session 2026-10-22 12:51 UTC; launch requires a separate go after I-3b; cap USD 6.70).
+# docs/PROTOCOL_I4.md. The variants are set to the I-3b-selected configuration at the freeze commit.
+i4:
+  variants: [v1p, v2, v3]
+  seeds: [0, 1, 2, 3, 4]
+  targets: [35.0, 40.0, 45.0]
+  bootstrap: 10000
+  margin: 0.01
+  message_seed: 0            # test/validation messages identical for every method and seed (pairing)
+# retraining of the lost I-4 checkpoints (decision d-2026-10-24-01 (c); docs/PROTOCOL_I4_RECOVERY.md)
+i4_recover:
+  recover: [v1p_s2, v2_s2, v3_s2, v1p_s3, v2_s3, v3_s3, v1p_s4, v2_s4]   # trained in I-4; checkpoints lost
+  new: [v3_s4]                                                       # never trained; descriptive only
+# Stage I-5 (decision d-2026-10-24-04; docs/PROTOCOL_I5.md, Sections 6-7; module trackd_wm.i5). Three independent
+# pods: I5-A (i5_m1), I5-B (i5_mbrs), I5-C (i5_hidden, i5_dwtdct). Descriptive; no hypothesis test, no decision.
+i5:
+  bootstrap: 10000
+  inputs:                      # archives fetched by step i5_inputs for pod I5_POD before any paid work
+    A: [i4_s0_v1p, i4_s0_v2, i4_s0_v3, i4_s1_v1p, i4_s1_v2, i4_s1_v3,
+        i4_s2_v1p, i4_s2_v2, i4_s2_v3, i4_s3_v1p, i4_s3_v2, i4_s3_v3]
+    B: [g3_mbrs]
+    C: [g3_hidden]
+  input_sha256:                # identity of the R11 archives (docs/STAGE_I4_RECOVERY_REPORT.md), checked from any source
+    i4_s2_v1p: 8899379a9e6e13e2799a00530f928a036f35ee0fb9314f84c23c820a6b124349
+    i4_s2_v2: fa55c404a6fb4fb2d4a4a238aeaa314e8001442190facdf728ea4ae943d70c40
+    i4_s2_v3: 8e351ead0f975dcaab80195bbcff42ff6c1cea52bdd19d9103a8dd179257f813
+    i4_s3_v1p: 2a575e183cd6a1c7fc0571c320a0a22685e066d3dd258278c1bca0c208a66460
+    i4_s3_v2: fd08dda673f970e45446ad642e855c1e740c6a6fd28808ae2204524b8dc102a1
+    i4_s3_v3: f9c4be6cdb26244e0c139e74ac77405b423d7543963f7ffbe60f2b7e50416950
+  m1:
+    variants: [v1p, v2, v3]
+    seeds: [0, 1, 2, 3]        # seed 4 is outside I5-A (incomplete in I-4; no budget in the pod ceiling)
+    targets: [35.0, 40.0, 45.0]
+    comparisons: [[v2, v1p], [v3, v1p], [v2, v3]]
+    recon_images: 50
+    power_iters: 10
+  div2k:
+    url: http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_HR.zip
+    n_images: 100
+    tiles_per_image: 10
+    seed: 0
+  baselines:
+    start_epoch: 20            # the archived pilot G3 checkpoints (seed 0)
+    total_epochs: 120
+    archive_every: 10
+    target_psnr: 40.0
+    validity:
+      mbrs: "preliminary: single seed (0); 120 epochs (20 pilot + 100 continued); discriminator re-initialised at
+        epoch 20 and optimiser state not restored (MBRS's own continuation restores none); about 74 times the
+        parameters of WMNet"
+      hidden: "preliminary: single seed (0); 120 epochs (20 pilot + 100 continued with HiDDeN's own continue
+        command; models, optimisers and discriminator restored)"
+    seed_validity:             # step i5_mbrs_seed (d-2026-10-25-79; docs/PROPOSAL_MBRS_SEEDS.md, Section 6)
+      mbrs: "preliminary: further training seed (I5_TRAIN_SEED); 120 epochs (20 from initialisation with the pilot
+        G3 settings + 100 continued); discriminator re-initialised at epoch 20 and optimiser state not restored, as
+        for seed 0; about 74 times the parameters of WMNet"
+  compare:                     # step i5_compare (CPU, after I5-A/B/C; PROTOCOL_I5.md, Sections 7.4 and 7.13)
+    branches: {m1: r/pilot-p1-i5_m1, mbrs: r/pilot-p1-i5_mbrs, hidden: r/pilot-p1-i5_hidden,
+               dwtdct: r/pilot-p1-i5_dwtdct, mbrs_s1: r/pilot-p1-i5_mbrs_s1}
+    baselines: [mbrs, hidden, dwtdct]
+    extra_seeds: {mbrs: [1]}   # further training seeds (step i5_mbrs_seed; d-2026-10-25-79, one further MBRS seed)
+    strength: matched_40dB     # the only strength shared by the WMNet variants and the baselines
+    table_attacks: [clean, jpeg50, jpeg75, webp50, blur1, noise002, median3, resize05, crop075, bright12,
+                    contrast08, rotate10, erase10]

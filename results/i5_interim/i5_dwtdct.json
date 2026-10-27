@@ -1,0 +1,333 @@
+{
+ "method": "dwtdct",
+ "pinned_commit": "68d0376",
+ "licence": "MIT",
+ "attack_smoke": {
+  "attacks": 29,
+  "images": 4,
+  "status": "ok"
+ },
+ "status": "ok",
+ "strengths_from_val": {
+  "matched_40dB": 0.5909104649908841,
+  "native": 1.0
+ },
+ "points": {
+  "coco": {
+   "matched_40dB": {
+    "strength": 0.5909104649908841,
+    "psnr_rgb": 39.9091911315918,
+    "psnr_y": 57.529991149902344,
+    "ssim": 0.9852224588394165,
+    "bitacc_clean": 0.7078593969345093,
+    "bitacc_jpeg10": 0.49943751096725464,
+    "bitacc_jpeg20": 0.49537500739097595,
+    "bitacc_jpeg30": 0.49931249022483826,
+    "bitacc_jpeg40": 0.49882811307907104,
+    "bitacc_jpeg50": 0.501296877861023,
+    "bitacc_jpeg60": 0.4995156228542328,
+    "bitacc_jpeg70": 0.49825000762939453,
+    "bitacc_jpeg80": 0.5022187232971191,
+    "bitacc_jpeg90": 0.5072656273841858,
+    "bitacc_webp50": 0.4954531192779541,
+    "bitacc_webp75": 0.4967343807220459,
+    "bitacc_blur05": 0.6291718482971191,
+    "bitacc_blur1": 0.5251562595367432,
+    "bitacc_blur2": 0.49790623784065247,
+    "bitacc_noise001": 0.7020312547683716,
+    "bitacc_noise002": 0.6932187676429749,
+    "bitacc_noise005": 0.6025312542915344,
+    "bitacc_median3": 0.5512812733650208,
+    "bitacc_resize05": 0.5105937719345093,
+    "bitacc_resize075": 0.546875,
+    "bitacc_crop075": 0.5009687542915344,
+    "bitacc_crop09": 0.5141718983650208,
+    "bitacc_bright12": 0.7315312623977661,
+    "bitacc_bright08": 0.5694687366485596,
+    "bitacc_contrast12": 0.7124687433242798,
+    "bitacc_contrast08": 0.5693125128746033,
+    "bitacc_rotate10": 0.5032187700271606,
+    "bitacc_erase10": 0.7084218859672546
+   },
+   "native": {
+    "strength": 1.0,
+    "psnr_rgb": 35.491920471191406,
+    "psnr_y": 56.46800231933594,
+    "ssim": 0.9666758179664612,
+    "bitacc_clean": 0.7782968878746033,
+    "bitacc_jpeg10": 0.49900001287460327,
+    "bitacc_jpeg20": 0.49629688262939453,
+    "bitacc_jpeg30": 0.5004843473434448,
+    "bitacc_jpeg40": 0.4990937411785126,
+    "bitacc_jpeg50": 0.5037343502044678,
+    "bitacc_jpeg60": 0.502328097820282,
+    "bitacc_jpeg70": 0.5023124814033508,
+    "bitacc_jpeg80": 0.5093125104904175,
+    "bitacc_jpeg90": 0.5241249799728394,
+    "bitacc_webp50": 0.4969843626022339,
+    "bitacc_webp75": 0.4995468854904175,
+    "bitacc_blur05": 0.7922031283378601,
+    "bitacc_blur1": 0.5625468492507935,
+    "bitacc_blur2": 0.4990937411785126,
+    "bitacc_noise001": 0.7810312509536743,
+    "bitacc_noise002": 0.7775624990463257,
+    "bitacc_noise005": 0.6732968688011169,
+    "bitacc_median3": 0.6117187738418579,
+    "bitacc_resize05": 0.5340468883514404,
+    "bitacc_resize075": 0.6068593859672546,
+    "bitacc_crop075": 0.5053906440734863,
+    "bitacc_crop09": 0.5479062795639038,
+    "bitacc_bright12": 0.7609218955039978,
+    "bitacc_bright08": 0.7589062452316284,
+    "bitacc_contrast12": 0.7552968859672546,
+    "bitacc_contrast08": 0.7586562633514404,
+    "bitacc_rotate10": 0.5180000066757202,
+    "bitacc_erase10": 0.8088906407356262
+   }
+  }
+ },
+ "seconds": 148.80288982391357,
+ "provenance": {
+  "commit": "b7dbf16e110aa2be89320ae76cb05af2865ec73b",
+  "trackd_wm": "0.1.0.dev0",
+  "torch": "2.8.0+cu128",
+  "device": "NVIDIA A40",
+  "seed": 0,
+  "pod": "wr30k4ocflh928",
+  "time_utc": "2026-10-24T14:55:30Z",
+  "config": {
+   "seed": 0,
+   "image_size": 128,
+   "bits": 64,
+   "work": "/workspace/trackd",
+   "data_root": "/workspace/trackd/data",
+   "methods": [
+    "proposed",
+    "cdf97",
+    "coupling",
+    "hidden",
+    "fin",
+    "mbrs",
+    "cin"
+   ],
+   "g3_epochs": 20,
+   "eval_every": 2,
+   "target_psnr": 40.0,
+   "eval_batch": 50,
+   "method_timeout_s": 8100,
+   "max_steps": null,
+   "n_candidates": {
+    "train": 13000,
+    "val": 1300
+   },
+   "coco": {
+    "train": "http://images.cocodataset.org/zips/train2017.zip",
+    "val": "http://images.cocodataset.org/zips/val2017.zip"
+   },
+   "wmnet": {
+    "lr": 0.001,
+    "batch_size": 16,
+    "num_workers": 4,
+    "strict_determinism": true,
+    "common": {
+     "bits": 64,
+     "image_size": 128,
+     "levels": 2,
+     "lift_hidden": 16,
+     "attention": true
+    },
+    "variants": {
+     "proposed": "lift_learned",
+     "cdf97": "lift_cdf97",
+     "coupling": "coupling_matched",
+     "v1": "lift_cdf97",
+     "v2": "lift_learned",
+     "v3": "coupling_haar_matched",
+     "v0": "lift_learned",
+     "v1p": "lift_cdf97",
+     "v2l1": "lift_learned",
+     "v2l3": "lift_learned",
+     "v2o2": "lift_learned",
+     "v2s": "lift_learned"
+    },
+    "freeze_encoder_transform": [
+     "v2",
+     "v3",
+     "v2l1",
+     "v2l3",
+     "v2o2",
+     "v2s"
+    ],
+    "model_overrides": {
+     "v2l1": {
+      "levels": 1
+     },
+     "v2l3": {
+      "levels": 3
+     },
+     "v2s": {
+      "attention": false
+     }
+    },
+    "decoder_frontend_hidden": {
+     "v1p": 98
+    }
+   },
+   "i2": {
+    "variants": [
+     "v1",
+     "v2",
+     "v3"
+    ],
+    "objective": "psnr_projection",
+    "target_psnr": 40.0,
+    "epochs": 20,
+    "smoke_steps": 5,
+    "smoke_images": 50,
+    "bootstrap": 10000,
+    "go_margin": 0.01
+   },
+   "i3a": {
+    "variants": [
+     "v0",
+     "v1p"
+    ],
+    "recon_images": 200,
+    "power_iters": 30,
+    "power_images": 4,
+    "margin": 0.01
+   },
+   "i2b": {
+    "methods": [
+     "hidden",
+     "mbrs",
+     "cin"
+    ]
+   },
+   "i3b": {
+    "variants": [
+     "v2l1",
+     "v2l3",
+     "v2o2",
+     "v2s"
+    ],
+    "objective_override": {
+     "v2o2": "dual_ascent"
+    },
+    "margin": 0.01
+   },
+   "i4": {
+    "variants": [
+     "v1p",
+     "v2",
+     "v3"
+    ],
+    "seeds": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "targets": [
+     35.0,
+     40.0,
+     45.0
+    ],
+    "bootstrap": 10000,
+    "margin": 0.01,
+    "message_seed": 0
+   },
+   "i4_recover": {
+    "recover": [
+     "v1p_s2",
+     "v2_s2",
+     "v3_s2",
+     "v1p_s3",
+     "v2_s3",
+     "v3_s3",
+     "v1p_s4",
+     "v2_s4"
+    ],
+    "new": [
+     "v3_s4"
+    ]
+   },
+   "i5": {
+    "bootstrap": 10000,
+    "inputs": {
+     "A": [
+      "i4_s0_v1p",
+      "i4_s0_v2",
+      "i4_s0_v3",
+      "i4_s1_v1p",
+      "i4_s1_v2",
+      "i4_s1_v3",
+      "i4_s2_v1p",
+      "i4_s2_v2",
+      "i4_s2_v3",
+      "i4_s3_v1p",
+      "i4_s3_v2",
+      "i4_s3_v3"
+     ],
+     "B": [
+      "g3_mbrs"
+     ],
+     "C": [
+      "g3_hidden"
+     ]
+    },
+    "m1": {
+     "variants": [
+      "v1p",
+      "v2",
+      "v3"
+     ],
+     "seeds": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "targets": [
+      35.0,
+      40.0,
+      45.0
+     ],
+     "comparisons": [
+      [
+       "v2",
+       "v1p"
+      ],
+      [
+       "v3",
+       "v1p"
+      ],
+      [
+       "v2",
+       "v3"
+      ]
+     ],
+     "recon_images": 50,
+     "power_iters": 10
+    },
+    "div2k": {
+     "url": "http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_HR.zip",
+     "n_images": 100,
+     "tiles_per_image": 10,
+     "seed": 0
+    },
+    "baselines": {
+     "start_epoch": 20,
+     "total_epochs": 120,
+     "archive_every": 10,
+     "target_psnr": 40.0,
+     "validity": {
+      "mbrs": "preliminary: single seed (0); 120 epochs (20 pilot + 100 continued); discriminator re-initialised at epoch 20 and optimiser state not restored (MBRS's own continuation restores none); about 74 times the parameters of WMNet",
+      "hidden": "preliminary: single seed (0); 120 epochs (20 pilot + 100 continued with HiDDeN's own continue command; models, optimisers and discriminator restored)"
+     }
+    }
+   }
+  }
+ }
+}

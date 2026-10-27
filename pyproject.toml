@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trackd_wm"
+version = "0.1.0.dev0"
+description = "Shared watermarking package for Track D (Papers I-III)"
+requires-python = ">=3.10"
+# Dependencies (manual session 2026-10-27). Core requirements stay unpinned so that installing the package on a
+# pod does not change the pod image's numpy/torch; the versions behind recorded results are given in
+# constraints/recorded-versions.txt. Undeclared imports (matplotlib, torch, baseline packages) are now extras.
+dependencies = ["numpy", "pillow", "omegaconf", "pyyaml", "scipy", "pandas", "statsmodels"]
+
+[project.optional-dependencies]
+# Training and evaluation (torch version of record in constraints/recorded-versions.txt).
+train = ["torch"]
+# Figures and tables (scripts/analysis/build_analysis.py, manuscript/scripts/).
+analysis = ["matplotlib"]
+# Baseline training and evaluation on the pods (MBRS, HiDDeN wrappers; scripts/pod/bootstrap.sh).
+baselines = ["torchvision", "kornia", "natsort", "opencv-python-headless", "pywavelets"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+trackd_wm = ["splits/*.txt"]
