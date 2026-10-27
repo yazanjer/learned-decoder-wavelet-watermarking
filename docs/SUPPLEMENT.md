@@ -16,6 +16,7 @@ means of the two MBRS models, which are also given, with the across-model compar
 | Paired differences against the released FIN checkpoint | `manuscript/tables/tab_a7_vs_fin.tex` | `results/i6_public/i6_fin_compare.json` |
 | Released FIN and HiDDeN checkpoints at native strength and at 40 dB | `manuscript/tables/tab_a8_released.tex` | `results/i6_public/i6_public.json` |
 | Second MBRS model (training seed 1) | `manuscript/tables/tab_s4_mbrs_two_models.tex` | `results/i5_compare_mbrs_s1/across_models.md` |
+| Curve figures (distortion strength, fidelity trade-off, DIV2K, conditioning) | `manuscript/figures/fig_c*` | `scripts/analysis/build_curves.py`; values in `results/analysis/curves_values.json` |
 | Figures (JPEG-quality curves, per-seed accuracy, distortion profile, architecture) | `manuscript/figures/` | as above; `manuscript/scripts/fig_architecture.py` |
 
 Protocols: `docs/PROTOCOL_I4.md` (pre-registered confirmatory analysis), `docs/PROTOCOL_I5.md` (extended
